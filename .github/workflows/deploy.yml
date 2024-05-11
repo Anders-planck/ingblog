@@ -1,0 +1,61 @@
+name: Deploy -> vercel
+on:
+  push:
+    branches:
+      - master
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VERCEL_ISA_BLOG_TOKEN: ${{ secrets.VERCEL_ISA_BLOG_TOKEN }}
+  VERCEL_APP_NAME: ${{ secrets.VERCEL_APP_NAME }}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    name: Deploy to Vercel
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: docker
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Docker Compose
+        run: |
+          cp .env.dist .env
+          echo VERCEL_ISA_BLOG_TOKEN=${{ secrets.VERCEL_ISA_BLOG_TOKEN }} >> .env
+          echo VERCEL_ORG_ID=${{ secrets.VERCEL_ORG_ID }} >> .env
+          echo VERCEL_PROJECT_ID=${{ secrets.VERCEL_PROJECT_ID }} >> .env
+          echo VERCEL_APP_NAME=${{ secrets.VERCEL_APP_NAME }} >> .env
+          docker compose build && docker compose up -d
+
+      - name: setup vercel
+        run: |
+          docker compose exec node /bin/bash setup_vercel.sh
+          docker compose exec node vercel env pull .env.development.local --token=${{ secrets.VERCEL_ISA_BLOG_TOKEN }}
+          docker compose exec node cp  .env.development.local .env
+
+      - name: Install dependencies
+        run: |
+          docker compose exec node yarn install
+          docker compose exec node npx prisma generate
+          docker compose exec node npx prisma db push
+
+      - name: Build project
+        run: docker compose exec node npm run vercel-build
+
+      - name: Link vercel to project
+        run: docker compose exec node vercel --prod -n ${{ secrets.VERCEL_APP_NAME }} --yes  --token=${{ secrets.VERCEL_ISA_BLOG_TOKEN }}
+
+      - name: Dump docker logs on failure using different shell
+        if: failure()
+        uses: jwalton/gh-docker-logs@v2
+        with:
+          shell: '/bin/sh'

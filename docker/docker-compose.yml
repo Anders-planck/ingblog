@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  node:
+    container_name: ${CONTAINER_NAME}-node
+    build:
+      context: ${APP_PATH}
+      dockerfile: docker/node/Dockerfile
+      args:
+        VERCEL_ISA_BLOG_TOKEN: ${VERCEL_ISA_BLOG_TOKEN}
+        VERCEL_ORG_ID: ${VERCEL_ORG_ID}
+        VERCEL_PROJECT_ID: ${VERCEL_PROJECT_ID}
+        VERCEL_APP_NAME: ${VERCEL_APP_NAME}
+    ports:
+      - ${EXPOSE_PORT}:3000
+    volumes:
+      - ${APP_PATH}:/app
+      - /app/node_modules
