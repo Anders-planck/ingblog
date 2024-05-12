@@ -1,3 +1,7 @@
+#idea
+.idea
+
+.vercel
 # Logs
 logs
 *.log

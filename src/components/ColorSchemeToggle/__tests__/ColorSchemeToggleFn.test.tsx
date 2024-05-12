@@ -8,9 +8,11 @@ vi.mock('@mantine/core', async (importOriginal) => {
   const original = await importOriginal();
   return {
     // @ts-ignore
-        ...original,
-        useMantineColorScheme: vi.fn().mockReturnValue({ colorScheme: 'light', setColorScheme: vi.fn() }),
-    };
+    ...original,
+    useMantineColorScheme: vi
+      .fn()
+      .mockReturnValue({ colorScheme: 'light', setColorScheme: vi.fn() }),
+  };
 });
 
 describe('ColorSchemeToggle fn', () => {
@@ -18,9 +20,9 @@ describe('ColorSchemeToggle fn', () => {
     const { setColorScheme } = useMantineColorScheme();
 
     render(
-        <MantineProvider>
-          <ColorSchemeToggle />
-        </MantineProvider>
+      <MantineProvider>
+        <ColorSchemeToggle />
+      </MantineProvider>
     );
 
     const lightButton = screen.getByText('Light');
@@ -33,9 +35,9 @@ describe('ColorSchemeToggle fn', () => {
     const { setColorScheme } = useMantineColorScheme();
 
     render(
-        <MantineProvider>
-          <ColorSchemeToggle />
-        </MantineProvider>
+      <MantineProvider>
+        <ColorSchemeToggle />
+      </MantineProvider>
     );
 
     const darkButton = screen.getByText('Dark');

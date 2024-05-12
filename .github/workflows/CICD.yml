@@ -30,20 +30,9 @@ jobs:
           echo VERCEL_APP_NAME=${{ secrets.VERCEL_APP_NAME }} >> .env
           docker compose build && docker compose up -d
 
-      - name: setup vercel
-        run: |
-           docker compose exec node /bin/bash setup_vercel.sh
-           docker compose exec node vercel env pull .env.development.local --token=${{ secrets.VERCEL_ISA_BLOG_TOKEN }}
-           docker compose exec node cp  .env.development.local .env
-
-      - name: Install dependencies
-        run: |
-          docker compose exec node yarn install
-          docker compose exec node npx prisma generate
-          docker compose exec node npx prisma db push
 
       - name: Lint code
-        run: docker compose exec node yarn test:lint
+        run: docker compose exec node npm run test:lint
 
       - name: Dump docker logs on failure using different shell
         if: failure()
