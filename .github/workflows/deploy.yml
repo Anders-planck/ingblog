@@ -9,6 +9,9 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   VERCEL_ISA_BLOG_TOKEN: ${{ secrets.VERCEL_ISA_BLOG_TOKEN }}
   VERCEL_APP_NAME: ${{ secrets.VERCEL_APP_NAME }}
+  VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+  VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
 
 permissions:
   contents: read
@@ -34,19 +37,17 @@ jobs:
           echo VERCEL_ORG_ID=${{ secrets.VERCEL_ORG_ID }} >> .env
           echo VERCEL_PROJECT_ID=${{ secrets.VERCEL_PROJECT_ID }} >> .env
           echo VERCEL_APP_NAME=${{ secrets.VERCEL_APP_NAME }} >> .env
+          echo VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }} >> .env
+          echo VITE_SUPABASE_ANON_KEY=${{ secrets.VITE_SUPABASE_ANON_KEY }} >> .env
           docker compose build && docker compose up -d
+
+      - name: setup environment
+        run: |
+          docker compose exec node /bin/bash setup.sh
 
       - name: setup vercel
         run: |
           docker compose exec node /bin/bash setup_vercel.sh
-          docker compose exec node vercel env pull .env.development.local --token=${{ secrets.VERCEL_ISA_BLOG_TOKEN }}
-          docker compose exec node cp  .env.development.local .env
-
-      - name: Install dependencies
-        run: |
-          docker compose exec node yarn install
-          docker compose exec node npx prisma generate
-          docker compose exec node npx prisma db push
 
       - name: Build project
         run: docker compose exec node npm run vercel-build
