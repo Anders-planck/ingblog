@@ -1,4 +1,4 @@
-ARG NODE_VERSION=20.9.0
+ARG NODE_VERSION=latest
 
 FROM node:${NODE_VERSION}
 
@@ -9,7 +9,7 @@ ARG VERCEL_PROJECT_ID
 
 RUN <<EOI
 apt-get update && apt-get install -y \
-    yarn \
+    npm \
     git \
     curl \
     wget \
@@ -18,26 +18,24 @@ EOI
 
 ## print the version of node and npm
 RUN <<EOI
-node -v && yarn -v
+node -v && npm -v
 EOI
 
 RUN <<EOI
-yarn add global npm@10.7.0
-yarn global add vercel
-yarn global add vite
-yarn global add prisma
+npm install -g vercel@latest
+npm install -g vite
+npm install -g prisma
 EOI
 
 WORKDIR /app
 
 COPY package*.json ./
-COPY yarn.lock ./
 
 RUN <<EOI
-yarn install
+npm install
 EOI
 
 COPY ./ ./
 
-CMD ["yarn", "dev"]
+CMD ["npm","run", "dev"]
 

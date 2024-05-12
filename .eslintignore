@@ -3,4 +3,7 @@
 *.mjs
 *.d.ts
 *.d.mts
+*.module.css
 vite.config.ts
+coverage/**/*
+coverage
