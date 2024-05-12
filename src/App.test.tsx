@@ -10,7 +10,7 @@ describe('App', () => {
   it('Check if App renders without crashing', async () => {
     render(<App />);
 
-    const element = await screen.findByText(/ingBlog/i);
+    const element = await screen.findByText('Isa-blog');
     expect(element).toBeInTheDocument();
   });
 });
