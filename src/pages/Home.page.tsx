@@ -8,12 +8,14 @@ import Page from '@/Layout/Page';
 import { useAppDispatch, useAppSelector } from '@/store';
 import { openSearchModal, selectSearch, setSearch } from '@/store/app/search';
 import SearchModal from '@/components/SearchModal';
+import { selectUser } from '@/store/auth';
 
 export function HomePage() {
   const [posts, setPosts] = useState<PostType[]>([]);
   const [loading, setLoading] = useState(true);
   const dispatch = useAppDispatch();
   const search = useAppSelector(selectSearch);
+  const user = useAppSelector(selectUser);
 
   const formatPosts = (data: any[]) =>
     data.map((post) => ({
@@ -94,9 +96,11 @@ export function HomePage() {
               </ActionIcon>
             )}
 
-            <ActionIcon color="blue" radius="md" size={40}>
-              <IconTextPlus stroke={1.5} size={20} />
-            </ActionIcon>
+            {user && (
+              <ActionIcon color="blue" radius="md" size={40}>
+                <IconTextPlus stroke={1.5} size={20} />
+              </ActionIcon>
+            )}
           </Group>
         </Group>
         {loading ? (
@@ -122,9 +126,11 @@ export function HomePage() {
               <IconSearch stroke={1.5} size={25} />
             </ActionIcon>
           )}
-          <ActionIcon color="blue" radius="xl" size={55}>
-            <IconTextPlus stroke={1.5} size={25} />
-          </ActionIcon>
+          {user && (
+            <ActionIcon color="blue" radius="xl" size={55}>
+              <IconTextPlus stroke={1.5} size={25} />
+            </ActionIcon>
+          )}
         </Stack>
       </Affix>
       <SearchModal />
