@@ -25,7 +25,7 @@ describe('Home Page', () => {
     );
 
     // Check for elements from the layout
-    const element = screen.getByText(/ingBlog/i);
+    const element = screen.getByText(/Posts/i);
     expect(element).toBeInTheDocument();
   });
 });

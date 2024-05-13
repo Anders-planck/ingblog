@@ -1,5 +1,6 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { reducer as searchReducer } from './app/search';
 import { listenerMiddleware } from './listener';
 import { reducer as authReducer } from './auth';
 
@@ -7,6 +8,7 @@ const makeStore = () =>
   configureStore({
     reducer: {
       auth: authReducer,
+      search: searchReducer,
     },
     middleware: (getDefaultMiddlewares) =>
       getDefaultMiddlewares().concat(listenerMiddleware.middleware),
