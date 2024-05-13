@@ -11,7 +11,6 @@ import {
   Group,
   Menu,
   ScrollArea,
-  Tabs,
   Text,
   ThemeIcon,
   UnstyledButton,
@@ -37,8 +36,7 @@ import { useAppSelector } from '@/store';
 import { selectProfile, selectUser } from '@/store/auth';
 import { supabase } from '@/lib/supabase';
 import { ConfirmationModal } from '@/components/ConfirmationModal';
-
-const tabs = ['Home'];
+import IsaBlogLogo from '@/components/Logo';
 
 const BlogsLinks = [
   {
@@ -66,12 +64,6 @@ export function Header() {
   const user = useAppSelector(selectUser);
   const profile = useAppSelector(selectProfile);
   const navigate = useNavigate();
-
-  const items = tabs.map((tab) => (
-    <Tabs.Tab value={tab} key={tab}>
-      {tab}
-    </Tabs.Tab>
-  ));
 
   const links = BlogsLinks.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
@@ -103,7 +95,7 @@ export function Header() {
     <div className={classes.header}>
       <Container className={classes.mainSection} size="md">
         <Group justify="space-between">
-          <Text size="xl">Isa-blog</Text>
+          <IsaBlogLogo />
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="xs" size="sm" />
 
@@ -213,26 +205,16 @@ export function Header() {
             </Menu>
           ) : (
             <Group visibleFrom="sm">
-              <Anchor href="/auth">
+              <Anchor
+                onClick={() => {
+                  navigate('/auth');
+                }}
+              >
                 <Button>Let&apos;s go</Button>
               </Anchor>
             </Group>
           )}
         </Group>
-      </Container>
-      <Container size="md">
-        <Tabs
-          defaultValue="Home"
-          variant="outline"
-          visibleFrom="sm"
-          classNames={{
-            root: classes.tabs,
-            list: classes.tabsList,
-            tab: classes.tab,
-          }}
-        >
-          <Tabs.List>{items}</Tabs.List>
-        </Tabs>
       </Container>
 
       <Drawer
@@ -240,14 +222,20 @@ export function Header() {
         onClose={closeDrawer}
         size="100%"
         padding="md"
-        title="Isa-blog"
+        title={<IsaBlogLogo size={24} />}
         hiddenFrom="sm"
         zIndex={1000000}
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
-          <Anchor onClick={() => navigate('/')} className={classes.link_mega}>
+          <Anchor
+            onClick={() => {
+              navigate('/');
+              closeDrawer();
+            }}
+            className={classes.link_mega}
+          >
             Home
           </Anchor>
           <UnstyledButton className={classes.link_mega} onClick={toggleLinks}>
@@ -267,7 +255,10 @@ export function Header() {
             <>
               <Group justify="center" grow pb="xl" px="md">
                 <Anchor
-                  href="/auth"
+                  onClick={() => {
+                    navigate('/auth');
+                    closeDrawer();
+                  }}
                   style={{
                     textDecoration: 'none',
                   }}
@@ -277,7 +268,12 @@ export function Header() {
               </Group>
             </>
           ) : (
-            <Anchor href="/account">
+            <Anchor
+              onClick={() => {
+                navigate('/account');
+                closeDrawer();
+              }}
+            >
               <Group justify="space-between" px="md">
                 <Group>
                   <Avatar radius="xl" src={user?.user_metadata.avatar_url} />

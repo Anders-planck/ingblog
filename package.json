@@ -43,6 +43,7 @@
     "@tiptap/extension-link": "^2.3.2",
     "@tiptap/react": "^2.3.2",
     "@tiptap/starter-kit": "^2.3.2",
+    "date-fns": "^3.6.0",
     "dayjs": "^1.11.11",
     "embla-carousel-react": "^8.0.4",
     "global": "^4.4.0",
