@@ -49,7 +49,7 @@ jobs:
           docker compose exec node /bin/bash setup_vercel.sh
 
       - name: Build project
-        run: docker compose exec node npm run vercel-build
+        run: docker compose exec node npm run build
 
       - name: Link vercel to project
         run: docker compose exec node vercel -n ${{ secrets.VERCEL_APP_NAME }} --yes  --token=${{ secrets.VERCEL_ISA_BLOG_TOKEN }}
