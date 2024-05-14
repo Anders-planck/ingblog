@@ -80,7 +80,7 @@ const AddPost = () => {
         content,
         category: values.category,
         published: values.publish,
-        authorId: user.id,
+        authorId: user?.id,
       },
     ]);
 
@@ -133,7 +133,8 @@ const AddPost = () => {
                 handleOnChange={(value) => setContent(value)}
                 //@ts-ignore
                 error={errorContent}
-                content={c}
+                placeholder={c}
+                content=""
               />
 
               <Checkbox
@@ -144,7 +145,11 @@ const AddPost = () => {
               />
 
               <Group justify="flex-end" mt="md">
-                <Button type="submit" disabled={!form.isValid || isSubmitting}>
+                <Button
+                  type="submit"
+                  disabled={!form.isValid || isSubmitting}
+                  loading={isSubmitting}
+                >
                   {isSubmitting ? 'saving...' : 'save'}
                 </Button>
               </Group>

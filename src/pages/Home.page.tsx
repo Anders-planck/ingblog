@@ -1,14 +1,4 @@
-import {
-  ActionIcon,
-  Affix,
-  Flex,
-  Group,
-  Loader,
-  SimpleGrid,
-  Stack,
-  Title,
-  useMatches,
-} from '@mantine/core';
+import { ActionIcon, Affix, Group, SimpleGrid, Stack, Title, useMatches } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { IconAdjustmentsOff, IconSearch, IconTextPlus } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
@@ -20,6 +10,7 @@ import { useAppDispatch, useAppSelector } from '@/store';
 import { openSearchModal, selectSearch, setSearch } from '@/store/app/search';
 import SearchModal from '@/components/SearchModal';
 import { selectUser } from '@/store/auth';
+import { formatPost } from '@/pages/Post/utils';
 
 export function HomePage() {
   const [posts, setPosts] = useState<PostType[]>([]);
@@ -29,23 +20,13 @@ export function HomePage() {
   const user = useAppSelector(selectUser);
   const navigate = useNavigate();
 
-  const formatPosts = (data: any[]) =>
-    data.map((post) => ({
-      ...post,
-      author: {
-        name: post.profiles.full_name,
-        avatar: post.profiles.avatar_url,
-      },
-      createdAt: new Date(post.created_at).toISOString(),
-      likes: post.likes,
-      comments: post.comments,
-    }));
-
   const fetchPosts = async () => {
     setLoading(true);
     const { data, error } = await supabase
       .from('posts')
-      .select('*, profiles(full_name, avatar_url), likes:likes(*), comments:comments(*)')
+      .select(
+        '*, profiles(full_name, avatar_url), likes:likes(*), bookmarks:bookmarks(*), comments:comments(*, profiles(full_name, avatar_url, id))'
+      )
       .order('created_at', { ascending: false });
 
     if (error) {
@@ -53,7 +34,7 @@ export function HomePage() {
     }
 
     if (data) {
-      setPosts(formatPosts(data));
+      setPosts(data.map(formatPost));
     }
     setLoading(false);
   };
@@ -62,7 +43,9 @@ export function HomePage() {
     setLoading(true);
     const { data, error } = await supabase
       .from('posts')
-      .select('*, profiles(full_name, avatar_url), likes:likes(*), comments:comments(*)')
+      .select(
+        '*, profiles(full_name, avatar_url), likes:likes(*), bookmarks:bookmarks(*), comments:comments(*, profiles(full_name, avatar_url, id))'
+      )
       .ilike('title', `%${search}%`);
 
     if (error) {
@@ -70,10 +53,23 @@ export function HomePage() {
     }
 
     if (data) {
-      setPosts(formatPosts(data));
+      setPosts(data.map(formatPost));
     }
 
     setLoading(false);
+  };
+
+  const updateSinglePosts = (post: PostType) => {
+    setPosts((current) => {
+      const index = current.findIndex((item) => item.id === post.id);
+      if (index === -1) {
+        return current;
+      }
+
+      const updated = [...current];
+      updated[index] = post;
+      return updated;
+    });
   };
 
   useEffect(() => {
@@ -92,7 +88,9 @@ export function HomePage() {
     dispatch(setSearch(''));
   };
 
-  const items = posts.map((post) => <Post key={post.id} item={post} />);
+  const items = posts.map((post) => (
+    <Post key={post.id} handleUpadateSinglePost={updateSinglePosts} item={post} />
+  ));
 
   const padding = useMatches({
     base: 'xs',
@@ -128,9 +126,7 @@ export function HomePage() {
           </Group>
         </Group>
         {loading ? (
-          <Flex justify="center">
-            <Loader size="xl" />
-          </Flex>
+          Array.from({ length: 5 }).map((_, index) => <Post key={index} skeleton />)
         ) : items.length > 0 ? (
           items
         ) : (
