@@ -138,17 +138,17 @@ export function HomePage() {
       <Affix position={{ bottom: 20, right: 10 }} hiddenFrom="xs">
         <Stack gap={10}>
           {search ? (
-            <ActionIcon color="blue" radius="xl" size={35} onClick={clearSearch}>
-              <IconAdjustmentsOff stroke={1.5} size={15} />
+            <ActionIcon color="blue" radius="xl" size={40} onClick={clearSearch}>
+              <IconAdjustmentsOff stroke={1.5} size={20} />
             </ActionIcon>
           ) : (
-            <ActionIcon color="blue" radius="xl" size={35} onClick={handleOpenSearchModal}>
-              <IconSearch stroke={1.5} size={15} />
+            <ActionIcon color="blue" radius="xl" size={40} onClick={handleOpenSearchModal}>
+              <IconSearch stroke={1.5} size={20} />
             </ActionIcon>
           )}
           {user && (
-            <ActionIcon color="blue" radius="xl" size={35} onClick={() => navigate('/add-post')}>
-              <IconTextPlus stroke={1.5} size={15} />
+            <ActionIcon color="blue" radius="xl" size={40} onClick={() => navigate('/add-post')}>
+              <IconTextPlus stroke={1.5} size={20} />
             </ActionIcon>
           )}
         </Stack>

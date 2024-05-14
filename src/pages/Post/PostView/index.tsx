@@ -9,6 +9,8 @@ import { formatPostDate } from '@/lib/utils';
 import RichTextInput from '@/components/RichTextInput';
 import CommentForm from '../Comment/CommentForm';
 import CommentView from '@/pages/Post/Comment/CommentView';
+import { useAppSelector } from '@/store';
+import { selectUser } from '@/store/auth';
 
 const PostView = () => {
   const { id } = useParams();
@@ -45,6 +47,8 @@ const PostView = () => {
     base: 'none',
     md: 'lg',
   });
+
+  const user = useAppSelector(selectUser);
 
   return (
     <Page title={post?.title || 'Post'}>
@@ -83,7 +87,7 @@ const PostView = () => {
 
             <RichTextInput readonly content={post.content} />
 
-            <CommentForm post={post} refresh={fetchPost} />
+            {user && <CommentForm post={post} refresh={fetchPost} />}
             <CommentView comments={post.comments?.reverse() ?? []} />
           </SimpleGrid>
         </Box>
