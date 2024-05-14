@@ -4,7 +4,8 @@ import RequireAuth from '@/RequireAuth';
 import Authenticator from '@/pages/Auth';
 import RootLayout from '@/Layout';
 import Account from '@/pages/Account';
-import AddPost from '@/pages/AddPost';
+import AddPost from '@/pages/Post/AddPost';
+import PostView from '@/pages/Post/PostView';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
           {
             path: '/add-post',
             element: <AddPost />,
+          },
+          {
+            path: '/post/:id',
+            element: <PostView />,
           },
         ],
       },

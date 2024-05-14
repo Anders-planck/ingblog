@@ -91,12 +91,18 @@ export function Header() {
   const deleteAccount = async () => {
     await logout();
   };
+
   return (
     <div className={classes.header}>
       <Container className={classes.mainSection} size="md">
         <Group justify="space-between">
-          <IsaBlogLogo />
-
+          <Anchor
+            onClick={() => {
+              navigate('/');
+            }}
+          >
+            <IsaBlogLogo />
+          </Anchor>
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="xs" size="sm" />
 
           {user ? (
