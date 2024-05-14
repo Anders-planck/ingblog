@@ -88,7 +88,7 @@ const Content = () => {
 export default function App() {
   return (
     <Provider store={store}>
-      <MantineProvider theme={theme}>
+      <MantineProvider defaultColorScheme="dark" theme={theme}>
         <ModalsProvider>
           <Content />
         </ModalsProvider>

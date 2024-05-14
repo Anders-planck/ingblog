@@ -33,18 +33,28 @@ export function escapeHtml(unsafe: string) {
 }
 
 type RichTextInputProps = {
-  label: string;
+  label?: string;
   readonly?: boolean;
-  handleOnChange: (value: any) => void;
+  handleOnChange?: (value: any) => void;
   error?: string;
   content?: string;
+  placeholder?: string;
 };
 
-const RichTextInput = ({ label, readonly, handleOnChange, error, content }: RichTextInputProps) => {
+const RichTextInput = ({
+  label,
+  readonly,
+  handleOnChange,
+  placeholder,
+  error,
+  content,
+}: RichTextInputProps) => {
   const editor = useEditor({
     editable: !readonly,
     onUpdate({ editor: eu }) {
-      handleOnChange(eu.getJSON());
+      if (handleOnChange) {
+        handleOnChange(eu.getHTML());
+      }
     },
     extensions: [
       StarterKit.configure({ codeBlock: false }),
@@ -57,7 +67,7 @@ const RichTextInput = ({ label, readonly, handleOnChange, error, content }: Rich
       SubScript,
       Highlight,
       TextAlign.configure({ types: ['heading', 'paragraph'] }),
-      Placeholder.configure({ placeholder: 'This is placeholder' }),
+      Placeholder.configure({ placeholder: placeholder ?? 'write what you think 😉...' }),
       getTaskListExtension(TipTapTaskList),
       TaskItem.configure({
         nested: true,
@@ -155,10 +165,10 @@ const RichTextInput = ({ label, readonly, handleOnChange, error, content }: Rich
             <RichTextEditor.UnsetColor />
           </RichTextEditor.Toolbar>
         )}
-        <RichTextEditor.Content />
+        <RichTextEditor.Content style={{ border: 'none' }} />
       </RichTextEditor>
-      {error && (
-        <Text color="red" size="sm">
+      {!readonly && error && (
+        <Text c="red" size="sm">
           {error}
         </Text>
       )}

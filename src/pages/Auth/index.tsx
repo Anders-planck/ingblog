@@ -1,5 +1,5 @@
 import { Container, Flex } from '@mantine/core';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Page from '@/Layout/Page';
 import { AuthForm } from '@/components/Auth';

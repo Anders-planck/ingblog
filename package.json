@@ -20,6 +20,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@emotion/styled": "^11.11.5",
     "@hookform/resolvers": "^3.3.4",
     "@mantine/carousel": "^7.9.1",
     "@mantine/charts": "^7.9.1",
