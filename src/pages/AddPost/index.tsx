@@ -1,6 +1,17 @@
-import { Box, Button, Checkbox, Group, Select, Stack, TextInput, Title } from '@mantine/core';
+import {
+  Box,
+  Button,
+  Checkbox,
+  Group,
+  Select,
+  Stack,
+  TextInput,
+  Title,
+  useMatches,
+} from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabase';
 
 import Page from '@/Layout/Page';
@@ -17,6 +28,13 @@ const AddPost = () => {
   const [content, setContent] = useState<any>(null);
   const [errorContent, setErrorContent] = useState<string | null>(null);
   const user = useAppSelector(selectUser);
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const padding = useMatches({
+    base: 'xs',
+    md: 'none',
+  });
 
   const form = useForm({
     mode: 'uncontrolled',
@@ -48,9 +66,10 @@ const AddPost = () => {
 
   const handleSubmit = async (values: any) => {
     if (!user) return;
-
+    setIsSubmitting(true);
     if (!content) {
       setErrorContent('Content is required');
+      setIsSubmitting(false);
       return;
     }
 
@@ -68,6 +87,8 @@ const AddPost = () => {
     if (error) {
       console.error(error);
     }
+    setIsSubmitting(false);
+    navigate('/');
   };
 
   useEffect(() => {
@@ -76,56 +97,60 @@ const AddPost = () => {
 
   return (
     <Page title="Add Post">
-      <Title order={1}>Post</Title>
+      <Box p={padding}>
+        <Title order={1}>Post</Title>
 
-      <Box mt="lg">
-        <form onSubmit={form.onSubmit(handleSubmit)}>
-          <Stack>
-            <TextInput
-              withAsterisk
-              label="Title"
-              placeholder="Post title"
-              key={form.key('title')}
-              {...form.getInputProps('title')}
-            />
+        <Box mt="lg">
+          <form onSubmit={form.onSubmit(handleSubmit)}>
+            <Stack>
+              <TextInput
+                withAsterisk
+                label="Title"
+                placeholder="Post title"
+                key={form.key('title')}
+                {...form.getInputProps('title')}
+              />
 
-            <TextInput
-              withAsterisk
-              label="Image"
-              placeholder="Post image URL"
-              key={form.key('image')}
-              {...form.getInputProps('image')}
-            />
+              <TextInput
+                withAsterisk
+                label="Image"
+                placeholder="Post image URL"
+                key={form.key('image')}
+                {...form.getInputProps('image')}
+              />
 
-            <Select
-              label="Category"
-              placeholder="Post category"
-              data={categories}
-              key={form.key('category')}
-              {...form.getInputProps('category')}
-            />
+              <Select
+                label="Category"
+                placeholder="Post category"
+                data={categories}
+                key={form.key('category')}
+                {...form.getInputProps('category')}
+              />
 
-            <RichTextInput
-              label="Content"
-              key="content"
-              handleOnChange={(value) => setContent(value)}
-              //@ts-ignore
-              error={errorContent}
-              content={c}
-            />
+              <RichTextInput
+                label="Content"
+                key="content"
+                handleOnChange={(value) => setContent(value)}
+                //@ts-ignore
+                error={errorContent}
+                content={c}
+              />
 
-            <Checkbox
-              mt="md"
-              label="Do you want to publish this post?"
-              key={form.key('publish')}
-              {...form.getInputProps('publish', { type: 'checkbox' })}
-            />
+              <Checkbox
+                mt="md"
+                label="Do you want to publish this post?"
+                key={form.key('publish')}
+                {...form.getInputProps('publish', { type: 'checkbox' })}
+              />
 
-            <Group justify="flex-end" mt="md">
-              <Button type="submit">Submit</Button>
-            </Group>
-          </Stack>
-        </form>
+              <Group justify="flex-end" mt="md">
+                <Button type="submit" disabled={!form.isValid || isSubmitting}>
+                  {isSubmitting ? 'saving...' : 'save'}
+                </Button>
+              </Group>
+            </Stack>
+          </form>
+        </Box>
       </Box>
     </Page>
   );

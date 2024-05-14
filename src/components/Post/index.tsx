@@ -8,8 +8,11 @@ import {
   Badge,
   ActionIcon,
   rem,
+  useMatches,
+  Box,
 } from '@mantine/core';
 import { IconBookmark, IconHeart, IconShare } from '@tabler/icons-react';
+import { useNavigate } from 'react-router-dom';
 import classes from './Post.module.css';
 import { formatPostDate } from '@/lib/utils';
 import { Post as PostType } from '@/types/post';
@@ -20,32 +23,58 @@ type Props = {
 
 export function Post({ item }: Props) {
   const theme = useMantineTheme();
+  const paddingCard = useMatches({
+    base: 'none',
+    md: 'auto',
+  });
+  const withBorder = useMatches({
+    base: false,
+    md: true,
+  });
+  const padding = useMatches({
+    base: 'xs',
+    md: 'none',
+  });
+  const radius = useMatches({
+    base: 'none',
+    md: 'lg',
+  });
+  const navigate = useNavigate();
 
   return (
-    <Card withBorder padding="lg" radius="md" className={classes.card}>
+    <Card withBorder={withBorder} padding={paddingCard} radius={radius} className={classes.card}>
       {item.image && (
-        <Card.Section mb="sm">
+        <Card.Section>
           <Image src={item.image} alt={item.title} height={180} />
         </Card.Section>
       )}
 
-      <Badge w="fit-content" variant="light">
-        {item.category}
-      </Badge>
+      <Box px={padding} pt={padding}>
+        <Badge w="fit-content" variant="light">
+          {item.category}
+        </Badge>
 
-      <Text fw={700} className={classes.title} mt="xs">
-        {item.title}
-      </Text>
+        <Text
+          fw={700}
+          className={classes.title}
+          mt="xs"
+          onClick={() => {
+            navigate(`/post/${item.id}`);
+          }}
+        >
+          {item.title}
+        </Text>
 
-      <Group mt="lg">
-        <Avatar src={item.author.avatar} radius="sm" />
-        <div>
-          <Text fw={500}>{item.author.name}</Text>
-          <Text fz="xs" c="dimmed">
-            {formatPostDate(new Date(item.createdAt))}
-          </Text>
-        </div>
-      </Group>
+        <Group mt="sm" gap="xs">
+          <Avatar src={item.author.avatar} radius="sm" />
+          <div>
+            <Text fw={500}>{item.author.name}</Text>
+            <Text fz="xs" c="dimmed">
+              {formatPostDate(new Date(item.createdAt))}
+            </Text>
+          </div>
+        </Group>
+      </Box>
 
       <Card.Section className={classes.footer}>
         <Group justify="space-between">

@@ -1,6 +1,17 @@
-import { ActionIcon, Affix, Flex, Group, Loader, SimpleGrid, Stack, Title } from '@mantine/core';
+import {
+  ActionIcon,
+  Affix,
+  Flex,
+  Group,
+  Loader,
+  SimpleGrid,
+  Stack,
+  Title,
+  useMatches,
+} from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { IconAdjustmentsOff, IconSearch, IconTextPlus } from '@tabler/icons-react';
+import { useNavigate } from 'react-router-dom';
 import { Post } from '@/components/Post';
 import { supabase } from '@/lib/supabase';
 import { Post as PostType } from '@/types/post';
@@ -16,6 +27,7 @@ export function HomePage() {
   const dispatch = useAppDispatch();
   const search = useAppSelector(selectSearch);
   const user = useAppSelector(selectUser);
+  const navigate = useNavigate();
 
   const formatPosts = (data: any[]) =>
     data.map((post) => ({
@@ -33,7 +45,8 @@ export function HomePage() {
     setLoading(true);
     const { data, error } = await supabase
       .from('posts')
-      .select('*, profiles(full_name, avatar_url), likes:likes(*), comments:comments(*)');
+      .select('*, profiles(full_name, avatar_url), likes:likes(*), comments:comments(*)')
+      .order('created_at', { ascending: false });
 
     if (error) {
       console.error(error);
@@ -80,10 +93,21 @@ export function HomePage() {
   };
 
   const items = posts.map((post) => <Post key={post.id} item={post} />);
+
+  const padding = useMatches({
+    base: 'xs',
+    md: 'none',
+  });
+
+  const spacing = useMatches({
+    base: 'xs',
+    md: 'lg',
+  });
+
   return (
     <Page title="Posts">
-      <SimpleGrid cols={1} spacing="md">
-        <Group justify="space-between">
+      <SimpleGrid cols={1} spacing={spacing}>
+        <Group justify="space-between" p={padding}>
           <Title order={1}>Posts</Title>
           <Group visibleFrom="xs" gap={search ? 6 : 4}>
             {search ? (
@@ -97,7 +121,7 @@ export function HomePage() {
             )}
 
             {user && (
-              <ActionIcon color="blue" radius="md" size={40}>
+              <ActionIcon color="blue" radius="md" size={40} onClick={() => navigate('/add-post')}>
                 <IconTextPlus stroke={1.5} size={20} />
               </ActionIcon>
             )}
@@ -115,20 +139,20 @@ export function HomePage() {
           </Title>
         )}
       </SimpleGrid>
-      <Affix position={{ bottom: 40, right: 40 }} hiddenFrom="xs">
+      <Affix position={{ bottom: 20, right: 10 }} hiddenFrom="xs">
         <Stack gap={10}>
           {search ? (
-            <ActionIcon color="blue" radius="xl" size={55} onClick={clearSearch}>
-              <IconAdjustmentsOff stroke={1.5} size={25} />
+            <ActionIcon color="blue" radius="xl" size={35} onClick={clearSearch}>
+              <IconAdjustmentsOff stroke={1.5} size={15} />
             </ActionIcon>
           ) : (
-            <ActionIcon color="blue" radius="xl" size={55} onClick={handleOpenSearchModal}>
-              <IconSearch stroke={1.5} size={25} />
+            <ActionIcon color="blue" radius="xl" size={35} onClick={handleOpenSearchModal}>
+              <IconSearch stroke={1.5} size={15} />
             </ActionIcon>
           )}
           {user && (
-            <ActionIcon color="blue" radius="xl" size={55}>
-              <IconTextPlus stroke={1.5} size={25} />
+            <ActionIcon color="blue" radius="xl" size={35} onClick={() => navigate('/add-post')}>
+              <IconTextPlus stroke={1.5} size={15} />
             </ActionIcon>
           )}
         </Stack>

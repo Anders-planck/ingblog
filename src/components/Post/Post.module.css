@@ -6,6 +6,12 @@
     font-family:
             Greycliff CF,
             var(--mantine-font-family);
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.title:hover {
+    text-decoration: underline;
 }
 
 .footer {
