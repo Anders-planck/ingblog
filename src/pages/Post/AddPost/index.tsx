@@ -19,10 +19,6 @@ import RichTextInput from '@/components/RichTextInput';
 import { useAppSelector } from '@/store';
 import { selectUser } from '@/store/auth';
 
-const c =
-  '<h2 style="text-align: center;">Welcome to Isa-blog</h2>' +
-  '<p><code>write any think you want here</code></p>';
-
 const AddPost = () => {
   const [categories, setCategories] = useState<string[]>([]);
   const [content, setContent] = useState<any>(null);
@@ -95,6 +91,12 @@ const AddPost = () => {
     handleCategory();
   }, []);
 
+  useEffect(() => {
+    if (!user) {
+      navigate('/auth');
+    }
+  }, []);
+
   return (
     <Page title="Add Post">
       <Box p={padding}>
@@ -133,7 +135,7 @@ const AddPost = () => {
                 handleOnChange={(value) => setContent(value)}
                 //@ts-ignore
                 error={errorContent}
-                placeholder={c}
+                placeholder="write your post content here"
                 content=""
               />
 
