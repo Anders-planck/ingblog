@@ -32,8 +32,8 @@ import cx from 'clsx';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import classes from './Header.module.css';
-import { useAppSelector } from '@/store';
-import { selectProfile, selectUser } from '@/store/auth';
+import { useAppDispatch, useAppSelector } from '@/store';
+import { selectProfile, selectUser, setProfile, setSession, setUser } from '@/store/auth';
 import { supabase } from '@/lib/supabase';
 import { ConfirmationModal } from '@/components/ConfirmationModal';
 import IsaBlogLogo from '@/components/Logo';
@@ -64,6 +64,7 @@ export function Header() {
   const user = useAppSelector(selectUser);
   const profile = useAppSelector(selectProfile);
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
 
   const links = BlogsLinks.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
@@ -85,6 +86,9 @@ export function Header() {
 
   const logout = async () => {
     await supabase.auth.signOut();
+    dispatch(setUser(null));
+    dispatch(setProfile(null));
+    dispatch(setSession(null));
     navigate('/auth');
   };
 

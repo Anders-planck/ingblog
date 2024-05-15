@@ -19,16 +19,20 @@ import { upperFirst } from '@mantine/hooks';
 import { IconInfoCircle, IconMoonStars, IconSun, IconTrash } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '@/store';
-import { selectUser, setProfile } from '@/store/auth';
+import { selectUser, setProfile, setSession, setUser } from '@/store/auth';
 import { supabase } from '@/lib/supabase';
 import { ConfirmationModal } from '@/components/ConfirmationModal';
 
 const UpdateInfoUser = () => {
   const user = useAppSelector(selectUser);
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
 
   const logout = async () => {
     await supabase.auth.signOut();
+    dispatch(setUser(null));
+    dispatch(setProfile(null));
+    dispatch(setSession(null));
     navigate('/auth');
   };
 
