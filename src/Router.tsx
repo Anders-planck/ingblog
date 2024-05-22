@@ -7,7 +7,7 @@ import Account from '@/pages/Account';
 import AddPost from '@/pages/Post/AddPost';
 import PostView from '@/pages/Post/PostView';
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: '/auth',
     element: <Authenticator />,
