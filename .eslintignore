@@ -5,5 +5,5 @@
 *.d.mts
 *.module.css
 vite.config.ts
-coverage/**/*
 coverage
+storybook-static
