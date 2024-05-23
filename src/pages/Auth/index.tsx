@@ -5,6 +5,7 @@ import Page from '@/Layout/Page';
 import { AuthForm } from '@/components/Auth';
 import { useAppSelector } from '@/store';
 import { selectIsAuthenticated } from '@/store/auth';
+import { HOME_ROUTE } from '@/routes';
 
 const Authenticator = () => {
   const isAuthenticated = useAppSelector(selectIsAuthenticated);
@@ -12,7 +13,7 @@ const Authenticator = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/');
+      navigate(HOME_ROUTE);
     }
   }, [isAuthenticated]);
 

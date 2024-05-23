@@ -23,7 +23,6 @@ import {
   IconChevronDown,
   IconHeart,
   IconLogout,
-  IconMessage,
   IconSettings,
   IconStar,
   IconTrash,
@@ -37,22 +36,26 @@ import { selectProfile, selectUser, setProfile, setSession, setUser } from '@/st
 import { supabase } from '@/lib/supabase';
 import { ConfirmationModal } from '@/components/ConfirmationModal';
 import IsaBlogLogo from '@/components/Logo';
+import {
+  ACCOUNT_POSTS_LIKED_ROUTE,
+  ACCOUNT_SAVED_POSTS_ROUTE,
+  ACCOUNT_SETTINGS_ROUTE,
+  AUTH_ROUTE,
+  HOME_ROUTE,
+} from '@/routes';
 
 const BlogsLinks = [
   {
     icon: IconHeart,
     title: 'Likes posts',
     description: 'Posts you liked',
+    link: ACCOUNT_POSTS_LIKED_ROUTE,
   },
   {
     icon: IconStar,
     title: 'Saved posts',
     description: 'Posts you saved',
-  },
-  {
-    icon: IconMessage,
-    title: 'Your comments',
-    description: 'Comments you left',
+    link: ACCOUNT_SAVED_POSTS_ROUTE,
   },
 ];
 
@@ -67,7 +70,14 @@ export function Header() {
   const dispatch = useAppDispatch();
 
   const links = BlogsLinks.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
+    <UnstyledButton
+      className={classes.subLink}
+      key={item.title}
+      onClick={() => {
+        navigate(item.link);
+        closeDrawer();
+      }}
+    >
       <Group wrap="nowrap" align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
           <item.icon style={{ width: rem(22), height: rem(22) }} color={theme.colors.blue[6]} />
@@ -89,7 +99,7 @@ export function Header() {
     dispatch(setUser(null));
     dispatch(setProfile(null));
     dispatch(setSession(null));
-    navigate('/auth');
+    navigate(AUTH_ROUTE);
   };
 
   const deleteAccount = async () => {
@@ -102,7 +112,7 @@ export function Header() {
         <Group justify="space-between">
           <Anchor
             onClick={() => {
-              navigate('/');
+              navigate(HOME_ROUTE);
             }}
           >
             <IsaBlogLogo />
@@ -147,6 +157,7 @@ export function Header() {
                       stroke={1.5}
                     />
                   }
+                  onClick={() => navigate(ACCOUNT_POSTS_LIKED_ROUTE)}
                 >
                   Liked posts
                 </Menu.Item>
@@ -158,19 +169,9 @@ export function Header() {
                       stroke={1.5}
                     />
                   }
+                  onClick={() => navigate(ACCOUNT_SAVED_POSTS_ROUTE)}
                 >
                   Saved posts
-                </Menu.Item>
-                <Menu.Item
-                  leftSection={
-                    <IconMessage
-                      style={{ width: rem(16), height: rem(16) }}
-                      color={theme.colors.blue[6]}
-                      stroke={1.5}
-                    />
-                  }
-                >
-                  Your comments
                 </Menu.Item>
 
                 <Menu.Label>Settings</Menu.Label>
@@ -178,7 +179,7 @@ export function Header() {
                   leftSection={
                     <IconSettings style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
                   }
-                  onClick={() => navigate('/account')}
+                  onClick={() => navigate(ACCOUNT_SETTINGS_ROUTE)}
                 >
                   Account settings
                 </Menu.Item>
@@ -217,7 +218,7 @@ export function Header() {
             <Group visibleFrom="sm">
               <Anchor
                 onClick={() => {
-                  navigate('/auth');
+                  navigate(AUTH_ROUTE);
                 }}
               >
                 <Button>Let&apos;s go</Button>
@@ -241,7 +242,7 @@ export function Header() {
 
           <Anchor
             onClick={() => {
-              navigate('/');
+              navigate(HOME_ROUTE);
               closeDrawer();
             }}
             className={classes.link_mega}
@@ -266,7 +267,7 @@ export function Header() {
               <Group justify="center" grow pb="xl" px="md">
                 <Anchor
                   onClick={() => {
-                    navigate('/auth');
+                    navigate(AUTH_ROUTE);
                     closeDrawer();
                   }}
                   style={{
@@ -280,7 +281,7 @@ export function Header() {
           ) : (
             <Anchor
               onClick={() => {
-                navigate('/account');
+                navigate(ACCOUNT_SETTINGS_ROUTE);
                 closeDrawer();
               }}
             >

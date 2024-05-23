@@ -11,6 +11,7 @@ import { openSearchModal, selectSearch, setSearch } from '@/store/app/search';
 import SearchModal from '@/components/SearchModal';
 import { selectUser } from '@/store/auth';
 import { formatPost } from '@/pages/Post/utils';
+import { ADD_POST_ROUTE } from '@/routes';
 
 export function HomePage() {
   const [posts, setPosts] = useState<PostType[]>([]);
@@ -89,7 +90,7 @@ export function HomePage() {
   };
 
   const items = posts.map((post) => (
-    <Post key={post.id} handleUpadateSinglePost={updateSinglePosts} item={post} />
+    <Post key={post.id} handleUpdateSinglePost={updateSinglePosts} skeleton={false} item={post} />
   ));
 
   const padding = useMatches({
@@ -119,7 +120,12 @@ export function HomePage() {
             )}
 
             {user && (
-              <ActionIcon color="blue" radius="md" size={40} onClick={() => navigate('/add-post')}>
+              <ActionIcon
+                color="blue"
+                radius="md"
+                size={40}
+                onClick={() => navigate(ADD_POST_ROUTE)}
+              >
                 <IconTextPlus stroke={1.5} size={20} />
               </ActionIcon>
             )}
@@ -147,7 +153,7 @@ export function HomePage() {
             </ActionIcon>
           )}
           {user && (
-            <ActionIcon color="blue" radius="xl" size={40} onClick={() => navigate('/add-post')}>
+            <ActionIcon color="blue" radius="xl" size={40} onClick={() => navigate(ADD_POST_ROUTE)}>
               <IconTextPlus stroke={1.5} size={20} />
             </ActionIcon>
           )}

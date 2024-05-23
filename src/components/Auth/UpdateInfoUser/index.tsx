@@ -22,6 +22,7 @@ import { useAppDispatch, useAppSelector } from '@/store';
 import { selectUser, setProfile, setSession, setUser } from '@/store/auth';
 import { supabase } from '@/lib/supabase';
 import { ConfirmationModal } from '@/components/ConfirmationModal';
+import { AUTH_ROUTE } from '@/routes';
 
 const UpdateInfoUser = () => {
   const user = useAppSelector(selectUser);
@@ -33,7 +34,7 @@ const UpdateInfoUser = () => {
     dispatch(setUser(null));
     dispatch(setProfile(null));
     dispatch(setSession(null));
-    navigate('/auth');
+    navigate(AUTH_ROUTE);
   };
 
   const deleteAccount = async () => {
