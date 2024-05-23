@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import {HOME_ROUTE} from "./src/routes";
 
 export default defineConfig({
-  base:'/',
+  base: '/',
   plugins: [react(), tsconfigPaths()],
   preview:{
     port:3000,

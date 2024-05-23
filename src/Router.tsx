@@ -6,17 +6,18 @@ import RootLayout from '@/Layout';
 import Account from '@/pages/Account';
 import AddPost from '@/pages/Post/AddPost';
 import PostView from '@/pages/Post/PostView';
+import { ACCOUNT_ROUTE, ADD_POST_ROUTE, AUTH_ROUTE, HOME_ROUTE, POST_ROUTE } from '@/routes';
 
 export const router = createBrowserRouter([
   {
-    path: '/auth',
+    path: AUTH_ROUTE,
     element: <Authenticator />,
   },
   {
     element: <RequireAuth />,
     children: [
       {
-        path: '/',
+        path: HOME_ROUTE,
         element: <RootLayout />,
         children: [
           {
@@ -24,15 +25,15 @@ export const router = createBrowserRouter([
             element: <HomePage />,
           },
           {
-            path: '/account',
+            path: `${ACCOUNT_ROUTE}`,
             element: <Account />,
           },
           {
-            path: '/add-post',
+            path: ADD_POST_ROUTE,
             element: <AddPost />,
           },
           {
-            path: '/post/:id',
+            path: `${POST_ROUTE}/:id`,
             element: <PostView />,
           },
         ],
