@@ -1,8 +1,9 @@
 import { Anchor, Container, Group, Text } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 import classes from './Footer.module.css';
+import { HOME_ROUTE } from '@/routes';
 
-const links = [{ link: '/', label: 'Home' }];
+const links = [{ link: HOME_ROUTE, label: 'Home' }];
 
 export function Footer() {
   const navigate = useNavigate();

@@ -28,11 +28,12 @@ import { Post as PostType } from '@/types/post';
 import { supabase } from '@/lib/supabase';
 import { useAppSelector } from '@/store';
 import { selectUser } from '@/store/auth';
+import { POST_ROUTE } from '@/routes';
 
 type Props =
   | {
       item: PostType;
-      handleUpadateSinglePost: (post: PostType) => void;
+      handleUpdateSinglePost: (post: PostType) => void;
       skeleton?: false;
     }
   | {
@@ -43,9 +44,9 @@ export function Post({ skeleton, ...props }: Props) {
   const theme = useMantineTheme();
 
   const item = (skeleton ? {} : (props as any).item) as PostType;
-  const handleUpadateSinglePost = (
-    skeleton ? () => {} : (props as any).handleUpadateSinglePost
-  ) as (post: PostType) => void;
+  const handleUpdateSinglePost = (skeleton ? () => {} : (props as any).handleUpdateSinglePost) as (
+    post: PostType
+  ) => void;
 
   const paddingCard = useMatches({
     base: 'none',
@@ -70,6 +71,8 @@ export function Post({ skeleton, ...props }: Props) {
   const user = useAppSelector(selectUser);
 
   const getIsLiked = async () => {
+    if (!user) return false;
+
     const { data, error } = await supabase
       .from('likes')
       .select('id')
@@ -100,7 +103,7 @@ export function Post({ skeleton, ...props }: Props) {
         console.error(error);
         return;
       }
-      handleUpadateSinglePost({
+      handleUpdateSinglePost({
         ...item,
         likes: item.likes?.filter((like) => like.authorId !== user?.id),
       });
@@ -121,7 +124,7 @@ export function Post({ skeleton, ...props }: Props) {
       }
 
       if (data) {
-        handleUpadateSinglePost({
+        handleUpdateSinglePost({
           ...item,
           likes: [
             ...(item.likes ?? []),
@@ -140,6 +143,7 @@ export function Post({ skeleton, ...props }: Props) {
   };
 
   const getIsBookmarked = async () => {
+    if (!user) return false;
     const { data, error } = await supabase
       .from('bookmarks')
       .select('id')
@@ -186,7 +190,7 @@ export function Post({ skeleton, ...props }: Props) {
       }
 
       if (data) {
-        handleUpadateSinglePost({
+        handleUpdateSinglePost({
           ...item,
           bookmarks: [
             ...(item.bookmarks ?? []),
@@ -210,7 +214,7 @@ export function Post({ skeleton, ...props }: Props) {
     getIsBookmarked().then((data) => {
       setIsBookmarked(data);
     });
-  }, []);
+  }, [user]);
 
   if (skeleton) {
     return (
@@ -242,7 +246,7 @@ export function Post({ skeleton, ...props }: Props) {
           className={classes.title}
           mt="xs"
           onClick={() => {
-            navigate(`/post/${item.id}`);
+            navigate(`${POST_ROUTE}/${item.id}`);
           }}
         >
           {item.title}
@@ -324,7 +328,7 @@ export function Post({ skeleton, ...props }: Props) {
                 variant="subtle"
                 color="gray"
                 onClick={() => {
-                  navigate(`/post/${item.id}?#comments`);
+                  navigate(`${POST_ROUTE}/${item.id}?#comments`);
                 }}
               >
                 <IconMessagePlus

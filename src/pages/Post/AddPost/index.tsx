@@ -18,6 +18,7 @@ import Page from '@/Layout/Page';
 import RichTextInput from '@/components/RichTextInput';
 import { useAppSelector } from '@/store';
 import { selectUser } from '@/store/auth';
+import { AUTH_ROUTE, HOME_ROUTE } from '@/routes';
 
 const AddPost = () => {
   const [categories, setCategories] = useState<string[]>([]);
@@ -84,7 +85,7 @@ const AddPost = () => {
       console.error(error);
     }
     setIsSubmitting(false);
-    navigate('/');
+    navigate(HOME_ROUTE);
   };
 
   useEffect(() => {
@@ -93,7 +94,7 @@ const AddPost = () => {
 
   useEffect(() => {
     if (!user) {
-      navigate('/auth');
+      navigate(AUTH_ROUTE);
     }
   }, []);
 
