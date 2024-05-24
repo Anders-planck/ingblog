@@ -1,8 +1,10 @@
 import '@mantine/core/styles.css';
+import '@mantine/notifications/styles.css';
 import { LoadingOverlay, MantineProvider } from '@mantine/core';
 import { Provider } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { ModalsProvider } from '@mantine/modals';
+import { Notifications } from '@mantine/notifications';
 import { Router } from '@/Router';
 import { theme } from '@/theme';
 import store, { useAppDispatch, useAppSelector } from '@/store';
@@ -90,6 +92,7 @@ export default function App() {
     <Provider store={store}>
       <MantineProvider defaultColorScheme="dark" theme={theme}>
         <ModalsProvider>
+          <Notifications />
           <Content />
         </ModalsProvider>
       </MantineProvider>

@@ -22,18 +22,23 @@ import {
 } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { notifications } from '@mantine/notifications';
 import classes from './Post.module.css';
 import { formatPostDate } from '@/lib/utils';
 import { Post as PostType } from '@/types/post';
-import { supabase } from '@/lib/supabase';
 import { useAppSelector } from '@/store';
 import { selectUser } from '@/store/auth';
 import { POST_ROUTE } from '@/routes';
+import {
+  useGetIsBookmarkedToUserQuery,
+  useGetIsLikedToUserQuery,
+  useToggleBookmarkPostMutation,
+  useToggleLikePostMutation,
+} from '@/services/posts';
 
 type Props =
   | {
       item: PostType;
-      handleUpdateSinglePost: (post: PostType) => void;
       skeleton?: false;
     }
   | {
@@ -44,9 +49,6 @@ export function Post({ skeleton, ...props }: Props) {
   const theme = useMantineTheme();
 
   const item = (skeleton ? {} : (props as any).item) as PostType;
-  const handleUpdateSinglePost = (skeleton ? () => {} : (props as any).handleUpdateSinglePost) as (
-    post: PostType
-  ) => void;
 
   const paddingCard = useMatches({
     base: 'none',
@@ -64,161 +66,85 @@ export function Post({ skeleton, ...props }: Props) {
     base: 'none',
     md: 'lg',
   });
-  const [isLiked, setIsLiked] = useState(false);
-  const [isBookmarked, setIsBookmarked] = useState(false);
 
   const navigate = useNavigate();
   const user = useAppSelector(selectUser);
 
-  const getIsLiked = async () => {
-    if (!user) return false;
-
-    const { data, error } = await supabase
-      .from('likes')
-      .select('id')
-      .eq('postId', item.id)
-      .eq('authorId', user?.id);
-
-    if (error) {
-      console.error(error);
+  const { data: isLikedRes } = useGetIsLikedToUserQuery(
+    {
+      postId: item.id as string,
+      authorId: user?.id as string,
+    },
+    {
+      skip: !user || !item.id,
     }
+  );
 
-    if (data) {
-      return data.length > 0;
+  const { data: isBookMarkRes } = useGetIsBookmarkedToUserQuery(
+    {
+      postId: item.id as string,
+      authorId: user?.id as string,
+    },
+    {
+      skip: !user || !item.id,
     }
+  );
 
-    return false;
-  };
+  const [isLiked, setIsLiked] = useState(isLikedRes ?? false);
+  const [isBookmarked, setIsBookmarked] = useState(isBookMarkRes ?? false);
+
+  const [toggleBookmarkPost] = useToggleBookmarkPostMutation();
+  const [toggleLikePost] = useToggleLikePostMutation();
+
   const toggleLikePosts = async () => {
     if (!user) return;
-
-    if (isLiked) {
-      const { error } = await supabase
-        .from('likes')
-        .delete()
-        .eq('postId', item.id)
-        .eq('authorId', user?.id);
-
-      if (error) {
-        console.error(error);
-        return;
-      }
-      handleUpdateSinglePost({
-        ...item,
-        likes: item.likes?.filter((like) => like.authorId !== user?.id),
+    const { error } = await toggleLikePost({
+      isLiked,
+      postId: item.id,
+      authorId: user.id,
+    });
+    if (error) {
+      notifications.show({
+        title: 'Sorry',
+        message: 'Something wrong 🤥',
+        color: 'red',
       });
-    } else {
-      const { data, error } = await supabase
-        .from('likes')
-        .insert([
-          {
-            postId: item.id,
-            authorId: user?.id,
-          },
-        ])
-        .select('*');
-
-      if (error) {
-        console.error(error);
-        return;
-      }
-
-      if (data) {
-        handleUpdateSinglePost({
-          ...item,
-          likes: [
-            ...(item.likes ?? []),
-            ...data.map((like) => ({
-              authorId: like.authorId,
-              id: like.id,
-              postId: like.postId,
-              createdAt: like.createdAt,
-            })),
-          ],
-        });
-      }
+      return;
     }
-
     setIsLiked(!isLiked);
   };
 
-  const getIsBookmarked = async () => {
-    if (!user) return false;
-    const { data, error } = await supabase
-      .from('bookmarks')
-      .select('id')
-      .eq('postId', item.id)
-      .eq('authorId', user?.id);
-
-    if (error) {
-      console.error(error);
-    }
-
-    if (data) {
-      return data.length > 0;
-    }
-
-    return false;
-  };
   const toggleBookmarkPosts = async () => {
     if (!user) return;
+    const { error } = await toggleBookmarkPost({
+      isBookmarked,
+      postId: item.id,
+      authorId: user.id,
+    });
 
-    if (isBookmarked) {
-      const { error } = await supabase
-        .from('bookmarks')
-        .delete()
-        .eq('postId', item.id)
-        .eq('authorId', user?.id);
-
-      if (error) {
-        console.error(error);
-      }
-    } else {
-      const { data, error } = await supabase
-        .from('bookmarks')
-        .insert([
-          {
-            postId: item.id,
-            authorId: user?.id,
-          },
-        ])
-        .select('*');
-
-      if (error) {
-        console.error(error);
-        return;
-      }
-
-      if (data) {
-        handleUpdateSinglePost({
-          ...item,
-          bookmarks: [
-            ...(item.bookmarks ?? []),
-            ...data.map((bookmark) => ({
-              authorId: bookmark.authorId,
-              id: bookmark.id,
-              postId: bookmark.postId,
-              createdAt: bookmark.createdAt,
-            })),
-          ],
-        });
-      }
+    if (error) {
+      notifications.show({
+        title: 'Sorry',
+        message: 'Something wrong 🤥',
+        color: 'red',
+      });
+      return;
     }
     setIsBookmarked(!isBookmarked);
   };
 
   useEffect(() => {
-    getIsLiked().then((data) => {
-      setIsLiked(data);
-    });
-    getIsBookmarked().then((data) => {
-      setIsBookmarked(data);
-    });
-  }, [user]);
+    if (isLikedRes !== undefined) {
+      setIsLiked(isLikedRes);
+    }
+    if (isBookMarkRes !== undefined) {
+      setIsBookmarked(isBookMarkRes);
+    }
+  }, [isLikedRes, isBookMarkRes]);
 
   if (skeleton) {
     return (
-      <Box p={padding}>
+      <Box p={padding} id={`post-skeleton-${item.id}`}>
         <Skeleton height={60} circle mb="xs" />
         <Skeleton height={180} radius="sm" />
         <Skeleton height={20} mt={6} radius="xl" />
@@ -229,7 +155,13 @@ export function Post({ skeleton, ...props }: Props) {
     );
   }
   return (
-    <Card withBorder={withBorder} padding={paddingCard} radius={radius} className={classes.card}>
+    <Card
+      id={`post-${item.id}`}
+      withBorder={withBorder}
+      padding={paddingCard}
+      radius={radius}
+      className={classes.card}
+    >
       {item.image && (
         <Card.Section>
           <Image src={item.image} alt={item.title} height={180} />

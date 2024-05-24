@@ -82,7 +82,7 @@ const AddPost = () => {
     ]);
 
     if (error) {
-      console.error(error);
+      return;
     }
     setIsSubmitting(false);
     navigate(HOME_ROUTE);

@@ -1,9 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import { Avatar, Box, Group, Image, SimpleGrid, Text, Title, useMatches } from '@mantine/core';
-import { supabase } from '@/lib/supabase';
-import { Post as PostType } from '@/types/post';
-import { formatPost } from '@/pages/Post/utils';
 import Page from '@/Layout/Page';
 import { formatPostDate } from '@/lib/utils';
 import RichTextInput from '@/components/RichTextInput';
@@ -11,32 +7,14 @@ import CommentForm from '../Comment/CommentForm';
 import CommentView from '@/pages/Post/Comment/CommentView';
 import { useAppSelector } from '@/store';
 import { selectUser } from '@/store/auth';
+import { useGetPostQuery } from '@/services/posts';
 
 const PostView = () => {
   const { id } = useParams();
-  const [post, setPost] = useState<PostType | null>(null);
 
-  const fetchPost = async () => {
-    const { data, error } = await supabase
-      .from('posts')
-      .select(
-        '*, profiles(full_name, avatar_url), likes:likes(*), bookmarks:bookmarks(*), comments:comments(*, profiles(full_name, avatar_url, id))'
-      )
-      .eq('id', id)
-      .single();
-
-    if (error) {
-      console.error(error);
-    }
-
-    if (data) {
-      setPost(formatPost(data));
-    }
-  };
-
-  useEffect(() => {
-    fetchPost();
-  }, []);
+  const { data: post } = useGetPostQuery({
+    postId: id as string,
+  });
 
   const padding = useMatches({
     base: 'xs',
@@ -87,7 +65,7 @@ const PostView = () => {
 
             <RichTextInput readonly content={post.content} />
 
-            {user && <CommentForm post={post} refresh={fetchPost} />}
+            {user && <CommentForm post={post} />}
             <CommentView comments={post.comments?.reverse() ?? []} />
           </SimpleGrid>
         </Box>

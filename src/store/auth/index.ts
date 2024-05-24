@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Session } from '@supabase/supabase-js';
 import { RootState } from '@/store';
 
-interface AuthState {
+export interface AuthState {
   user: any | null;
   session: Session | null;
   loginAttempted: boolean;

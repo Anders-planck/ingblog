@@ -1,85 +1,25 @@
 import { ActionIcon, Affix, Group, SimpleGrid, Stack, Title, useMatches } from '@mantine/core';
-import { useEffect, useState } from 'react';
 import { IconAdjustmentsOff, IconSearch, IconTextPlus } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import { Post } from '@/components/Post';
-import { supabase } from '@/lib/supabase';
-import { Post as PostType } from '@/types/post';
 import Page from '@/Layout/Page';
 import { useAppDispatch, useAppSelector } from '@/store';
 import { openSearchModal, selectSearch, setSearch } from '@/store/app/search';
 import SearchModal from '@/components/SearchModal';
 import { selectUser } from '@/store/auth';
-import { formatPost } from '@/pages/Post/utils';
 import { ADD_POST_ROUTE } from '@/routes';
+import { useGetPostsQuery } from '@/services/posts';
 
 export function HomePage() {
-  const [posts, setPosts] = useState<PostType[]>([]);
-  const [loading, setLoading] = useState(true);
+  //const [loading, setLoading] = useState(true);
   const dispatch = useAppDispatch();
   const search = useAppSelector(selectSearch);
   const user = useAppSelector(selectUser);
   const navigate = useNavigate();
 
-  const fetchPosts = async () => {
-    setLoading(true);
-    const { data, error } = await supabase
-      .from('posts')
-      .select(
-        '*, profiles(full_name, avatar_url), likes:likes(*), bookmarks:bookmarks(*), comments:comments(*, profiles(full_name, avatar_url, id))'
-      )
-      .order('created_at', { ascending: false });
-
-    if (error) {
-      console.error(error);
-    }
-
-    if (data) {
-      setPosts(data.map(formatPost));
-    }
-    setLoading(false);
-  };
-
-  const handleSearch = async () => {
-    setLoading(true);
-    const { data, error } = await supabase
-      .from('posts')
-      .select(
-        '*, profiles(full_name, avatar_url), likes:likes(*), bookmarks:bookmarks(*), comments:comments(*, profiles(full_name, avatar_url, id))'
-      )
-      .ilike('title', `%${search}%`);
-
-    if (error) {
-      console.error(error);
-    }
-
-    if (data) {
-      setPosts(data.map(formatPost));
-    }
-
-    setLoading(false);
-  };
-
-  const updateSinglePosts = (post: PostType) => {
-    setPosts((current) => {
-      const index = current.findIndex((item) => item.id === post.id);
-      if (index === -1) {
-        return current;
-      }
-
-      const updated = [...current];
-      updated[index] = post;
-      return updated;
-    });
-  };
-
-  useEffect(() => {
-    if (search) {
-      handleSearch();
-    } else {
-      fetchPosts();
-    }
-  }, [search]);
+  const { data, isLoading } = useGetPostsQuery({
+    title: search,
+  });
 
   const handleOpenSearchModal = () => {
     dispatch(openSearchModal());
@@ -89,9 +29,7 @@ export function HomePage() {
     dispatch(setSearch(''));
   };
 
-  const items = posts.map((post) => (
-    <Post key={post.id} handleUpdateSinglePost={updateSinglePosts} skeleton={false} item={post} />
-  ));
+  const items = data?.map((post) => <Post key={post.id} skeleton={false} item={post} />);
 
   const padding = useMatches({
     base: 'xs',
@@ -105,7 +43,7 @@ export function HomePage() {
 
   return (
     <Page title="Posts">
-      <SimpleGrid cols={1} spacing={spacing}>
+      <SimpleGrid cols={1} spacing={spacing} id="posts-list">
         <Group justify="space-between" p={padding}>
           <Title order={1}>Posts</Title>
           <Group visibleFrom="xs" gap={search ? 6 : 4}>
@@ -131,9 +69,9 @@ export function HomePage() {
             )}
           </Group>
         </Group>
-        {loading ? (
+        {isLoading ? (
           Array.from({ length: 5 }).map((_, index) => <Post key={index} skeleton />)
-        ) : items.length > 0 ? (
+        ) : items && items.length > 0 ? (
           items
         ) : (
           <Title order={5} mt="lg" style={{ textAlign: 'center' }}>
