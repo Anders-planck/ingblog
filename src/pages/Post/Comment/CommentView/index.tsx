@@ -10,7 +10,7 @@ const CommentView = ({ comments }: Props) => {
 
   return (
     <SimpleGrid cols={1} spacing="xs" id="comments">
-      <Title order={3} mt="lg">
+      <Title order={2} fw={900}>
         Comments
       </Title>
 

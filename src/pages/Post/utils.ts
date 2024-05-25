@@ -9,6 +9,7 @@ export const formatPost = (post: any) =>
     },
     createdAt: new Date(post.created_at).toISOString(),
     likes: post.likes,
+    bookmarks: post.bookmarks,
     comments: post.comments.map(formatComment),
   }) as PostType;
 

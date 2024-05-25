@@ -31,7 +31,7 @@ const SearchModal = () => {
           .ilike('title', `%${searchContent}%`);
 
         if (error) {
-          console.error(error);
+          return;
         }
 
         if (data) {

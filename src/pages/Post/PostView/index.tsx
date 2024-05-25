@@ -1,9 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import { Avatar, Box, Group, Image, SimpleGrid, Text, Title, useMatches } from '@mantine/core';
-import { supabase } from '@/lib/supabase';
-import { Post as PostType } from '@/types/post';
-import { formatPost } from '@/pages/Post/utils';
 import Page from '@/Layout/Page';
 import { formatPostDate } from '@/lib/utils';
 import RichTextInput from '@/components/RichTextInput';
@@ -11,32 +7,15 @@ import CommentForm from '../Comment/CommentForm';
 import CommentView from '@/pages/Post/Comment/CommentView';
 import { useAppSelector } from '@/store';
 import { selectUser } from '@/store/auth';
+import { useGetPostQuery } from '@/services/posts';
+import { Post } from '@/components/Post';
 
 const PostView = () => {
   const { id } = useParams();
-  const [post, setPost] = useState<PostType | null>(null);
 
-  const fetchPost = async () => {
-    const { data, error } = await supabase
-      .from('posts')
-      .select(
-        '*, profiles(full_name, avatar_url), likes:likes(*), bookmarks:bookmarks(*), comments:comments(*, profiles(full_name, avatar_url, id))'
-      )
-      .eq('id', id)
-      .single();
-
-    if (error) {
-      console.error(error);
-    }
-
-    if (data) {
-      setPost(formatPost(data));
-    }
-  };
-
-  useEffect(() => {
-    fetchPost();
-  }, []);
+  const { data: post, isLoading } = useGetPostQuery({
+    postId: id as string,
+  });
 
   const padding = useMatches({
     base: 'xs',
@@ -50,6 +29,14 @@ const PostView = () => {
 
   const user = useAppSelector(selectUser);
 
+  if (isLoading) {
+    return (
+      <Page title="Post">
+        <Post skeleton />
+      </Page>
+    );
+  }
+
   return (
     <Page title={post?.title || 'Post'}>
       {post && (
@@ -57,7 +44,7 @@ const PostView = () => {
           {post.image && <Image src={post.image} alt={post.title} height={180} radius={radius} />}
 
           <SimpleGrid cols={1} spacing="xs" p={padding}>
-            <Title order={1} mt="sm">
+            <Title order={1} fw={900} mt="sm">
               {post.title}
             </Title>
 
@@ -87,8 +74,10 @@ const PostView = () => {
 
             <RichTextInput readonly content={post.content} />
 
-            {user && <CommentForm post={post} refresh={fetchPost} />}
-            <CommentView comments={post.comments?.reverse() ?? []} />
+            {user && <CommentForm post={post} />}
+            {post.comments && post.comments.length > 0 && (
+              <CommentView comments={[...post.comments].reverse()} />
+            )}
           </SimpleGrid>
         </Box>
       )}
