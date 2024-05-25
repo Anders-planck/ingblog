@@ -33,39 +33,39 @@ export const fakePost: Post = {
 };
 
 export type Like = {
-  id?: number;
+  id?: string;
   authorId: number;
   postId: number;
   createdAt?: string;
 };
 
 export type Bookmark = {
-  id: number;
-  authorId: number;
-  postId: number;
+  id: string;
+  authorId: string;
+  postId: string;
   createdAt: string;
 };
 
 export type Comment = {
-  id: number;
+  id: string;
   content: string;
-  postId: number;
+  postId: string;
   author: {
     name: string;
     avatar: string;
-    id: number;
+    id: string;
   };
   createdAt: string;
 };
 
 export const fakeComment: Comment = {
-  id: 1,
+  id: '1',
   content: 'Comment goes here...',
-  postId: 1,
+  postId: '1',
   createdAt: new Date().toISOString(),
   author: {
     name: 'John Doe',
     avatar: 'https://avatars.dicebear.com/api/avataaars/john-doe.svg',
-    id: 1,
+    id: '1',
   },
 };

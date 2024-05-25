@@ -32,7 +32,7 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN <<EOI
-npm install
+npm install --legacy-peer-deps
 EOI
 
 COPY ./ ./

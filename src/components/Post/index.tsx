@@ -12,6 +12,7 @@ import {
   Box,
   Divider,
   Skeleton,
+  Title,
 } from '@mantine/core';
 import {
   IconBookmarks,
@@ -173,7 +174,8 @@ export function Post({ skeleton, ...props }: Props) {
           {item.category}
         </Badge>
 
-        <Text
+        <Title
+          order={2}
           fw={700}
           className={classes.title}
           mt="xs"
@@ -182,7 +184,7 @@ export function Post({ skeleton, ...props }: Props) {
           }}
         >
           {item.title}
-        </Text>
+        </Title>
 
         <Group mt="sm" gap="xs">
           <Avatar src={item.author.avatar} radius="sm" />

@@ -8,11 +8,12 @@ import CommentView from '@/pages/Post/Comment/CommentView';
 import { useAppSelector } from '@/store';
 import { selectUser } from '@/store/auth';
 import { useGetPostQuery } from '@/services/posts';
+import { Post } from '@/components/Post';
 
 const PostView = () => {
   const { id } = useParams();
 
-  const { data: post } = useGetPostQuery({
+  const { data: post, isLoading } = useGetPostQuery({
     postId: id as string,
   });
 
@@ -28,6 +29,14 @@ const PostView = () => {
 
   const user = useAppSelector(selectUser);
 
+  if (isLoading) {
+    return (
+      <Page title="Post">
+        <Post skeleton />
+      </Page>
+    );
+  }
+
   return (
     <Page title={post?.title || 'Post'}>
       {post && (
@@ -35,7 +44,7 @@ const PostView = () => {
           {post.image && <Image src={post.image} alt={post.title} height={180} radius={radius} />}
 
           <SimpleGrid cols={1} spacing="xs" p={padding}>
-            <Title order={1} mt="sm">
+            <Title order={1} fw={900} mt="sm">
               {post.title}
             </Title>
 
@@ -66,7 +75,9 @@ const PostView = () => {
             <RichTextInput readonly content={post.content} />
 
             {user && <CommentForm post={post} />}
-            <CommentView comments={post.comments?.reverse() ?? []} />
+            {post.comments && post.comments.length > 0 && (
+              <CommentView comments={[...post.comments].reverse()} />
+            )}
           </SimpleGrid>
         </Box>
       )}

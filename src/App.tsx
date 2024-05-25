@@ -37,6 +37,7 @@ const Content = () => {
     };
   }, []);
 
+  // @TODO: Move to a store
   useEffect(() => {
     let ignore = false;
     async function getProfile() {

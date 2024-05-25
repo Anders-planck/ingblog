@@ -7,6 +7,15 @@ type GetPostsParams = {
   title?: string;
 };
 
+type PostNewPostParams = {
+  title: string;
+  image: string;
+  content: string;
+  category: string;
+  publish: boolean;
+  authorId: string;
+};
+
 export const postApi = createApi({
   reducerPath: 'postApi',
   baseQuery: fetchBaseQuery(),
@@ -101,6 +110,21 @@ export const postApi = createApi({
         }
 
         return { data: data.length > 0 };
+      },
+    }),
+
+    getCategories: builder.query<string[], void>({
+      // @ts-ignore
+      queryFn: async () => {
+        const { data, error } = await supabase
+          .schema('public')
+          .rpc('get_types', { enum_type: 'category' });
+
+        if (error) {
+          return { error };
+        }
+
+        return { data };
       },
     }),
 
@@ -205,6 +229,29 @@ export const postApi = createApi({
       invalidatesTags: ['POSTS'],
     }),
 
+    postNewPost: builder.mutation<void, PostNewPostParams>({
+      // @ts-ignore
+      queryFn: async ({ title, image, content, category, publish, authorId }) => {
+        const { error } = await supabase.from('posts').insert([
+          {
+            title,
+            image,
+            content,
+            category,
+            published: publish,
+            authorId,
+          },
+        ]);
+
+        if (error) {
+          return { error };
+        }
+
+        return {};
+      },
+      invalidatesTags: ['POSTS'],
+    }),
+
     getLikedPostsByUser: builder.query<Post[], { authorId: string }>({
       // @ts-ignore
       queryFn: async ({ authorId }) => {
@@ -248,7 +295,7 @@ export const postApi = createApi({
 export const {
   useGetPostsQuery,
   useGetPostQuery,
-  useLazyGetPostsQuery,
+  useGetCategoriesQuery,
   useGetIsLikedToUserQuery,
   useGetIsBookmarkedToUserQuery,
   useGetLikedPostsByUserQuery,
@@ -256,4 +303,5 @@ export const {
   useToggleLikePostMutation,
   useToggleBookmarkPostMutation,
   usePostCommentMutation,
+  usePostNewPostMutation,
 } = postApi;
