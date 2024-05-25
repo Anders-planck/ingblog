@@ -1,20 +1,35 @@
-import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
+import { Action, combineReducers, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { reducer as searchReducer } from './app/search';
 import { listenerMiddleware } from './listener';
 import { reducer as authReducer } from './auth';
+import { postApi } from '@/services/posts';
+
+const rootReducer = combineReducers({
+  auth: authReducer,
+  search: searchReducer,
+  [postApi.reducerPath]: postApi.reducer,
+});
+
+export const setupStore = (preloadedState?: Partial<RootState>) =>
+  configureStore({
+    reducer: rootReducer,
+    preloadedState,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(listenerMiddleware.middleware, postApi.middleware),
+  });
+
+export type AppStore = ReturnType<typeof setupStore>;
 
 const makeStore = () =>
   configureStore({
-    reducer: {
-      auth: authReducer,
-      search: searchReducer,
-    },
+    reducer: rootReducer,
     middleware: (getDefaultMiddlewares) =>
-      getDefaultMiddlewares().concat(listenerMiddleware.middleware),
+      getDefaultMiddlewares().concat(listenerMiddleware.middleware, postApi.middleware),
   });
 
 const store = makeStore();
+
 export default store;
 
 export type AppDispatch = typeof store.dispatch;

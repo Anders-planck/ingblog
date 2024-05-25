@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Group, Textarea } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import { notifications } from '@mantine/notifications';
 import { Post as PostType } from '@/types/post';
-import { supabase } from '@/lib/supabase';
 import { selectUser } from '@/store/auth';
 import { useAppSelector } from '@/store';
+import { usePostCommentMutation } from '@/services/posts';
 
 type Props = {
   post: PostType;
-  refresh: () => void;
 };
 
-const CommentForm = ({ post, refresh }: Props) => {
+const CommentForm = ({ post }: Props) => {
   const user = useAppSelector(selectUser);
-  const [loading, setLoading] = useState(false);
+
   const form = useForm({
     initialValues: {
       content: '',
@@ -22,22 +22,23 @@ const CommentForm = ({ post, refresh }: Props) => {
       content: (value) => value.trim().length === 0 && 'comment is required',
     },
   });
+
+  const [postComment, { isLoading }] = usePostCommentMutation();
+
   const handleOnSubmit = async (values: any) => {
-    setLoading(true);
-    const { error } = await supabase.from('comments').insert([
-      {
-        postId: post.id,
-        content: values.content,
-        authorId: user?.id,
-      },
-    ]);
+    const { error } = await postComment({
+      postId: post.id,
+      authorId: user?.id,
+      content: values.content,
+    });
 
     if (error) {
-      console.error(error);
+      notifications.show({
+        title: 'Sorry',
+        message: 'Something wrong 🤥',
+        color: 'red',
+      });
     }
-
-    setLoading(false);
-    refresh();
   };
 
   return (
@@ -51,7 +52,12 @@ const CommentForm = ({ post, refresh }: Props) => {
         placeholder="write here"
       />
       <Group justify="flex-end" mt="md">
-        <Button type="submit" color="blue" loading={loading} disabled={loading || !form.isValid}>
+        <Button
+          type="submit"
+          color="blue"
+          loading={isLoading}
+          disabled={isLoading || !form.isValid}
+        >
           Tell me what you think 😎
         </Button>
       </Group>

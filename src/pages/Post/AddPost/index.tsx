@@ -12,26 +12,27 @@ import {
 import { useForm } from '@mantine/form';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { supabase } from '@/lib/supabase';
 
 import Page from '@/Layout/Page';
 import RichTextInput from '@/components/RichTextInput';
 import { useAppSelector } from '@/store';
 import { selectUser } from '@/store/auth';
 import { AUTH_ROUTE, HOME_ROUTE } from '@/routes';
+import { useGetCategoriesQuery, usePostNewPostMutation } from '@/services/posts';
 
 const AddPost = () => {
-  const [categories, setCategories] = useState<string[]>([]);
   const [content, setContent] = useState<any>(null);
   const [errorContent, setErrorContent] = useState<string | null>(null);
   const user = useAppSelector(selectUser);
   const navigate = useNavigate();
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const padding = useMatches({
     base: 'xs',
     md: 'none',
   });
+
+  const { data: categories } = useGetCategoriesQuery();
+  const [postNewPost, { error, isLoading: isSubmitting }] = usePostNewPostMutation();
 
   const form = useForm({
     mode: 'uncontrolled',
@@ -48,49 +49,29 @@ const AddPost = () => {
     },
   });
 
-  const handleCategory = async () => {
-    const { data, error } = await supabase
-      .schema('public')
-      .rpc('get_types', { enum_type: 'category' });
-
-    if (error) {
-      setCategories([]);
-    }
-    if (data) {
-      setCategories(data);
-    }
-  };
-
   const handleSubmit = async (values: any) => {
     if (!user) return;
-    setIsSubmitting(true);
+
     if (!content) {
       setErrorContent('Content is required');
-      setIsSubmitting(false);
       return;
     }
 
-    const { error } = await supabase.from('posts').insert([
-      {
-        title: values.title,
-        image: values.image,
-        content,
-        category: values.category,
-        published: values.publish,
-        authorId: user?.id,
-      },
-    ]);
+    await postNewPost({
+      title: values.title,
+      image: values.image,
+      content,
+      category: values.category,
+      publish: values.publish,
+      authorId: user.id,
+    });
 
     if (error) {
-      console.error(error);
+      return;
     }
-    setIsSubmitting(false);
+
     navigate(HOME_ROUTE);
   };
-
-  useEffect(() => {
-    handleCategory();
-  }, []);
 
   useEffect(() => {
     if (!user) {
@@ -115,7 +96,6 @@ const AddPost = () => {
               />
 
               <TextInput
-                withAsterisk
                 label="Image"
                 placeholder="Post image URL"
                 key={form.key('image')}
@@ -123,9 +103,11 @@ const AddPost = () => {
               />
 
               <Select
+                withAsterisk
+                searchable
                 label="Category"
                 placeholder="Post category"
-                data={categories}
+                data={categories ?? []}
                 key={form.key('category')}
                 {...form.getInputProps('category')}
               />
