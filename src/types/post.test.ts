@@ -6,6 +6,7 @@ test('Post type', () => {
   const validPost: Post = {
     id: '1',
     title: 'Title',
+    overview: 'Overview',
     createdAt: new Date().toISOString(),
     category: 'Category',
     author: {

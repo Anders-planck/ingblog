@@ -11,22 +11,6 @@ describe('postApi', () => {
     expect(result).toBeDefined();
   });
 
-  test('getIsLikedToUser endpoint', async () => {
-    const result = await postApi.endpoints.getIsLikedToUser.initiate({
-      postId: '1',
-      authorId: '1',
-    });
-    expect(result).toBeDefined();
-  });
-
-  test('getIsBookmarkedToUser endpoint', async () => {
-    const result = await postApi.endpoints.getIsBookmarkedToUser.initiate({
-      postId: '1',
-      authorId: '1',
-    });
-    expect(result).toBeDefined();
-  });
-
   test('toggleLikePost endpoint', async () => {
     const result = await postApi.endpoints.toggleLikePost.initiate({
       isLiked: true,
