@@ -15,7 +15,7 @@ import { createLowlight } from 'lowlight';
 import ts from 'highlight.js/lib/languages/typescript';
 import TaskItem from '@tiptap/extension-task-item';
 import TipTapTaskList from '@tiptap/extension-task-list';
-import { Stack, Text } from '@mantine/core';
+import { Stack, Input } from '@mantine/core';
 import classes from './RichText.module.css';
 
 const lowlight = createLowlight();
@@ -33,7 +33,9 @@ export function escapeHtml(unsafe: string) {
 }
 
 type RichTextInputProps = {
+  withAsterisk?: boolean;
   label?: string;
+  description?: string;
   readonly?: boolean;
   handleOnChange?: (value: any) => void;
   error?: string;
@@ -43,10 +45,12 @@ type RichTextInputProps = {
 
 const RichTextInput = ({
   label,
+  withAsterisk,
   readonly,
   handleOnChange,
   placeholder,
   error,
+  description,
   content,
 }: RichTextInputProps) => {
   const editor = useEditor({
@@ -81,97 +85,98 @@ const RichTextInput = ({
 
   return (
     <Stack gap={2}>
-      {!readonly && <Text size="sm">{label}</Text>}
-      <RichTextEditor
-        withTypographyStyles
-        withCodeHighlightStyles
-        editor={editor}
-        classNames={classes}
+      <Input.Wrapper
+        {...(!readonly && label && { label })}
+        {...(!readonly && description && { description })}
+        {...(!readonly && error && { error })}
+        {...(!readonly && withAsterisk && { required: true, withAsterisk })}
       >
-        {!readonly && (
-          <RichTextEditor.Toolbar sticky stickyOffset={60}>
-            <RichTextEditor.ControlsGroup>
-              <RichTextEditor.Bold />
-              <RichTextEditor.Italic />
-              <RichTextEditor.Underline />
-              <RichTextEditor.Strikethrough />
-              <RichTextEditor.ClearFormatting />
-              <RichTextEditor.Highlight />
-              <RichTextEditor.Code />
-            </RichTextEditor.ControlsGroup>
+        <RichTextEditor
+          withTypographyStyles
+          withCodeHighlightStyles
+          editor={editor}
+          classNames={classes}
+        >
+          {!readonly && (
+            <RichTextEditor.Toolbar sticky stickyOffset={60}>
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.Bold />
+                <RichTextEditor.Italic />
+                <RichTextEditor.Underline />
+                <RichTextEditor.Strikethrough />
+                <RichTextEditor.ClearFormatting />
+                <RichTextEditor.Highlight />
+                <RichTextEditor.Code />
+              </RichTextEditor.ControlsGroup>
 
-            <RichTextEditor.ControlsGroup>
-              <RichTextEditor.H1 />
-              <RichTextEditor.H2 />
-              <RichTextEditor.H3 />
-              <RichTextEditor.H4 />
-            </RichTextEditor.ControlsGroup>
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.H1 />
+                <RichTextEditor.H2 />
+                <RichTextEditor.H3 />
+                <RichTextEditor.H4 />
+              </RichTextEditor.ControlsGroup>
 
-            <RichTextEditor.ControlsGroup>
-              <RichTextEditor.Blockquote />
-              <RichTextEditor.Hr />
-              <RichTextEditor.BulletList />
-              <RichTextEditor.OrderedList />
-              <RichTextEditor.Subscript />
-              <RichTextEditor.Superscript />
-            </RichTextEditor.ControlsGroup>
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.Blockquote />
+                <RichTextEditor.Hr />
+                <RichTextEditor.BulletList />
+                <RichTextEditor.OrderedList />
+                <RichTextEditor.Subscript />
+                <RichTextEditor.Superscript />
+              </RichTextEditor.ControlsGroup>
 
-            <RichTextEditor.ControlsGroup>
-              <RichTextEditor.Link />
-              <RichTextEditor.Unlink />
-            </RichTextEditor.ControlsGroup>
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.Link />
+                <RichTextEditor.Unlink />
+              </RichTextEditor.ControlsGroup>
 
-            <RichTextEditor.ControlsGroup>
-              <RichTextEditor.AlignLeft />
-              <RichTextEditor.AlignCenter />
-              <RichTextEditor.AlignJustify />
-              <RichTextEditor.AlignRight />
-            </RichTextEditor.ControlsGroup>
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.AlignLeft />
+                <RichTextEditor.AlignCenter />
+                <RichTextEditor.AlignJustify />
+                <RichTextEditor.AlignRight />
+              </RichTextEditor.ControlsGroup>
 
-            <RichTextEditor.ControlsGroup>
-              <RichTextEditor.CodeBlock />
-            </RichTextEditor.ControlsGroup>
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.CodeBlock />
+              </RichTextEditor.ControlsGroup>
 
-            <RichTextEditor.ControlsGroup>
-              <RichTextEditor.TaskList />
-              <RichTextEditor.TaskListLift />
-              <RichTextEditor.TaskListSink />
-            </RichTextEditor.ControlsGroup>
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.TaskList />
+                <RichTextEditor.TaskListLift />
+                <RichTextEditor.TaskListSink />
+              </RichTextEditor.ControlsGroup>
 
-            <RichTextEditor.ControlsGroup>
-              <RichTextEditor.Undo />
-              <RichTextEditor.Redo />
-            </RichTextEditor.ControlsGroup>
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.Undo />
+                <RichTextEditor.Redo />
+              </RichTextEditor.ControlsGroup>
 
-            <RichTextEditor.ColorPicker
-              colors={[
-                '#25262b',
-                '#868e96',
-                '#fa5252',
-                '#e64980',
-                '#be4bdb',
-                '#7950f2',
-                '#4c6ef5',
-                '#228be6',
-                '#15aabf',
-                '#12b886',
-                '#40c057',
-                '#82c91e',
-                '#fab005',
-                '#fd7e14',
-              ]}
-            />
+              <RichTextEditor.ColorPicker
+                colors={[
+                  '#25262b',
+                  '#868e96',
+                  '#fa5252',
+                  '#e64980',
+                  '#be4bdb',
+                  '#7950f2',
+                  '#4c6ef5',
+                  '#228be6',
+                  '#15aabf',
+                  '#12b886',
+                  '#40c057',
+                  '#82c91e',
+                  '#fab005',
+                  '#fd7e14',
+                ]}
+              />
 
-            <RichTextEditor.UnsetColor />
-          </RichTextEditor.Toolbar>
-        )}
-        <RichTextEditor.Content style={{ border: 'none' }} />
-      </RichTextEditor>
-      {!readonly && error && (
-        <Text c="red" size="sm">
-          {error}
-        </Text>
-      )}
+              <RichTextEditor.UnsetColor />
+            </RichTextEditor.Toolbar>
+          )}
+          <RichTextEditor.Content style={{ border: 'none' }} />
+        </RichTextEditor>
+      </Input.Wrapper>
     </Stack>
   );
 };

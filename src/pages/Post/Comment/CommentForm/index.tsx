@@ -46,6 +46,7 @@ const CommentForm = ({ post }: Props) => {
       <Textarea
         label="hey 🙆🏽‍♂️"
         withAsterisk
+        autosize
         description="tell me more about you think"
         key={form.key('content')}
         {...form.getInputProps('content')}

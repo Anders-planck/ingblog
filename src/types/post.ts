@@ -1,6 +1,7 @@
 export type Post = {
   id: string;
   title: string;
+  overview: string;
   content?: string;
   image?: string;
   category: string;
@@ -13,12 +14,15 @@ export type Post = {
   comments?: Comment[];
   bookmarks?: Bookmark[];
   published: boolean;
+  userLiked?: boolean;
+  userBookmarked?: boolean;
 };
 
 export const fakePost: Post = {
   id: '1',
   title: 'Title',
   content: 'Content goes here...',
+  overview: 'Overview goes here...',
   createdAt: new Date().toISOString(),
   category: 'Category',
   image: 'https://via.placeholder.com/180',

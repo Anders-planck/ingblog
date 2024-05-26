@@ -22,7 +22,7 @@ import {
   IconMessagePlus,
 } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { notifications } from '@mantine/notifications';
 import classes from './Post.module.css';
 import { formatPostDate } from '@/lib/utils';
@@ -30,12 +30,7 @@ import { Post as PostType } from '@/types/post';
 import { useAppSelector } from '@/store';
 import { selectUser } from '@/store/auth';
 import { POST_ROUTE } from '@/routes';
-import {
-  useGetIsBookmarkedToUserQuery,
-  useGetIsLikedToUserQuery,
-  useToggleBookmarkPostMutation,
-  useToggleLikePostMutation,
-} from '@/services/posts';
+import { useToggleBookmarkPostMutation, useToggleLikePostMutation } from '@/services/posts';
 
 type Props =
   | {
@@ -71,28 +66,8 @@ export function Post({ skeleton, ...props }: Props) {
   const navigate = useNavigate();
   const user = useAppSelector(selectUser);
 
-  const { data: isLikedRes } = useGetIsLikedToUserQuery(
-    {
-      postId: item.id as string,
-      authorId: user?.id as string,
-    },
-    {
-      skip: !user || !item.id,
-    }
-  );
-
-  const { data: isBookMarkRes } = useGetIsBookmarkedToUserQuery(
-    {
-      postId: item.id as string,
-      authorId: user?.id as string,
-    },
-    {
-      skip: !user || !item.id,
-    }
-  );
-
-  const [isLiked, setIsLiked] = useState(isLikedRes ?? false);
-  const [isBookmarked, setIsBookmarked] = useState(isBookMarkRes ?? false);
+  const [isLiked, setIsLiked] = useState(item.userLiked !== false);
+  const [isBookmarked, setIsBookmarked] = useState(item.userBookmarked !== false);
 
   const [toggleBookmarkPost] = useToggleBookmarkPostMutation();
   const [toggleLikePost] = useToggleLikePostMutation();
@@ -134,15 +109,6 @@ export function Post({ skeleton, ...props }: Props) {
     setIsBookmarked(!isBookmarked);
   };
 
-  useEffect(() => {
-    if (isLikedRes !== undefined) {
-      setIsLiked(isLikedRes);
-    }
-    if (isBookMarkRes !== undefined) {
-      setIsBookmarked(isBookMarkRes);
-    }
-  }, [isLikedRes, isBookMarkRes]);
-
   if (skeleton) {
     return (
       <Box p={padding} id={`post-skeleton-${item.id}`}>
@@ -175,7 +141,7 @@ export function Post({ skeleton, ...props }: Props) {
         </Badge>
 
         <Title
-          order={2}
+          order={3}
           fw={700}
           className={classes.title}
           mt="xs"
@@ -184,6 +150,10 @@ export function Post({ skeleton, ...props }: Props) {
           }}
         >
           {item.title}
+        </Title>
+
+        <Title order={6} fw={400} lineClamp={3}>
+          {item.overview}
         </Title>
 
         <Group mt="sm" gap="xs">
