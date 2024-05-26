@@ -1,7 +1,7 @@
 import { rem, SimpleGrid, Tabs, Title, useMatches } from '@mantine/core';
 import { IconMessageCircle, IconPhoto, IconSettings } from '@tabler/icons-react';
 import { useSearchParams } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { UserInfoIcons } from '@/components/UserInfo';
 import UpdateInfoUser from '@/components/Auth/UpdateInfoUser';
 import { TAB_POSTS_LIKED, TAB_SAVED_POSTS, TAB_SETTINGS } from '@/routes';
@@ -53,6 +53,12 @@ export default function Account() {
     base: 1,
     md: 1,
   });
+
+  useEffect(() => {
+    if (searchParams.get('tabValue')) {
+      setTabValue(searchParams.get('tabValue') as string);
+    }
+  }, [searchParams]);
 
   return (
     <Page title="Account">

@@ -11,6 +11,7 @@ type PostNewPostParams = {
   title: string;
   image: string;
   content: string;
+  overview: string;
   category: string;
   publish: boolean;
   authorId: string;
@@ -29,11 +30,12 @@ export const postApi = createApi({
           .select(
             '*, profiles(full_name, avatar_url), likes:likes(*), bookmarks:bookmarks(*), comments:comments(*, profiles(full_name, avatar_url, id))'
           )
+          .eq('published', true)
           .order('created_at', { ascending: false });
 
         // Se title è definito, aggiungi il filtro .ilike()
         if (title) {
-          query = query.ilike('title', `%${title}%`);
+          query = query.textSearch('title', title, { type: 'websearch' });
         }
 
         const { data, error } = await query;
@@ -41,7 +43,6 @@ export const postApi = createApi({
         if (error) {
           return { error };
         }
-
         return { data: data.map(formatPost) };
       },
       providesTags: ['POSTS'],
@@ -65,52 +66,6 @@ export const postApi = createApi({
         return { data: formatPost(data) };
       },
       providesTags: ['POSTS'],
-    }),
-
-    getIsLikedToUser: builder.query<
-      boolean,
-      {
-        postId: string;
-        authorId: string;
-      }
-    >({
-      // @ts-ignore
-      queryFn: async ({ postId, authorId }) => {
-        const { data, error } = await supabase
-          .from('likes')
-          .select('id')
-          .eq('postId', postId)
-          .eq('authorId', authorId);
-
-        if (error) {
-          return { error };
-        }
-
-        return { data: data.length > 0 };
-      },
-    }),
-
-    getIsBookmarkedToUser: builder.query<
-      boolean,
-      {
-        postId: string;
-        authorId: string;
-      }
-    >({
-      // @ts-ignore
-      queryFn: async ({ postId, authorId }) => {
-        const { data, error } = await supabase
-          .from('bookmarks')
-          .select('id')
-          .eq('postId', postId)
-          .eq('authorId', authorId);
-
-        if (error) {
-          return { error };
-        }
-
-        return { data: data.length > 0 };
-      },
     }),
 
     getCategories: builder.query<string[], void>({
@@ -296,8 +251,6 @@ export const {
   useGetPostsQuery,
   useGetPostQuery,
   useGetCategoriesQuery,
-  useGetIsLikedToUserQuery,
-  useGetIsBookmarkedToUserQuery,
   useGetLikedPostsByUserQuery,
   useGetBookmarkedPostsByUserQuery,
   useToggleLikePostMutation,

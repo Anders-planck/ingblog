@@ -48,6 +48,10 @@ const PostView = () => {
               {post.title}
             </Title>
 
+            <Title order={5} fw={400}>
+              {post.overview}
+            </Title>
+
             <Group justify="space-between">
               <Group mt="sm" gap="xs">
                 <Avatar src={post.author.avatar} radius="sm" />

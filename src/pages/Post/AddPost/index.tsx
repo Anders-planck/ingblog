@@ -5,6 +5,7 @@ import {
   Group,
   Select,
   Stack,
+  Textarea,
   TextInput,
   Title,
   useMatches,
@@ -40,6 +41,7 @@ const AddPost = () => {
       publish: false,
       title: '',
       image: '',
+      overview: '',
       category: null,
     },
 
@@ -60,6 +62,7 @@ const AddPost = () => {
     await postNewPost({
       title: values.title,
       image: values.image,
+      overview: values.overview,
       content,
       category: values.category,
       publish: values.publish,
@@ -90,6 +93,7 @@ const AddPost = () => {
               <TextInput
                 withAsterisk
                 label="Title"
+                description="Title of your article 🤓"
                 placeholder="Post title"
                 key={form.key('title')}
                 {...form.getInputProps('title')}
@@ -97,6 +101,7 @@ const AddPost = () => {
 
               <TextInput
                 label="Image"
+                description="Image URL of your article, is optional 🤷🏽‍♂️"
                 placeholder="Post image URL"
                 key={form.key('image')}
                 {...form.getInputProps('image')}
@@ -106,15 +111,28 @@ const AddPost = () => {
                 withAsterisk
                 searchable
                 label="Category"
+                description="Category of your article 🧐"
                 placeholder="Post category"
                 data={categories ?? []}
                 key={form.key('category')}
                 {...form.getInputProps('category')}
               />
 
+              <Textarea
+                label="Overview description 🙆🏽‍♂️"
+                withAsterisk
+                description="tell me more about you article"
+                autosize
+                key={form.key('overview')}
+                {...form.getInputProps('overview')}
+                placeholder="write here the overview of your article"
+              />
+
               <RichTextInput
-                label="Content"
+                label="Content 📝"
+                description="write your post content here 🤓"
                 key="content"
+                withAsterisk
                 handleOnChange={(value) => setContent(value)}
                 //@ts-ignore
                 error={errorContent}
