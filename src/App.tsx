@@ -2,34 +2,41 @@ import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import { LoadingOverlay, MantineProvider } from '@mantine/core';
 import { Provider } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { ModalsProvider } from '@mantine/modals';
 import { Notifications } from '@mantine/notifications';
 import { Router } from '@/Router';
 import { theme } from '@/theme';
 import store, { useAppDispatch, useAppSelector } from '@/store';
 import { supabase } from '@/lib/supabase';
-import { selectUser, setLoginAttempted, setProfile, setSession, setUser } from '@/store/auth';
+import {
+  selectUser,
+  setLoginAttempted,
+  selectProfile,
+  setSession,
+  setProfile,
+  setUser,
+} from '@/store/auth';
+import { useLazyGetProfileQuery } from '@/services/users';
 
 const Content = () => {
   const dispatch = useAppDispatch();
   const user = useAppSelector(selectUser);
-  const [loading, setLoading] = useState(false);
+  const profile = useAppSelector(selectProfile);
+  const [getProfile, { isLoading }] = useLazyGetProfileQuery();
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       dispatch(setSession(session));
-      dispatch(setLoginAttempted(false));
     });
 
     supabase.auth.getUser().then(({ data }) => {
       dispatch(setUser(data.user));
-      dispatch(setLoginAttempted(false));
     });
 
     const { data } = supabase.auth.onAuthStateChange((_event, session) => {
       dispatch(setSession(session));
-      dispatch(setLoginAttempted(false));
+      dispatch(setLoginAttempted(true));
     });
 
     return () => {
@@ -37,44 +44,32 @@ const Content = () => {
     };
   }, []);
 
-  // @TODO: Move to a store
   useEffect(() => {
     let ignore = false;
-    async function getProfile() {
-      if (!user) return;
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('profiles')
-        .select('full_name, phone, work, updated_at ')
-        .eq('id', user?.id)
-        .limit(1);
+    (async () => {
+      if (profile) {
+        return;
+      }
+      if (!user) {
+        return;
+      }
 
       if (!ignore) {
-        if (error) {
-          //@ts-ignore
-          setErrorMessage(error.message);
-        } else if (data[0]) {
-          dispatch(
-            setProfile({
-              full_name: data[0].full_name,
-              phone: data[0].phone,
-              work: data[0].work,
-              updated_at: data[0].updated_at,
-            })
-          );
+        const { data } = await getProfile({ userId: user.id });
+        if (data) {
+          dispatch(setProfile(data));
         }
-      }
-      setLoading(false);
-    }
 
-    getProfile();
+        setLoginAttempted(false);
+      }
+    })();
 
     return () => {
       ignore = true;
     };
   }, [user]);
 
-  if (loading) {
+  if (isLoading) {
     return (
       <LoadingOverlay
         visible

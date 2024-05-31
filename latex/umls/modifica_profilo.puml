@@ -1,0 +1,37 @@
+@startuml
+!theme plain
+title User Profile Update Process Flow
+
+[*] --> start : User is logged in and wants to update profile
+
+state "Start" as start
+start: User attempts to the Account page and\n see the fields to edit (full name, phone number)
+
+state "Validating" as validating
+validating: User clicks on save button and the data going to validation.\n (the fields full name and phone number are required,\n phone number must be a valid phone number,\n full name must be a valid name)
+
+state "Validation Success" as validation_success
+validation_success: All fields are valid
+
+state "Validation Failure" as validation_failure
+validation_failure: One or more fields are invalid
+
+state "Saving to Database" as saving
+saving: Validated data is sent to the database\n (supabase API)
+
+state "Save Success" as save_success
+save_success: Data is saved successfully
+
+state "Save Failure" as save_failure
+save_failure: Error during saving process\n (e.g. network error, server error)
+
+start --> validating : User clicks save button
+validating --> validation_success : All checks pass
+validating --> validation_failure : One or more checks fail
+validation_success --> saving : Validated data is sent to DB
+validation_failure --> start : User corrects validation errors
+saving --> save_success : User data is saved
+saving --> save_failure : Error during 'saving' process
+save_failure --> start : User retries after save error
+save_success --> [*] : Credentials updated successfully
+@enduml

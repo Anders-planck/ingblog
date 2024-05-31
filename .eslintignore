@@ -7,3 +7,4 @@
 vite.config.ts
 coverage
 storybook-static
+jest.config.ts

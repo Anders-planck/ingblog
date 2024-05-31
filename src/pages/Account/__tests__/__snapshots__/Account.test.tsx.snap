@@ -1,0 +1,4449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
+<div>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
+  <div>
+    <div
+      class="m_89d60db1 mantine-Tabs-root"
+      data-orientation="horizontal"
+      data-variant="default"
+      id="mantine-6h843qcvz"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-blue-filled);"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="m_576c9d4 m_89d33d6d mantine-Tabs-list"
+        data-grow="true"
+        data-orientation="horizontal"
+        data-variant="default"
+        role="tablist"
+      >
+        <button
+          aria-controls="mantine-6h843qcvz-panel-settings"
+          aria-selected="true"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-active="true"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-6h843qcvz-tab-settings"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-settings "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+              />
+              <path
+                d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Settings
+          </span>
+        </button>
+        <button
+          aria-controls="mantine-6h843qcvz-panel-postsLikes"
+          aria-selected="false"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-6h843qcvz-tab-postsLikes"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-photo "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 8h.01"
+              />
+              <path
+                d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"
+              />
+              <path
+                d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"
+              />
+              <path
+                d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Liked
+          </span>
+        </button>
+        <button
+          aria-controls="mantine-6h843qcvz-panel-savedPosts"
+          aria-selected="false"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-6h843qcvz-tab-savedPosts"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-message-circle "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Saved
+          </span>
+        </button>
+      </div>
+      <div
+        aria-labelledby="mantine-6h843qcvz-tab-postsLikes"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-6h843qcvz-panel-postsLikes"
+        role="tabpanel"
+        style="display: none;"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r7{--sg-spacing-x:var(--mantine-spacing-xs);--sg-spacing-y:var(--mantine-spacing-xs);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r7"
+        >
+          <div
+            class="card m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root"
+            id="post-1"
+            style="--paper-radius: var(--mantine-radius-none); --card-padding: var(--mantine-spacing-none);"
+          >
+            <div
+              class=""
+              style="padding-inline: var(--mantine-spacing-xs);"
+            >
+              <div
+                class="m_347db0ec mantine-Badge-root"
+                data-variant="light"
+                style="--badge-bg: var(--mantine-color-blue-light); --badge-color: var(--mantine-color-blue-light-color); --badge-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              >
+                <span
+                  class="m_5add502a mantine-Badge-label"
+                >
+                  Actuality
+                </span>
+              </div>
+              <h3
+                class="title m_8a5d1357 mantine-Title-root"
+                data-order="3"
+                style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size); font-weight: 700;"
+              >
+                Interview with Anders
+              </h3>
+              <h6
+                class="m_8a5d1357 mantine-Title-root"
+                data-line-clamp="true"
+                data-order="6"
+                style="--title-fw: var(--mantine-h6-font-weight); --title-lh: var(--mantine-h6-line-height); --title-fz: var(--mantine-h6-font-size); --title-line-clamp: 3; font-weight: 400;"
+              >
+                I was recently contacted by believemy as part of its "portrait" format. Many thanks to Louis-Nicolas Leuillet, who came to Montpellier for the occasion. An interview that allows me to go back over my Grafikart philosophy and talk about my freelance activity.
+              </h6>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_f85678b6 mantine-Avatar-root"
+                  style="--avatar-radius: var(--mantine-radius-sm);"
+                >
+                  <img
+                    class="m_11f8ac07 mantine-Avatar-image"
+                    src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                    style="font-weight: 500;"
+                  >
+                    Anders 🤯
+                  </p>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    17 days ago
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_599a2148 mantine-Card-section footer"
+              data-last-section="true"
+            >
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                >
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-heart-filled "
+                          fill="#fa5252"
+                          height="24"
+                          stroke="none"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      0
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-bookmarks "
+                          fill="none"
+                          height="24"
+                          stroke="#fab005"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"
+                          />
+                          <path
+                            d="M11 3h5a3 3 0 0 1 3 3v11"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-message-plus "
+                          fill="none"
+                          height="24"
+                          stroke="#228be6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 9h8"
+                          />
+                          <path
+                            d="M8 13h6"
+                          />
+                          <path
+                            d="M12.01 18.594l-4.01 2.406v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5"
+                          />
+                          <path
+                            d="M16 19h6"
+                          />
+                          <path
+                            d="M19 16v6"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root"
+            id="post-2"
+            style="--paper-radius: var(--mantine-radius-none); --card-padding: var(--mantine-spacing-none);"
+          >
+            <div
+              class=""
+              style="padding-inline: var(--mantine-spacing-xs);"
+            >
+              <div
+                class="m_347db0ec mantine-Badge-root"
+                data-variant="light"
+                style="--badge-bg: var(--mantine-color-blue-light); --badge-color: var(--mantine-color-blue-light-color); --badge-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              >
+                <span
+                  class="m_5add502a mantine-Badge-label"
+                >
+                  Actuality
+                </span>
+              </div>
+              <h3
+                class="title m_8a5d1357 mantine-Title-root"
+                data-order="3"
+                style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size); font-weight: 700;"
+              >
+                secondo post
+              </h3>
+              <h6
+                class="m_8a5d1357 mantine-Title-root"
+                data-line-clamp="true"
+                data-order="6"
+                style="--title-fw: var(--mantine-h6-font-weight); --title-lh: var(--mantine-h6-line-height); --title-fz: var(--mantine-h6-font-size); --title-line-clamp: 3; font-weight: 400;"
+              >
+                I was recently contacted by believemy as part of its "portrait" format. Many thanks to Louis-Nicolas Leuillet, who came to Montpellier for the occasion. An interview that allows me to go back over my Grafikart philosophy and talk about my freelance activity.
+              </h6>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_f85678b6 mantine-Avatar-root"
+                  style="--avatar-radius: var(--mantine-radius-sm);"
+                >
+                  <img
+                    class="m_11f8ac07 mantine-Avatar-image"
+                    src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                    style="font-weight: 500;"
+                  >
+                    Anders 🤯
+                  </p>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    17 days ago
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_599a2148 mantine-Card-section footer"
+              data-last-section="true"
+            >
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                >
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-heart-filled "
+                          fill="#fa5252"
+                          height="24"
+                          stroke="none"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      0
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-bookmarks "
+                          fill="none"
+                          height="24"
+                          stroke="#fab005"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"
+                          />
+                          <path
+                            d="M11 3h5a3 3 0 0 1 3 3v11"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-message-plus "
+                          fill="none"
+                          height="24"
+                          stroke="#228be6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 9h8"
+                          />
+                          <path
+                            d="M8 13h6"
+                          />
+                          <path
+                            d="M12.01 18.594l-4.01 2.406v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5"
+                          />
+                          <path
+                            d="M16 19h6"
+                          />
+                          <path
+                            d="M19 16v6"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-labelledby="mantine-6h843qcvz-tab-savedPosts"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-6h843qcvz-panel-savedPosts"
+        role="tabpanel"
+        style="display: none;"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r1u{--sg-spacing-x:var(--mantine-spacing-xs);--sg-spacing-y:var(--mantine-spacing-xs);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r1u"
+        >
+          <h5
+            class="m_8a5d1357 mantine-Title-root"
+            data-order="5"
+            style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size); text-align: center;"
+          >
+            No Saved posts yet
+          </h5>
+        </div>
+      </div>
+      <div
+        aria-labelledby="mantine-6h843qcvz-tab-settings"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-6h843qcvz-panel-settings"
+        role="tabpanel"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r22{--sg-spacing-x:var(--mantine-spacing-xl);--sg-spacing-y:var(--mantine-spacing-xl);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r22"
+        >
+          <div>
+            <div
+              class="m_4081bf90 mantine-Group-root"
+              style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+            >
+              <div
+                class="m_f85678b6 mantine-Avatar-root"
+                style="--avatar-size: calc(5.875rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-md);"
+              >
+                <img
+                  class="m_11f8ac07 mantine-Avatar-image"
+                  src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                />
+              </div>
+              <div>
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  style="font-weight: 700; text-transform: uppercase;"
+                >
+                  What is your work?
+                </p>
+                <p
+                  class="mantine-focus-auto name m_b6d8b162 mantine-Text-root"
+                  style="font-weight: 500;"
+                >
+                  What is your name?
+                </p>
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: calc(0.625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-at icon"
+                    fill="none"
+                    height="1rem"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"
+                    />
+                    <path
+                      d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"
+                    />
+                  </svg>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    john@doe.fr
+                  </p>
+                </div>
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: calc(0.625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-phone-call icon"
+                    fill="none"
+                    height="1rem"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                    />
+                    <path
+                      d="M15 7a2 2 0 0 1 2 2"
+                    />
+                    <path
+                      d="M15 3a6 6 0 0 1 6 6"
+                    />
+                  </svg>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    What is your phone number?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style
+            data-mantine-styles="inline"
+          >
+            .__m__-r2c{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+          </style>
+          <div
+            class="m_2415a157 mantine-SimpleGrid-root __m__-r2c"
+          >
+            <div
+              class="m_6d731127 mantine-Stack-root"
+              style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start;"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                Email
+              </h4>
+              <div
+                class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+              >
+                <div
+                  class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                  data-disabled="true"
+                  data-variant="default"
+                  style="--input-radius: var(--mantine-radius-md);"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                    data-disabled="true"
+                    data-variant="default"
+                    disabled=""
+                    id="mantine-4qzcp158f"
+                    placeholder="john@doe.io"
+                    required=""
+                    value="john@doe.fr"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              role="separator"
+            />
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r2l{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r2l"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                Update your Information
+              </h4>
+              <style
+                data-mantine-styles="inline"
+              >
+                .__m__-r2o{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:2;}
+              </style>
+              <div
+                class="m_2415a157 mantine-SimpleGrid-root __m__-r2o"
+              >
+                <div
+                  class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+                >
+                  <label
+                    class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                    data-required="true"
+                    for="mantine-lnom0w70n"
+                    id="mantine-lnom0w70n-label"
+                  >
+                    Full name
+                    <span
+                      aria-hidden="true"
+                      class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                    data-variant="default"
+                    style="--input-radius: var(--mantine-radius-md);"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                      data-variant="default"
+                      id="mantine-lnom0w70n"
+                      placeholder="John Doe"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+                >
+                  <label
+                    class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                    data-required="true"
+                    for="mantine-o5oduemfp"
+                    id="mantine-o5oduemfp-label"
+                  >
+                    Phone number
+                    <span
+                      aria-hidden="true"
+                      class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                    data-variant="default"
+                    style="--input-radius: var(--mantine-radius-md);"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                      data-variant="default"
+                      id="mantine-o5oduemfp"
+                      placeholder="1234567890"
+                      required=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+              >
+                <label
+                  class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                  data-required="true"
+                  for="mantine-d432jmosj"
+                  id="mantine-d432jmosj-label"
+                >
+                  Work
+                  <span
+                    aria-hidden="true"
+                    class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                  >
+                     *
+                  </span>
+                </label>
+                <div
+                  class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                  data-variant="default"
+                  style="--input-radius: var(--mantine-radius-md);"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                    data-variant="default"
+                    id="mantine-d432jmosj"
+                    placeholder="Software engineer"
+                    required=""
+                  />
+                </div>
+              </div>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <button
+                  class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                  style="--button-radius: var(--mantine-radius-xl); --button-color: var(--mantine-color-white);"
+                  type="button"
+                >
+                  <span
+                    class="m_80f1301b mantine-Button-inner"
+                  >
+                    <span
+                      class="m_811560b9 mantine-Button-label"
+                    >
+                      Save
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              role="separator"
+            />
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r3d{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r3d"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                App settings
+              </h4>
+              <div
+                class="m_5f93f3bb mantine-Switch-root m_5f75b09e mantine-Switch-root"
+                data-label-position="right"
+                data-size="sm"
+                style="--switch-height: var(--switch-height-sm); --switch-width: var(--switch-width-sm); --switch-thumb-size: var(--switch-thumb-size-sm); --switch-label-font-size: var(--switch-label-font-size-sm); --switch-track-label-padding: var(--switch-track-label-padding-sm); --switch-color: var(--mantine-color-dark-4); --label-fz: var(--mantine-font-size-sm); --label-lh: var(--label-lh-sm);"
+              >
+                <label
+                  class="m_5f6e695e mantine-Switch-body"
+                  for="mantine-ivy86w433"
+                >
+                  <input
+                    class="m_926b4011 mantine-Switch-input"
+                    id="mantine-ivy86w433"
+                    role="switch"
+                    type="checkbox"
+                  />
+                  <div
+                    aria-hidden="true"
+                    class="m_9307d992 mantine-Switch-track"
+                    data-label-position="right"
+                  >
+                    <span
+                      class="m_93039a1d mantine-Switch-thumb"
+                      data-reduce-motion="true"
+                    />
+                    <span
+                      class="m_8277e082 mantine-Switch-trackLabel"
+                    >
+                      <svg
+                        class="tabler-icon tabler-icon-moon-stars "
+                        fill="none"
+                        height="24"
+                        stroke="#228be6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                        />
+                        <path
+                          d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+                        />
+                        <path
+                          d="M19 11h2m-1 -1v2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="m_d3ea56bb mantine-Switch-labelWrapper"
+                  >
+                    <span
+                      class="m_8ee546b8 mantine-Switch-label"
+                    >
+                      Change color theme
+                    </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              data-with-label="true"
+              role="separator"
+              style="margin-block: var(--mantine-spacing-sm);"
+            >
+              <span
+                class="m_9e365f20 mantine-Divider-label"
+              >
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  color="red"
+                  data-size="xs"
+                  style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); --text-color: var(--mantine-color-red-filled); font-weight: bold;"
+                >
+                  Danger zone
+                </p>
+              </span>
+            </div>
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r3p{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:2;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r3p"
+            >
+              <button
+                class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                style="--button-radius: var(--mantine-radius-sm); --button-color: var(--mantine-color-white);"
+                type="button"
+              >
+                <span
+                  class="m_80f1301b mantine-Button-inner"
+                >
+                  <span
+                    class="m_811560b9 mantine-Button-label"
+                  >
+                    Logout
+                  </span>
+                </span>
+              </button>
+              <button
+                class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                data-block="true"
+                data-with-left-section="true"
+                style="--button-bg: var(--mantine-color-red-filled); --button-hover: var(--mantine-color-red-filled-hover); --button-color: var(--mantine-color-white); --button-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                type="button"
+              >
+                <span
+                  class="m_80f1301b mantine-Button-inner"
+                >
+                  <span
+                    class="m_a74036a mantine-Button-section"
+                    data-position="left"
+                  >
+                    <svg
+                      class="tabler-icon tabler-icon-trash "
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4 7l16 0"
+                      />
+                      <path
+                        d="M10 11l0 6"
+                      />
+                      <path
+                        d="M14 11l0 6"
+                      />
+                      <path
+                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+                      />
+                      <path
+                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="m_811560b9 mantine-Button-label"
+                  >
+                    Delete account
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Account Page Check if tabs get all fields should switch tabs when clicked 1`] = `
+<div>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
+  <div>
+    <div
+      class="m_89d60db1 mantine-Tabs-root"
+      data-orientation="horizontal"
+      data-variant="default"
+      id="mantine-fdvx97v1f"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-blue-filled);"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="m_576c9d4 m_89d33d6d mantine-Tabs-list"
+        data-grow="true"
+        data-orientation="horizontal"
+        data-variant="default"
+        role="tablist"
+      >
+        <button
+          aria-controls="mantine-fdvx97v1f-panel-settings"
+          aria-selected="true"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-active="true"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-fdvx97v1f-tab-settings"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-settings "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+              />
+              <path
+                d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Settings
+          </span>
+        </button>
+        <button
+          aria-controls="mantine-fdvx97v1f-panel-postsLikes"
+          aria-selected="false"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-fdvx97v1f-tab-postsLikes"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-photo "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 8h.01"
+              />
+              <path
+                d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"
+              />
+              <path
+                d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"
+              />
+              <path
+                d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Liked
+          </span>
+        </button>
+        <button
+          aria-controls="mantine-fdvx97v1f-panel-savedPosts"
+          aria-selected="false"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-fdvx97v1f-tab-savedPosts"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-message-circle "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Saved
+          </span>
+        </button>
+      </div>
+      <div
+        aria-labelledby="mantine-fdvx97v1f-tab-postsLikes"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-fdvx97v1f-panel-postsLikes"
+        role="tabpanel"
+        style="display: none;"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r47{--sg-spacing-x:var(--mantine-spacing-xs);--sg-spacing-y:var(--mantine-spacing-xs);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r47"
+        >
+          <div
+            class="card m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root"
+            id="post-1"
+            style="--paper-radius: var(--mantine-radius-none); --card-padding: var(--mantine-spacing-none);"
+          >
+            <div
+              class=""
+              style="padding-inline: var(--mantine-spacing-xs);"
+            >
+              <div
+                class="m_347db0ec mantine-Badge-root"
+                data-variant="light"
+                style="--badge-bg: var(--mantine-color-blue-light); --badge-color: var(--mantine-color-blue-light-color); --badge-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              >
+                <span
+                  class="m_5add502a mantine-Badge-label"
+                >
+                  Actuality
+                </span>
+              </div>
+              <h3
+                class="title m_8a5d1357 mantine-Title-root"
+                data-order="3"
+                style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size); font-weight: 700;"
+              >
+                Interview with Anders
+              </h3>
+              <h6
+                class="m_8a5d1357 mantine-Title-root"
+                data-line-clamp="true"
+                data-order="6"
+                style="--title-fw: var(--mantine-h6-font-weight); --title-lh: var(--mantine-h6-line-height); --title-fz: var(--mantine-h6-font-size); --title-line-clamp: 3; font-weight: 400;"
+              >
+                I was recently contacted by believemy as part of its "portrait" format. Many thanks to Louis-Nicolas Leuillet, who came to Montpellier for the occasion. An interview that allows me to go back over my Grafikart philosophy and talk about my freelance activity.
+              </h6>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_f85678b6 mantine-Avatar-root"
+                  style="--avatar-radius: var(--mantine-radius-sm);"
+                >
+                  <img
+                    class="m_11f8ac07 mantine-Avatar-image"
+                    src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                    style="font-weight: 500;"
+                  >
+                    Anders 🤯
+                  </p>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    17 days ago
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_599a2148 mantine-Card-section footer"
+              data-last-section="true"
+            >
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                >
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-heart-filled "
+                          fill="#fa5252"
+                          height="24"
+                          stroke="none"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      0
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-bookmarks "
+                          fill="none"
+                          height="24"
+                          stroke="#fab005"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"
+                          />
+                          <path
+                            d="M11 3h5a3 3 0 0 1 3 3v11"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-message-plus "
+                          fill="none"
+                          height="24"
+                          stroke="#228be6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 9h8"
+                          />
+                          <path
+                            d="M8 13h6"
+                          />
+                          <path
+                            d="M12.01 18.594l-4.01 2.406v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5"
+                          />
+                          <path
+                            d="M16 19h6"
+                          />
+                          <path
+                            d="M19 16v6"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root"
+            id="post-2"
+            style="--paper-radius: var(--mantine-radius-none); --card-padding: var(--mantine-spacing-none);"
+          >
+            <div
+              class=""
+              style="padding-inline: var(--mantine-spacing-xs);"
+            >
+              <div
+                class="m_347db0ec mantine-Badge-root"
+                data-variant="light"
+                style="--badge-bg: var(--mantine-color-blue-light); --badge-color: var(--mantine-color-blue-light-color); --badge-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              >
+                <span
+                  class="m_5add502a mantine-Badge-label"
+                >
+                  Actuality
+                </span>
+              </div>
+              <h3
+                class="title m_8a5d1357 mantine-Title-root"
+                data-order="3"
+                style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size); font-weight: 700;"
+              >
+                secondo post
+              </h3>
+              <h6
+                class="m_8a5d1357 mantine-Title-root"
+                data-line-clamp="true"
+                data-order="6"
+                style="--title-fw: var(--mantine-h6-font-weight); --title-lh: var(--mantine-h6-line-height); --title-fz: var(--mantine-h6-font-size); --title-line-clamp: 3; font-weight: 400;"
+              >
+                I was recently contacted by believemy as part of its "portrait" format. Many thanks to Louis-Nicolas Leuillet, who came to Montpellier for the occasion. An interview that allows me to go back over my Grafikart philosophy and talk about my freelance activity.
+              </h6>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_f85678b6 mantine-Avatar-root"
+                  style="--avatar-radius: var(--mantine-radius-sm);"
+                >
+                  <img
+                    class="m_11f8ac07 mantine-Avatar-image"
+                    src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                    style="font-weight: 500;"
+                  >
+                    Anders 🤯
+                  </p>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    17 days ago
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_599a2148 mantine-Card-section footer"
+              data-last-section="true"
+            >
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                >
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-heart-filled "
+                          fill="#fa5252"
+                          height="24"
+                          stroke="none"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      0
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-bookmarks "
+                          fill="none"
+                          height="24"
+                          stroke="#fab005"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"
+                          />
+                          <path
+                            d="M11 3h5a3 3 0 0 1 3 3v11"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-message-plus "
+                          fill="none"
+                          height="24"
+                          stroke="#228be6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 9h8"
+                          />
+                          <path
+                            d="M8 13h6"
+                          />
+                          <path
+                            d="M12.01 18.594l-4.01 2.406v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5"
+                          />
+                          <path
+                            d="M16 19h6"
+                          />
+                          <path
+                            d="M19 16v6"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-labelledby="mantine-fdvx97v1f-tab-savedPosts"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-fdvx97v1f-panel-savedPosts"
+        role="tabpanel"
+        style="display: none;"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r5u{--sg-spacing-x:var(--mantine-spacing-xs);--sg-spacing-y:var(--mantine-spacing-xs);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r5u"
+        >
+          <h5
+            class="m_8a5d1357 mantine-Title-root"
+            data-order="5"
+            style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size); text-align: center;"
+          >
+            No Saved posts yet
+          </h5>
+        </div>
+      </div>
+      <div
+        aria-labelledby="mantine-fdvx97v1f-tab-settings"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-fdvx97v1f-panel-settings"
+        role="tabpanel"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r62{--sg-spacing-x:var(--mantine-spacing-xl);--sg-spacing-y:var(--mantine-spacing-xl);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r62"
+        >
+          <div>
+            <div
+              class="m_4081bf90 mantine-Group-root"
+              style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+            >
+              <div
+                class="m_f85678b6 mantine-Avatar-root"
+                style="--avatar-size: calc(5.875rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-md);"
+              >
+                <img
+                  class="m_11f8ac07 mantine-Avatar-image"
+                  src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                />
+              </div>
+              <div>
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  style="font-weight: 700; text-transform: uppercase;"
+                >
+                  What is your work?
+                </p>
+                <p
+                  class="mantine-focus-auto name m_b6d8b162 mantine-Text-root"
+                  style="font-weight: 500;"
+                >
+                  What is your name?
+                </p>
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: calc(0.625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-at icon"
+                    fill="none"
+                    height="1rem"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"
+                    />
+                    <path
+                      d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"
+                    />
+                  </svg>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    john@doe.fr
+                  </p>
+                </div>
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: calc(0.625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-phone-call icon"
+                    fill="none"
+                    height="1rem"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                    />
+                    <path
+                      d="M15 7a2 2 0 0 1 2 2"
+                    />
+                    <path
+                      d="M15 3a6 6 0 0 1 6 6"
+                    />
+                  </svg>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    What is your phone number?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style
+            data-mantine-styles="inline"
+          >
+            .__m__-r6c{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+          </style>
+          <div
+            class="m_2415a157 mantine-SimpleGrid-root __m__-r6c"
+          >
+            <div
+              class="m_6d731127 mantine-Stack-root"
+              style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start;"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                Email
+              </h4>
+              <div
+                class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+              >
+                <div
+                  class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                  data-disabled="true"
+                  data-variant="default"
+                  style="--input-radius: var(--mantine-radius-md);"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                    data-disabled="true"
+                    data-variant="default"
+                    disabled=""
+                    id="mantine-8k5t5wwib"
+                    placeholder="john@doe.io"
+                    required=""
+                    value="john@doe.fr"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              role="separator"
+            />
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r6l{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r6l"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                Update your Information
+              </h4>
+              <style
+                data-mantine-styles="inline"
+              >
+                .__m__-r6o{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:2;}
+              </style>
+              <div
+                class="m_2415a157 mantine-SimpleGrid-root __m__-r6o"
+              >
+                <div
+                  class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+                >
+                  <label
+                    class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                    data-required="true"
+                    for="mantine-njvq43u8i"
+                    id="mantine-njvq43u8i-label"
+                  >
+                    Full name
+                    <span
+                      aria-hidden="true"
+                      class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                    data-variant="default"
+                    style="--input-radius: var(--mantine-radius-md);"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                      data-variant="default"
+                      id="mantine-njvq43u8i"
+                      placeholder="John Doe"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+                >
+                  <label
+                    class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                    data-required="true"
+                    for="mantine-5rec3lkd4"
+                    id="mantine-5rec3lkd4-label"
+                  >
+                    Phone number
+                    <span
+                      aria-hidden="true"
+                      class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                    data-variant="default"
+                    style="--input-radius: var(--mantine-radius-md);"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                      data-variant="default"
+                      id="mantine-5rec3lkd4"
+                      placeholder="1234567890"
+                      required=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+              >
+                <label
+                  class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                  data-required="true"
+                  for="mantine-b34nkibc1"
+                  id="mantine-b34nkibc1-label"
+                >
+                  Work
+                  <span
+                    aria-hidden="true"
+                    class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                  >
+                     *
+                  </span>
+                </label>
+                <div
+                  class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                  data-variant="default"
+                  style="--input-radius: var(--mantine-radius-md);"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                    data-variant="default"
+                    id="mantine-b34nkibc1"
+                    placeholder="Software engineer"
+                    required=""
+                  />
+                </div>
+              </div>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <button
+                  class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                  style="--button-radius: var(--mantine-radius-xl); --button-color: var(--mantine-color-white);"
+                  type="button"
+                >
+                  <span
+                    class="m_80f1301b mantine-Button-inner"
+                  >
+                    <span
+                      class="m_811560b9 mantine-Button-label"
+                    >
+                      Save
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              role="separator"
+            />
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r7d{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r7d"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                App settings
+              </h4>
+              <div
+                class="m_5f93f3bb mantine-Switch-root m_5f75b09e mantine-Switch-root"
+                data-label-position="right"
+                data-size="sm"
+                style="--switch-height: var(--switch-height-sm); --switch-width: var(--switch-width-sm); --switch-thumb-size: var(--switch-thumb-size-sm); --switch-label-font-size: var(--switch-label-font-size-sm); --switch-track-label-padding: var(--switch-track-label-padding-sm); --switch-color: var(--mantine-color-dark-4); --label-fz: var(--mantine-font-size-sm); --label-lh: var(--label-lh-sm);"
+              >
+                <label
+                  class="m_5f6e695e mantine-Switch-body"
+                  for="mantine-8n7erpmxk"
+                >
+                  <input
+                    class="m_926b4011 mantine-Switch-input"
+                    id="mantine-8n7erpmxk"
+                    role="switch"
+                    type="checkbox"
+                  />
+                  <div
+                    aria-hidden="true"
+                    class="m_9307d992 mantine-Switch-track"
+                    data-label-position="right"
+                  >
+                    <span
+                      class="m_93039a1d mantine-Switch-thumb"
+                      data-reduce-motion="true"
+                    />
+                    <span
+                      class="m_8277e082 mantine-Switch-trackLabel"
+                    >
+                      <svg
+                        class="tabler-icon tabler-icon-moon-stars "
+                        fill="none"
+                        height="24"
+                        stroke="#228be6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                        />
+                        <path
+                          d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+                        />
+                        <path
+                          d="M19 11h2m-1 -1v2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="m_d3ea56bb mantine-Switch-labelWrapper"
+                  >
+                    <span
+                      class="m_8ee546b8 mantine-Switch-label"
+                    >
+                      Change color theme
+                    </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              data-with-label="true"
+              role="separator"
+              style="margin-block: var(--mantine-spacing-sm);"
+            >
+              <span
+                class="m_9e365f20 mantine-Divider-label"
+              >
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  color="red"
+                  data-size="xs"
+                  style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); --text-color: var(--mantine-color-red-filled); font-weight: bold;"
+                >
+                  Danger zone
+                </p>
+              </span>
+            </div>
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r7p{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:2;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r7p"
+            >
+              <button
+                class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                style="--button-radius: var(--mantine-radius-sm); --button-color: var(--mantine-color-white);"
+                type="button"
+              >
+                <span
+                  class="m_80f1301b mantine-Button-inner"
+                >
+                  <span
+                    class="m_811560b9 mantine-Button-label"
+                  >
+                    Logout
+                  </span>
+                </span>
+              </button>
+              <button
+                class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                data-block="true"
+                data-with-left-section="true"
+                style="--button-bg: var(--mantine-color-red-filled); --button-hover: var(--mantine-color-red-filled-hover); --button-color: var(--mantine-color-white); --button-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                type="button"
+              >
+                <span
+                  class="m_80f1301b mantine-Button-inner"
+                >
+                  <span
+                    class="m_a74036a mantine-Button-section"
+                    data-position="left"
+                  >
+                    <svg
+                      class="tabler-icon tabler-icon-trash "
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4 7l16 0"
+                      />
+                      <path
+                        d="M10 11l0 6"
+                      />
+                      <path
+                        d="M14 11l0 6"
+                      />
+                      <path
+                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+                      />
+                      <path
+                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="m_811560b9 mantine-Button-label"
+                  >
+                    Delete account
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Account Page Check if tabs get all fields should switch tabs when clicked 2`] = `
+<div>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
+  <div>
+    <div
+      class="m_89d60db1 mantine-Tabs-root"
+      data-orientation="horizontal"
+      data-variant="default"
+      id="mantine-fdvx97v1f"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-blue-filled);"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="m_576c9d4 m_89d33d6d mantine-Tabs-list"
+        data-grow="true"
+        data-orientation="horizontal"
+        data-variant="default"
+        role="tablist"
+      >
+        <button
+          aria-controls="mantine-fdvx97v1f-panel-settings"
+          aria-selected="true"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-active="true"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-fdvx97v1f-tab-settings"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-settings "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+              />
+              <path
+                d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Settings
+          </span>
+        </button>
+        <button
+          aria-controls="mantine-fdvx97v1f-panel-postsLikes"
+          aria-selected="false"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-fdvx97v1f-tab-postsLikes"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-photo "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 8h.01"
+              />
+              <path
+                d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"
+              />
+              <path
+                d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"
+              />
+              <path
+                d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Liked
+          </span>
+        </button>
+        <button
+          aria-controls="mantine-fdvx97v1f-panel-savedPosts"
+          aria-selected="false"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-fdvx97v1f-tab-savedPosts"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-message-circle "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Saved
+          </span>
+        </button>
+      </div>
+      <div
+        aria-labelledby="mantine-fdvx97v1f-tab-postsLikes"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-fdvx97v1f-panel-postsLikes"
+        role="tabpanel"
+        style="display: none;"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r47{--sg-spacing-x:var(--mantine-spacing-xs);--sg-spacing-y:var(--mantine-spacing-xs);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r47"
+        >
+          <div
+            class="card m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root"
+            id="post-1"
+            style="--paper-radius: var(--mantine-radius-none); --card-padding: var(--mantine-spacing-none);"
+          >
+            <div
+              class=""
+              style="padding-inline: var(--mantine-spacing-xs);"
+            >
+              <div
+                class="m_347db0ec mantine-Badge-root"
+                data-variant="light"
+                style="--badge-bg: var(--mantine-color-blue-light); --badge-color: var(--mantine-color-blue-light-color); --badge-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              >
+                <span
+                  class="m_5add502a mantine-Badge-label"
+                >
+                  Actuality
+                </span>
+              </div>
+              <h3
+                class="title m_8a5d1357 mantine-Title-root"
+                data-order="3"
+                style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size); font-weight: 700;"
+              >
+                Interview with Anders
+              </h3>
+              <h6
+                class="m_8a5d1357 mantine-Title-root"
+                data-line-clamp="true"
+                data-order="6"
+                style="--title-fw: var(--mantine-h6-font-weight); --title-lh: var(--mantine-h6-line-height); --title-fz: var(--mantine-h6-font-size); --title-line-clamp: 3; font-weight: 400;"
+              >
+                I was recently contacted by believemy as part of its "portrait" format. Many thanks to Louis-Nicolas Leuillet, who came to Montpellier for the occasion. An interview that allows me to go back over my Grafikart philosophy and talk about my freelance activity.
+              </h6>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_f85678b6 mantine-Avatar-root"
+                  style="--avatar-radius: var(--mantine-radius-sm);"
+                >
+                  <img
+                    class="m_11f8ac07 mantine-Avatar-image"
+                    src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                    style="font-weight: 500;"
+                  >
+                    Anders 🤯
+                  </p>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    17 days ago
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_599a2148 mantine-Card-section footer"
+              data-last-section="true"
+            >
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                >
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-heart-filled "
+                          fill="#fa5252"
+                          height="24"
+                          stroke="none"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      0
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-bookmarks "
+                          fill="none"
+                          height="24"
+                          stroke="#fab005"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"
+                          />
+                          <path
+                            d="M11 3h5a3 3 0 0 1 3 3v11"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-message-plus "
+                          fill="none"
+                          height="24"
+                          stroke="#228be6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 9h8"
+                          />
+                          <path
+                            d="M8 13h6"
+                          />
+                          <path
+                            d="M12.01 18.594l-4.01 2.406v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5"
+                          />
+                          <path
+                            d="M16 19h6"
+                          />
+                          <path
+                            d="M19 16v6"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root"
+            id="post-2"
+            style="--paper-radius: var(--mantine-radius-none); --card-padding: var(--mantine-spacing-none);"
+          >
+            <div
+              class=""
+              style="padding-inline: var(--mantine-spacing-xs);"
+            >
+              <div
+                class="m_347db0ec mantine-Badge-root"
+                data-variant="light"
+                style="--badge-bg: var(--mantine-color-blue-light); --badge-color: var(--mantine-color-blue-light-color); --badge-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              >
+                <span
+                  class="m_5add502a mantine-Badge-label"
+                >
+                  Actuality
+                </span>
+              </div>
+              <h3
+                class="title m_8a5d1357 mantine-Title-root"
+                data-order="3"
+                style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size); font-weight: 700;"
+              >
+                secondo post
+              </h3>
+              <h6
+                class="m_8a5d1357 mantine-Title-root"
+                data-line-clamp="true"
+                data-order="6"
+                style="--title-fw: var(--mantine-h6-font-weight); --title-lh: var(--mantine-h6-line-height); --title-fz: var(--mantine-h6-font-size); --title-line-clamp: 3; font-weight: 400;"
+              >
+                I was recently contacted by believemy as part of its "portrait" format. Many thanks to Louis-Nicolas Leuillet, who came to Montpellier for the occasion. An interview that allows me to go back over my Grafikart philosophy and talk about my freelance activity.
+              </h6>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_f85678b6 mantine-Avatar-root"
+                  style="--avatar-radius: var(--mantine-radius-sm);"
+                >
+                  <img
+                    class="m_11f8ac07 mantine-Avatar-image"
+                    src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                    style="font-weight: 500;"
+                  >
+                    Anders 🤯
+                  </p>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    17 days ago
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_599a2148 mantine-Card-section footer"
+              data-last-section="true"
+            >
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                >
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-heart-filled "
+                          fill="#fa5252"
+                          height="24"
+                          stroke="none"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      0
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-bookmarks "
+                          fill="none"
+                          height="24"
+                          stroke="#fab005"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"
+                          />
+                          <path
+                            d="M11 3h5a3 3 0 0 1 3 3v11"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-message-plus "
+                          fill="none"
+                          height="24"
+                          stroke="#228be6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 9h8"
+                          />
+                          <path
+                            d="M8 13h6"
+                          />
+                          <path
+                            d="M12.01 18.594l-4.01 2.406v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5"
+                          />
+                          <path
+                            d="M16 19h6"
+                          />
+                          <path
+                            d="M19 16v6"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-labelledby="mantine-fdvx97v1f-tab-savedPosts"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-fdvx97v1f-panel-savedPosts"
+        role="tabpanel"
+        style="display: none;"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r5u{--sg-spacing-x:var(--mantine-spacing-xs);--sg-spacing-y:var(--mantine-spacing-xs);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r5u"
+        >
+          <h5
+            class="m_8a5d1357 mantine-Title-root"
+            data-order="5"
+            style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size); text-align: center;"
+          >
+            No Saved posts yet
+          </h5>
+        </div>
+      </div>
+      <div
+        aria-labelledby="mantine-fdvx97v1f-tab-settings"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-fdvx97v1f-panel-settings"
+        role="tabpanel"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r62{--sg-spacing-x:var(--mantine-spacing-xl);--sg-spacing-y:var(--mantine-spacing-xl);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r62"
+        >
+          <div>
+            <div
+              class="m_4081bf90 mantine-Group-root"
+              style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+            >
+              <div
+                class="m_f85678b6 mantine-Avatar-root"
+                style="--avatar-size: calc(5.875rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-md);"
+              >
+                <img
+                  class="m_11f8ac07 mantine-Avatar-image"
+                  src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                />
+              </div>
+              <div>
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  style="font-weight: 700; text-transform: uppercase;"
+                >
+                  What is your work?
+                </p>
+                <p
+                  class="mantine-focus-auto name m_b6d8b162 mantine-Text-root"
+                  style="font-weight: 500;"
+                >
+                  What is your name?
+                </p>
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: calc(0.625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-at icon"
+                    fill="none"
+                    height="1rem"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"
+                    />
+                    <path
+                      d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"
+                    />
+                  </svg>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    john@doe.fr
+                  </p>
+                </div>
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: calc(0.625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-phone-call icon"
+                    fill="none"
+                    height="1rem"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                    />
+                    <path
+                      d="M15 7a2 2 0 0 1 2 2"
+                    />
+                    <path
+                      d="M15 3a6 6 0 0 1 6 6"
+                    />
+                  </svg>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    What is your phone number?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style
+            data-mantine-styles="inline"
+          >
+            .__m__-r6c{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+          </style>
+          <div
+            class="m_2415a157 mantine-SimpleGrid-root __m__-r6c"
+          >
+            <div
+              class="m_6d731127 mantine-Stack-root"
+              style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start;"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                Email
+              </h4>
+              <div
+                class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+              >
+                <div
+                  class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                  data-disabled="true"
+                  data-variant="default"
+                  style="--input-radius: var(--mantine-radius-md);"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                    data-disabled="true"
+                    data-variant="default"
+                    disabled=""
+                    id="mantine-8k5t5wwib"
+                    placeholder="john@doe.io"
+                    required=""
+                    value="john@doe.fr"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              role="separator"
+            />
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r6l{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r6l"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                Update your Information
+              </h4>
+              <style
+                data-mantine-styles="inline"
+              >
+                .__m__-r6o{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:2;}
+              </style>
+              <div
+                class="m_2415a157 mantine-SimpleGrid-root __m__-r6o"
+              >
+                <div
+                  class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+                >
+                  <label
+                    class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                    data-required="true"
+                    for="mantine-njvq43u8i"
+                    id="mantine-njvq43u8i-label"
+                  >
+                    Full name
+                    <span
+                      aria-hidden="true"
+                      class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                    data-variant="default"
+                    style="--input-radius: var(--mantine-radius-md);"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                      data-variant="default"
+                      id="mantine-njvq43u8i"
+                      placeholder="John Doe"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+                >
+                  <label
+                    class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                    data-required="true"
+                    for="mantine-5rec3lkd4"
+                    id="mantine-5rec3lkd4-label"
+                  >
+                    Phone number
+                    <span
+                      aria-hidden="true"
+                      class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                    data-variant="default"
+                    style="--input-radius: var(--mantine-radius-md);"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                      data-variant="default"
+                      id="mantine-5rec3lkd4"
+                      placeholder="1234567890"
+                      required=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+              >
+                <label
+                  class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                  data-required="true"
+                  for="mantine-b34nkibc1"
+                  id="mantine-b34nkibc1-label"
+                >
+                  Work
+                  <span
+                    aria-hidden="true"
+                    class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                  >
+                     *
+                  </span>
+                </label>
+                <div
+                  class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                  data-variant="default"
+                  style="--input-radius: var(--mantine-radius-md);"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                    data-variant="default"
+                    id="mantine-b34nkibc1"
+                    placeholder="Software engineer"
+                    required=""
+                  />
+                </div>
+              </div>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <button
+                  class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                  style="--button-radius: var(--mantine-radius-xl); --button-color: var(--mantine-color-white);"
+                  type="button"
+                >
+                  <span
+                    class="m_80f1301b mantine-Button-inner"
+                  >
+                    <span
+                      class="m_811560b9 mantine-Button-label"
+                    >
+                      Save
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              role="separator"
+            />
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r7d{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r7d"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                App settings
+              </h4>
+              <div
+                class="m_5f93f3bb mantine-Switch-root m_5f75b09e mantine-Switch-root"
+                data-label-position="right"
+                data-size="sm"
+                style="--switch-height: var(--switch-height-sm); --switch-width: var(--switch-width-sm); --switch-thumb-size: var(--switch-thumb-size-sm); --switch-label-font-size: var(--switch-label-font-size-sm); --switch-track-label-padding: var(--switch-track-label-padding-sm); --switch-color: var(--mantine-color-dark-4); --label-fz: var(--mantine-font-size-sm); --label-lh: var(--label-lh-sm);"
+              >
+                <label
+                  class="m_5f6e695e mantine-Switch-body"
+                  for="mantine-8n7erpmxk"
+                >
+                  <input
+                    class="m_926b4011 mantine-Switch-input"
+                    id="mantine-8n7erpmxk"
+                    role="switch"
+                    type="checkbox"
+                  />
+                  <div
+                    aria-hidden="true"
+                    class="m_9307d992 mantine-Switch-track"
+                    data-label-position="right"
+                  >
+                    <span
+                      class="m_93039a1d mantine-Switch-thumb"
+                      data-reduce-motion="true"
+                    />
+                    <span
+                      class="m_8277e082 mantine-Switch-trackLabel"
+                    >
+                      <svg
+                        class="tabler-icon tabler-icon-moon-stars "
+                        fill="none"
+                        height="24"
+                        stroke="#228be6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                        />
+                        <path
+                          d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+                        />
+                        <path
+                          d="M19 11h2m-1 -1v2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="m_d3ea56bb mantine-Switch-labelWrapper"
+                  >
+                    <span
+                      class="m_8ee546b8 mantine-Switch-label"
+                    >
+                      Change color theme
+                    </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              data-with-label="true"
+              role="separator"
+              style="margin-block: var(--mantine-spacing-sm);"
+            >
+              <span
+                class="m_9e365f20 mantine-Divider-label"
+              >
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  color="red"
+                  data-size="xs"
+                  style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); --text-color: var(--mantine-color-red-filled); font-weight: bold;"
+                >
+                  Danger zone
+                </p>
+              </span>
+            </div>
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r7p{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:2;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r7p"
+            >
+              <button
+                class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                style="--button-radius: var(--mantine-radius-sm); --button-color: var(--mantine-color-white);"
+                type="button"
+              >
+                <span
+                  class="m_80f1301b mantine-Button-inner"
+                >
+                  <span
+                    class="m_811560b9 mantine-Button-label"
+                  >
+                    Logout
+                  </span>
+                </span>
+              </button>
+              <button
+                class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                data-block="true"
+                data-with-left-section="true"
+                style="--button-bg: var(--mantine-color-red-filled); --button-hover: var(--mantine-color-red-filled-hover); --button-color: var(--mantine-color-white); --button-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                type="button"
+              >
+                <span
+                  class="m_80f1301b mantine-Button-inner"
+                >
+                  <span
+                    class="m_a74036a mantine-Button-section"
+                    data-position="left"
+                  >
+                    <svg
+                      class="tabler-icon tabler-icon-trash "
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4 7l16 0"
+                      />
+                      <path
+                        d="M10 11l0 6"
+                      />
+                      <path
+                        d="M14 11l0 6"
+                      />
+                      <path
+                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+                      />
+                      <path
+                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="m_811560b9 mantine-Button-label"
+                  >
+                    Delete account
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Account Page Check if tabs get all fields should switch tabs when clicked 3`] = `
+<div>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
+  <div>
+    <div
+      class="m_89d60db1 mantine-Tabs-root"
+      data-orientation="horizontal"
+      data-variant="default"
+      id="mantine-fdvx97v1f"
+      style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-blue-filled);"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="m_576c9d4 m_89d33d6d mantine-Tabs-list"
+        data-grow="true"
+        data-orientation="horizontal"
+        data-variant="default"
+        role="tablist"
+      >
+        <button
+          aria-controls="mantine-fdvx97v1f-panel-settings"
+          aria-selected="true"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-active="true"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-fdvx97v1f-tab-settings"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-settings "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+              />
+              <path
+                d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Settings
+          </span>
+        </button>
+        <button
+          aria-controls="mantine-fdvx97v1f-panel-postsLikes"
+          aria-selected="false"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-fdvx97v1f-tab-postsLikes"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-photo "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 8h.01"
+              />
+              <path
+                d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"
+              />
+              <path
+                d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"
+              />
+              <path
+                d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Liked
+          </span>
+        </button>
+        <button
+          aria-controls="mantine-fdvx97v1f-panel-savedPosts"
+          aria-selected="false"
+          class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
+          data-orientation="horizontal"
+          data-variant="default"
+          id="mantine-fdvx97v1f-tab-savedPosts"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="m_fc420b1f mantine-Tabs-tabSection"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-message-circle "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1"
+              />
+            </svg>
+          </span>
+          <span
+            class="mantine-Tabs-tabLabel"
+          >
+            Saved
+          </span>
+        </button>
+      </div>
+      <div
+        aria-labelledby="mantine-fdvx97v1f-tab-postsLikes"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-fdvx97v1f-panel-postsLikes"
+        role="tabpanel"
+        style="display: none;"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r47{--sg-spacing-x:var(--mantine-spacing-xs);--sg-spacing-y:var(--mantine-spacing-xs);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r47"
+        >
+          <div
+            class="card m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root"
+            id="post-1"
+            style="--paper-radius: var(--mantine-radius-none); --card-padding: var(--mantine-spacing-none);"
+          >
+            <div
+              class=""
+              style="padding-inline: var(--mantine-spacing-xs);"
+            >
+              <div
+                class="m_347db0ec mantine-Badge-root"
+                data-variant="light"
+                style="--badge-bg: var(--mantine-color-blue-light); --badge-color: var(--mantine-color-blue-light-color); --badge-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              >
+                <span
+                  class="m_5add502a mantine-Badge-label"
+                >
+                  Actuality
+                </span>
+              </div>
+              <h3
+                class="title m_8a5d1357 mantine-Title-root"
+                data-order="3"
+                style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size); font-weight: 700;"
+              >
+                Interview with Anders
+              </h3>
+              <h6
+                class="m_8a5d1357 mantine-Title-root"
+                data-line-clamp="true"
+                data-order="6"
+                style="--title-fw: var(--mantine-h6-font-weight); --title-lh: var(--mantine-h6-line-height); --title-fz: var(--mantine-h6-font-size); --title-line-clamp: 3; font-weight: 400;"
+              >
+                I was recently contacted by believemy as part of its "portrait" format. Many thanks to Louis-Nicolas Leuillet, who came to Montpellier for the occasion. An interview that allows me to go back over my Grafikart philosophy and talk about my freelance activity.
+              </h6>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_f85678b6 mantine-Avatar-root"
+                  style="--avatar-radius: var(--mantine-radius-sm);"
+                >
+                  <img
+                    class="m_11f8ac07 mantine-Avatar-image"
+                    src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                    style="font-weight: 500;"
+                  >
+                    Anders 🤯
+                  </p>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    17 days ago
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_599a2148 mantine-Card-section footer"
+              data-last-section="true"
+            >
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                >
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-heart-filled "
+                          fill="#fa5252"
+                          height="24"
+                          stroke="none"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      0
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-bookmarks "
+                          fill="none"
+                          height="24"
+                          stroke="#fab005"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"
+                          />
+                          <path
+                            d="M11 3h5a3 3 0 0 1 3 3v11"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-message-plus "
+                          fill="none"
+                          height="24"
+                          stroke="#228be6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 9h8"
+                          />
+                          <path
+                            d="M8 13h6"
+                          />
+                          <path
+                            d="M12.01 18.594l-4.01 2.406v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5"
+                          />
+                          <path
+                            d="M16 19h6"
+                          />
+                          <path
+                            d="M19 16v6"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root"
+            id="post-2"
+            style="--paper-radius: var(--mantine-radius-none); --card-padding: var(--mantine-spacing-none);"
+          >
+            <div
+              class=""
+              style="padding-inline: var(--mantine-spacing-xs);"
+            >
+              <div
+                class="m_347db0ec mantine-Badge-root"
+                data-variant="light"
+                style="--badge-bg: var(--mantine-color-blue-light); --badge-color: var(--mantine-color-blue-light-color); --badge-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+              >
+                <span
+                  class="m_5add502a mantine-Badge-label"
+                >
+                  Actuality
+                </span>
+              </div>
+              <h3
+                class="title m_8a5d1357 mantine-Title-root"
+                data-order="3"
+                style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size); font-weight: 700;"
+              >
+                secondo post
+              </h3>
+              <h6
+                class="m_8a5d1357 mantine-Title-root"
+                data-line-clamp="true"
+                data-order="6"
+                style="--title-fw: var(--mantine-h6-font-weight); --title-lh: var(--mantine-h6-line-height); --title-fz: var(--mantine-h6-font-size); --title-line-clamp: 3; font-weight: 400;"
+              >
+                I was recently contacted by believemy as part of its "portrait" format. Many thanks to Louis-Nicolas Leuillet, who came to Montpellier for the occasion. An interview that allows me to go back over my Grafikart philosophy and talk about my freelance activity.
+              </h6>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_f85678b6 mantine-Avatar-root"
+                  style="--avatar-radius: var(--mantine-radius-sm);"
+                >
+                  <img
+                    class="m_11f8ac07 mantine-Avatar-image"
+                    src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                    style="font-weight: 500;"
+                  >
+                    Anders 🤯
+                  </p>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    17 days ago
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_599a2148 mantine-Card-section footer"
+              data-last-section="true"
+            >
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                >
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-heart-filled "
+                          fill="#fa5252"
+                          height="24"
+                          stroke="none"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      0
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-bookmarks "
+                          fill="none"
+                          height="24"
+                          stroke="#fab005"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"
+                          />
+                          <path
+                            d="M11 3h5a3 3 0 0 1 3 3v11"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="m_3eebeb36 mantine-Divider-root"
+                    data-orientation="vertical"
+                    data-size="sm"
+                    role="separator"
+                    style="--divider-size: var(--divider-size-sm); margin-inline: calc(0.25rem * var(--mantine-scale));"
+                  />
+                  <div
+                    class="m_4081bf90 mantine-Group-root"
+                    style="--group-gap: 0rem; --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+                  >
+                    <p
+                      class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                      style="font-weight: 600;"
+                    >
+                      1
+                    </p>
+                    <button
+                      class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+                      data-variant="subtle"
+                      style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                      type="button"
+                    >
+                      <span
+                        class="m_8d3afb97 mantine-ActionIcon-icon"
+                      >
+                        <svg
+                          class="tabler-icon tabler-icon-message-plus "
+                          fill="none"
+                          height="24"
+                          stroke="#228be6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 9h8"
+                          />
+                          <path
+                            d="M8 13h6"
+                          />
+                          <path
+                            d="M12.01 18.594l-4.01 2.406v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5"
+                          />
+                          <path
+                            d="M16 19h6"
+                          />
+                          <path
+                            d="M19 16v6"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-labelledby="mantine-fdvx97v1f-tab-savedPosts"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-fdvx97v1f-panel-savedPosts"
+        role="tabpanel"
+        style="display: none;"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r5u{--sg-spacing-x:var(--mantine-spacing-xs);--sg-spacing-y:var(--mantine-spacing-xs);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r5u"
+        >
+          <h5
+            class="m_8a5d1357 mantine-Title-root"
+            data-order="5"
+            style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size); text-align: center;"
+          >
+            No Saved posts yet
+          </h5>
+        </div>
+      </div>
+      <div
+        aria-labelledby="mantine-fdvx97v1f-tab-settings"
+        class="m_b0c91715 mantine-Tabs-panel"
+        data-orientation="horizontal"
+        id="mantine-fdvx97v1f-panel-settings"
+        role="tabpanel"
+      >
+        <style
+          data-mantine-styles="inline"
+        >
+          .__m__-r62{--sg-spacing-x:var(--mantine-spacing-xl);--sg-spacing-y:var(--mantine-spacing-xl);--sg-cols:1;}
+        </style>
+        <div
+          class="m_2415a157 mantine-SimpleGrid-root __m__-r62"
+        >
+          <div>
+            <div
+              class="m_4081bf90 mantine-Group-root"
+              style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+            >
+              <div
+                class="m_f85678b6 mantine-Avatar-root"
+                style="--avatar-size: calc(5.875rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-md);"
+              >
+                <img
+                  class="m_11f8ac07 mantine-Avatar-image"
+                  src="https://avatars.githubusercontent.com/u/71154960?v=4"
+                />
+              </div>
+              <div>
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  style="font-weight: 700; text-transform: uppercase;"
+                >
+                  What is your work?
+                </p>
+                <p
+                  class="mantine-focus-auto name m_b6d8b162 mantine-Text-root"
+                  style="font-weight: 500;"
+                >
+                  What is your name?
+                </p>
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: calc(0.625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-at icon"
+                    fill="none"
+                    height="1rem"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"
+                    />
+                    <path
+                      d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"
+                    />
+                  </svg>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    john@doe.fr
+                  </p>
+                </div>
+                <div
+                  class="m_4081bf90 mantine-Group-root"
+                  style="--group-gap: calc(0.625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap;"
+                >
+                  <svg
+                    class="tabler-icon tabler-icon-phone-call icon"
+                    fill="none"
+                    height="1rem"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                    />
+                    <path
+                      d="M15 7a2 2 0 0 1 2 2"
+                    />
+                    <path
+                      d="M15 3a6 6 0 0 1 6 6"
+                    />
+                  </svg>
+                  <p
+                    class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  >
+                    What is your phone number?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style
+            data-mantine-styles="inline"
+          >
+            .__m__-r6c{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+          </style>
+          <div
+            class="m_2415a157 mantine-SimpleGrid-root __m__-r6c"
+          >
+            <div
+              class="m_6d731127 mantine-Stack-root"
+              style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start;"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                Email
+              </h4>
+              <div
+                class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+              >
+                <div
+                  class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                  data-disabled="true"
+                  data-variant="default"
+                  style="--input-radius: var(--mantine-radius-md);"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                    data-disabled="true"
+                    data-variant="default"
+                    disabled=""
+                    id="mantine-8k5t5wwib"
+                    placeholder="john@doe.io"
+                    required=""
+                    value="john@doe.fr"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              role="separator"
+            />
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r6l{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r6l"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                Update your Information
+              </h4>
+              <style
+                data-mantine-styles="inline"
+              >
+                .__m__-r6o{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:2;}
+              </style>
+              <div
+                class="m_2415a157 mantine-SimpleGrid-root __m__-r6o"
+              >
+                <div
+                  class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+                >
+                  <label
+                    class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                    data-required="true"
+                    for="mantine-njvq43u8i"
+                    id="mantine-njvq43u8i-label"
+                  >
+                    Full name
+                    <span
+                      aria-hidden="true"
+                      class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                    data-variant="default"
+                    style="--input-radius: var(--mantine-radius-md);"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                      data-variant="default"
+                      id="mantine-njvq43u8i"
+                      placeholder="John Doe"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+                >
+                  <label
+                    class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                    data-required="true"
+                    for="mantine-5rec3lkd4"
+                    id="mantine-5rec3lkd4-label"
+                  >
+                    Phone number
+                    <span
+                      aria-hidden="true"
+                      class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                    data-variant="default"
+                    style="--input-radius: var(--mantine-radius-md);"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                      data-variant="default"
+                      id="mantine-5rec3lkd4"
+                      placeholder="1234567890"
+                      required=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+              >
+                <label
+                  class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
+                  data-required="true"
+                  for="mantine-b34nkibc1"
+                  id="mantine-b34nkibc1-label"
+                >
+                  Work
+                  <span
+                    aria-hidden="true"
+                    class="m_78a94662 mantine-InputWrapper-required mantine-TextInput-required"
+                  >
+                     *
+                  </span>
+                </label>
+                <div
+                  class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+                  data-variant="default"
+                  style="--input-radius: var(--mantine-radius-md);"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+                    data-variant="default"
+                    id="mantine-b34nkibc1"
+                    placeholder="Software engineer"
+                    required=""
+                  />
+                </div>
+              </div>
+              <div
+                class="m_4081bf90 mantine-Group-root"
+                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <button
+                  class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                  style="--button-radius: var(--mantine-radius-xl); --button-color: var(--mantine-color-white);"
+                  type="button"
+                >
+                  <span
+                    class="m_80f1301b mantine-Button-inner"
+                  >
+                    <span
+                      class="m_811560b9 mantine-Button-label"
+                    >
+                      Save
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              role="separator"
+            />
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r7d{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r7d"
+            >
+              <h4
+                class="m_8a5d1357 mantine-Title-root"
+                data-order="4"
+                style="--title-fw: var(--mantine-h4-font-weight); --title-lh: var(--mantine-h4-line-height); --title-fz: var(--mantine-h4-font-size);"
+              >
+                App settings
+              </h4>
+              <div
+                class="m_5f93f3bb mantine-Switch-root m_5f75b09e mantine-Switch-root"
+                data-label-position="right"
+                data-size="sm"
+                style="--switch-height: var(--switch-height-sm); --switch-width: var(--switch-width-sm); --switch-thumb-size: var(--switch-thumb-size-sm); --switch-label-font-size: var(--switch-label-font-size-sm); --switch-track-label-padding: var(--switch-track-label-padding-sm); --switch-color: var(--mantine-color-dark-4); --label-fz: var(--mantine-font-size-sm); --label-lh: var(--label-lh-sm);"
+              >
+                <label
+                  class="m_5f6e695e mantine-Switch-body"
+                  for="mantine-8n7erpmxk"
+                >
+                  <input
+                    class="m_926b4011 mantine-Switch-input"
+                    id="mantine-8n7erpmxk"
+                    role="switch"
+                    type="checkbox"
+                  />
+                  <div
+                    aria-hidden="true"
+                    class="m_9307d992 mantine-Switch-track"
+                    data-label-position="right"
+                  >
+                    <span
+                      class="m_93039a1d mantine-Switch-thumb"
+                      data-reduce-motion="true"
+                    />
+                    <span
+                      class="m_8277e082 mantine-Switch-trackLabel"
+                    >
+                      <svg
+                        class="tabler-icon tabler-icon-moon-stars "
+                        fill="none"
+                        height="24"
+                        stroke="#228be6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                        />
+                        <path
+                          d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+                        />
+                        <path
+                          d="M19 11h2m-1 -1v2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="m_d3ea56bb mantine-Switch-labelWrapper"
+                  >
+                    <span
+                      class="m_8ee546b8 mantine-Switch-label"
+                    >
+                      Change color theme
+                    </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div
+              class="m_3eebeb36 mantine-Divider-root"
+              data-orientation="horizontal"
+              data-with-label="true"
+              role="separator"
+              style="margin-block: var(--mantine-spacing-sm);"
+            >
+              <span
+                class="m_9e365f20 mantine-Divider-label"
+              >
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                  color="red"
+                  data-size="xs"
+                  style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); --text-color: var(--mantine-color-red-filled); font-weight: bold;"
+                >
+                  Danger zone
+                </p>
+              </span>
+            </div>
+            <style
+              data-mantine-styles="inline"
+            >
+              .__m__-r7p{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:2;}
+            </style>
+            <div
+              class="m_2415a157 mantine-SimpleGrid-root __m__-r7p"
+            >
+              <button
+                class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                style="--button-radius: var(--mantine-radius-sm); --button-color: var(--mantine-color-white);"
+                type="button"
+              >
+                <span
+                  class="m_80f1301b mantine-Button-inner"
+                >
+                  <span
+                    class="m_811560b9 mantine-Button-label"
+                  >
+                    Logout
+                  </span>
+                </span>
+              </button>
+              <button
+                class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+                data-block="true"
+                data-with-left-section="true"
+                style="--button-bg: var(--mantine-color-red-filled); --button-hover: var(--mantine-color-red-filled-hover); --button-color: var(--mantine-color-white); --button-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+                type="button"
+              >
+                <span
+                  class="m_80f1301b mantine-Button-inner"
+                >
+                  <span
+                    class="m_a74036a mantine-Button-section"
+                    data-position="left"
+                  >
+                    <svg
+                      class="tabler-icon tabler-icon-trash "
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4 7l16 0"
+                      />
+                      <path
+                        d="M10 11l0 6"
+                      />
+                      <path
+                        d="M14 11l0 6"
+                      />
+                      <path
+                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+                      />
+                      <path
+                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="m_811560b9 mantine-Button-label"
+                  >
+                    Delete account
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

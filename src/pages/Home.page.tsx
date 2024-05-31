@@ -11,7 +11,6 @@ import { ADD_POST_ROUTE } from '@/routes';
 import { useGetPostsQuery } from '@/services/posts';
 
 export function HomePage() {
-  //const [loading, setLoading] = useState(true);
   const dispatch = useAppDispatch();
   const search = useAppSelector(selectSearch);
   const user = useAppSelector(selectUser);
@@ -29,7 +28,7 @@ export function HomePage() {
     dispatch(setSearch(''));
   };
 
-  const items = data?.map((post) => <Post key={post.id} skeleton={false} item={post} />);
+  const items = data && data?.map((post) => <Post key={post.id} skeleton={false} item={post} />);
 
   const padding = useMatches({
     base: 'xs',
@@ -82,11 +81,23 @@ export function HomePage() {
       <Affix position={{ bottom: 20, right: 10 }} hiddenFrom="xs">
         <Stack gap={10}>
           {search ? (
-            <ActionIcon color="blue" radius="xl" size={40} onClick={clearSearch}>
+            <ActionIcon
+              color="blue"
+              radius="xl"
+              size={40}
+              onClick={clearSearch}
+              data-testid="clear-search.modal"
+            >
               <IconAdjustmentsOff stroke={1.5} size={20} />
             </ActionIcon>
           ) : (
-            <ActionIcon color="blue" radius="xl" size={40} onClick={handleOpenSearchModal}>
+            <ActionIcon
+              color="blue"
+              radius="xl"
+              size={40}
+              onClick={handleOpenSearchModal}
+              data-testid="open-search-modal"
+            >
               <IconSearch stroke={1.5} size={20} />
             </ActionIcon>
           )}

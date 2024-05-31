@@ -1,0 +1,121 @@
+\documentclass[8pt]{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{setspace}
+
+
+\renewcommand{\baselinestretch}{1.5}
+\include{theme/theme}
+
+
+\title{ISA Blog}
+\subtitle{Presentazione del progetto di Ingegneria del Software Avanzata}
+\author{Jipwouo chiege planck Anders}
+\date{A.A. 2023/2024}
+
+\begin{document}
+
+
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Introduzione}
+    \begin{itemize}
+        \item \textbf{ISA blog} è una piattaforma progettata per la comunità ISA,
+        dove studenti e insegnanti possono condividere le loro esperienze e conoscenze.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Requisiti}
+    Requisiti funzionali primari:
+    \begin{itemize}
+        \item Gli utenti possono visualizzare la lista dei posts pubblicati.
+        \item Gli utenti possono visualizzare i dettagli di un post.
+        \item Gli utenti possono interagire con i post pubblicati.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Requisiti}
+    Requisiti funzioniali derivati:
+    \begin{itemize}
+        \item Gli utenti devono essere in grado di aggiornare i dettagli del loro profilo.
+        \item Gli utenti devono essere in grado di creare nuovi post.
+        \item Gli utenti devono essere in grado di commentare i post esistenti.
+        \item Gli utenti devono essere in grado di rispondere ai commenti.
+      \end{itemize}
+    Security:
+    \begin{itemize}
+        \item la creazione di nuovi post e interazione con i post esistenti deve essere permessa solo agli utenti registrati.
+              \begin{itemize}
+                  \item Gli utenti possono registrarsi autonomamente.
+                  \item Gli utenti possono effettuare il login tramite email e github o google.
+              \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Utenti}
+    Per poter utilizzare l'apllicazione,non è necessario registrarsi come utente, ma per poter creare un post o commentare un post è necessario registrarsi.
+    \begin{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Tecnologie utilizzate}
+    \begin{itemize}
+        \item \textbf{Backend}: Supabase (un'alternativa open-source a Firebase)
+        \item \textbf{Hosting e funzioni serverless}: Vercel
+        \item \textbf{Libreria UI}: Mantine (una libreria di componenti e ganci React con supporto nativo per temi scuri, focalizzata su usabilità e accessibilità)
+        \item \textbf{Testing}: Vitest (un runner di test veloce, leggero e con opinioni per progetti JavaScript moderni)
+        \item \textbf{Containerizzazione}: Docker
+        \item \textbf{Autenticazione}: GitHub OAuth, Google OAuth
+        \item \textbf{Trasformazione CSS}: PostCSS (uno strumento per trasformare gli stili con plugin JS)
+        \item \textbf{Gestione degli stati}: Redux Toolkit (l'insieme di strumenti ufficiali, autorevoli e inclusi nelle batterie per uno sviluppo efficiente di Redux)
+        \item \textbf{Recupero dati e cache}: Interrogazione RTK
+        \item \textbf{Forms}: React Hook Form (un form performante, flessibile ed estensibile con una validazione facile da usare)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Testing}
+    Sono state testate le seguenti funzionalità:
+    \begin{itemize}
+        \item Nella directory \textbf{pages}, è stato testato il corretto rendering delle pagine e la corretta navigazione tra di esse.
+        \begin{itemize}
+            \item Home page: verifica del caricamento corretto dei post e della possibilità di navigare a un post specifico.
+            \item Pagina del post: verifica del caricamento corretto dei dettagli del post e dei commenti associati.
+            \item Pagina di login/registrazione: verifica del corretto funzionamento dei form di login e registrazione.
+        \end{itemize}
+        \item Nella directory \textbf{service}, è stato testato il corretto funzionamento delle chiamate API.
+        \begin{itemize}
+            \item Recupero dei post: verifica che i post vengano recuperati correttamente dall'API.
+            \item Creazione di un post: verifica che un nuovo post possa essere creato correttamente tramite l'API.
+            \item Autenticazione: verifica che l'autenticazione dell'utente funzioni correttamente tramite l'API.
+        \end{itemize}
+        \item Nella directory \textbf{component}, è stato testato il corretto funzionamento dei componenti React.
+        \begin{itemize}
+            \item Componente Post: verifica che il componente Post renderizzi correttamente i dettagli di un post.
+            \item Componente Comment: verifica che il componente Comment renderizzi correttamente un commento.
+            \item Componente Form: verifica che i componenti del form gestiscano correttamente l'input dell'utente e inviino i dati corretti quando vengono inviati.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{CI/CD}
+    L'applicazione utilizza le GitHub Actions per il CI/CD.
+    Il workflow è eseguito ogni volta che viene effettuato un push o un pull request sul branch main o develop.
+    \begin{itemize}
+        \item \textbf{Build}: viene eseguito il build dell'applicazione tramite node (npm run build).
+        \item \textbf{Test}: vengono eseguiti i test di unità e di sistema.
+        \item \textbf{Deploy}: viene buildata l'immagine Docker dell'applicazione e pubblicata su Docker Hub.
+    \end{itemize}
+    Inoltre, ogni volta che viene effettuato un push sul branch main, viene eseguito il deploy dell'applicazione su vercel.
+\end{frame}
+
+
+
+
+\end{document}

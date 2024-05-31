@@ -157,9 +157,9 @@ export function Post({ skeleton, ...props }: Props) {
         </Title>
 
         <Group mt="sm" gap="xs">
-          <Avatar src={item.author.avatar} radius="sm" />
+          <Avatar src={item.author?.avatar} radius="sm" />
           <div>
-            <Text fw={500}>{item.author.name}</Text>
+            <Text fw={500}>{item.author?.name}</Text>
             <Text fz="xs" c="dimmed">
               {formatPostDate(new Date(item.createdAt))}
             </Text>

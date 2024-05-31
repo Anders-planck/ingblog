@@ -1,0 +1,43 @@
+@startuml
+!theme plain
+title Post Creation Process
+
+[*] --> start : User is logged in and on post creation page
+
+state "compilation form Post" as start
+start: User fills out post form (title, content, tags, etc.)
+
+state "Submitted" as submitted
+submitted: User clicks submit button
+
+state "Validating" as validating
+validating: user data is being validated
+
+state "Validation Success" as validation_success
+validation_success: All fields pass validation
+
+state "Validation Failure" as validation_failure
+validation_failure: One or more fields fail validation
+
+state "Saving to Database" as saving
+saving: Validated data is sent to DB (supabase)
+
+state "Save Success" as save_success
+save_success: Post data is saved
+
+state "Save Failure" as save_failure
+save_failure: Error during saving (esp. network error, server error)
+
+
+start --> submitted : User clicks submit button
+submitted --> validating : Post data is being validated
+validating --> validation_success : All checks pass
+validating --> validation_failure : One or more checks fail
+validation_success --> saving : Validated data is sent to DB
+validation_failure --> start : User corrects validation errors
+saving --> save_success : Post data is saved
+saving --> save_failure : Error during saving
+save_failure --> start : User retries after save error
+
+save_success --> [*] : Post published successfully
+@enduml

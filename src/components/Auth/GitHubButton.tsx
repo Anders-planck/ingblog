@@ -9,6 +9,7 @@ type GithubButtonProps = ButtonProps &
 export function GithubButton({ signInWithGithub, ...props }: GithubButtonProps) {
   return (
     <Button
+      data-testid="github-button"
       onClick={signInWithGithub}
       leftSection={<IconBrandGithub style={{ width: '1rem', height: '1rem' }} color="#fff" />}
       variant="default"

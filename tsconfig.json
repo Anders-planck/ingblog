@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
     "types": ["node", "@testing-library/jest-dom", "vitest/globals"],
-    "target": "ESNext",
+    "target": "esnext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -25,6 +25,8 @@
     "src",
     "test-utils",
     "vitest.config.ts",
+    "jest.config.ts",
+    "jest.setup.ts"
   ],
-  "exclude": ["node_modules","coverage"]
+  "exclude": ["node_modules","coverage","latex","out", "storybook-static"]
 }

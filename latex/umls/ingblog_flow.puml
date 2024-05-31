@@ -1,0 +1,55 @@
+@startuml
+
+!theme plain
+title Mini Blog Finite State Machine
+
+[*] --> HomePage : the user lands on the home page
+
+state "Home Page" as HomePage
+
+state "Account" as Account {
+    state "liked post" as LikedPost
+
+    state "saved post" as SavedPost
+
+    state "settings" as Settings {
+        [*] --> userDetail : the user sees the user details
+        --
+        [*] --> updateUserDetail : the user updates the user details
+         state "updateUserDetail" as updateUserDetail
+        --
+        [*] --> updateSistemaColor : the user updates the color system
+        state "updateSistemaColor" as updateSistemaColor
+        --
+        [*] --> dangerZone : the user goes \nto the danger zone
+        state "dangerZone" as dangerZone
+    }
+}
+
+ state "Add Post" as AddPost
+
+state "Auth" as Auth {
+    [*] --> LoginForm : User lands on the login\n form without authentication
+    LoginForm --> AttemptAuthentication : User attempts to authenticate \n by clicking the login button
+    AttemptAuthentication --> LoginForm : Authentication fails, \nuser remains on the login form
+    AttemptAuthentication --> HomePage : Authentication succeeds,\n user is redirected to the home page
+}
+
+
+state selectorAccount <<choice>>
+selectorAccount: the user clicks on the account/liked/saved icon
+selectorAccount --> Settings :  Setting icon
+selectorAccount --> LikedPost : liked posts icon
+selectorAccount --> SavedPost : saved posts icon
+
+state "redirect auth" as redirectAuth <<sdlreceive>>
+redirectAuth: the user is redirected to the auth page if not authenticated
+redirectAuth --> Auth : the user is not authenticated
+redirectAuth --> selectorAccount : the user is authenticated
+redirectAuth --> AddPost : the user is authenticated and clicked on the add post icon
+redirectAuth --> HomePage : the user is authenticated and clicked on the authentication icon
+
+HomePage --> redirectAuth : the user clicks on the account/liked/bookmark icon, add post icon, or authentication icon
+AddPost --> HomePage : the user clicks on the logo icon
+Account --> HomePage : the user clicks on the logo icon
+@enduml
