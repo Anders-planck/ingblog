@@ -1,4 +1,4 @@
-import { Autocomplete, Modal, rem } from '@mantine/core';
+import { Autocomplete, Modal, rem, Title } from '@mantine/core';
 import { IconSearch } from '@tabler/icons-react';
 import React, { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store';
@@ -6,7 +6,9 @@ import { closeSearchModal, selectOpened, setSearch } from '@/store/app/search';
 import { supabase } from '@/lib/supabase';
 
 const SearchModal = () => {
-  const [autoCompleteData, setautoCompleteData] = useState<string[]>([]);
+  const [autoCompleteData, setautoCompleteData] = useState<string[]>([
+    'Start typing to see suggestions...',
+  ]);
   const opened = useAppSelector(selectOpened);
   const dispatch = useAppDispatch();
   const [searchContent, setSearchContent] = useState('');
@@ -48,9 +50,16 @@ const SearchModal = () => {
         onClose={handleClose}
         withCloseButton={false}
         transitionProps={{ transition: 'rotate-left' }}
+        radius="md"
+        data-testid="search-modal"
       >
+        <Title order={1} fw={900} style={{ marginBottom: rem(10) }}>
+          Search
+        </Title>
+
         <Autocomplete
           placeholder="Search"
+          data-testid="search-input"
           onKeyDown={(event) => handleKeyDown(event)}
           onChange={(value) => setSearchContent(value)}
           leftSection={<IconSearch style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}

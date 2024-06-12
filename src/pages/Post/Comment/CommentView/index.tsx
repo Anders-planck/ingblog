@@ -9,7 +9,7 @@ const CommentView = ({ comments }: Props) => {
   const items = comments.map((item) => <CommentCard key={item.id} item={item} />);
 
   return (
-    <SimpleGrid cols={1} spacing="xs" id="comments">
+    <SimpleGrid cols={1} spacing="xs" data-testid="comments-list">
       <Title order={2} fw={900}>
         Comments
       </Title>

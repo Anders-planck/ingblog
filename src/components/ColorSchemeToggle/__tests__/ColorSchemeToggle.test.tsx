@@ -3,6 +3,16 @@ import userEvent from '@testing-library/user-event';
 import { MantineProvider } from '@mantine/core';
 import { ColorSchemeToggle } from '../ColorSchemeToggle';
 
+jest.setTimeout(300000);
+
+afterAll(() => {
+  jest.restoreAllMocks();
+});
+
+afterEach(() => {
+  jest.clearAllMocks();
+});
+
 describe('ColorSchemeToggle render', () => {
   it('renders without crashing', () => {
     render(

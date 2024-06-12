@@ -9,167 +9,116 @@ import {
   Group,
   Alert,
   Text,
-  useMantineColorScheme,
   Switch,
   rem,
-  useMantineTheme,
 } from '@mantine/core';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { upperFirst } from '@mantine/hooks';
 import { IconInfoCircle, IconMoonStars, IconSun, IconTrash } from '@tabler/icons-react';
-import { useNavigate } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '@/store';
-import { selectUser, setProfile, setSession, setUser } from '@/store/auth';
-import { supabase } from '@/lib/supabase';
 import { ConfirmationModal } from '@/components/ConfirmationModal';
-import { AUTH_ROUTE } from '@/routes';
 
-const UpdateInfoUser = () => {
-  const user = useAppSelector(selectUser);
-  const navigate = useNavigate();
-  const dispatch = useAppDispatch();
-
-  const logout = async () => {
-    await supabase.auth.signOut();
-    dispatch(setUser(null));
-    dispatch(setProfile(null));
-    dispatch(setSession(null));
-    navigate(AUTH_ROUTE);
-  };
-
-  const deleteAccount = async () => {
-    await logout();
-  };
-
-  return (
-    <SimpleGrid cols={1} spacing="md">
-      <Stack>
-        <Title order={4}>Email</Title>
-        <TextInput
-          required
-          value={user?.email}
-          placeholder="hello@mantine.dev"
-          disabled
-          radius="md"
-        />
-      </Stack>
-      <Divider />
-      <UpdateName />
-      <Divider />
-      <SettingsApp />
-      <Divider
-        label={
-          <Text size="xs" color="red" fw="bold">
-            Danger zone
-          </Text>
-        }
-        my="sm"
-      />
-      <SimpleGrid cols={2} spacing="md">
-        <Button onClick={logout} radius="sm">
-          Logout
-        </Button>
-        <ConfirmationModal
-          onConfirm={deleteAccount}
-          labelButton="Delete account"
-          buttonProps={{
-            leftSection: <IconTrash style={{ width: rem(16), height: rem(16) }} stroke={1.5} />,
-            color: 'red',
-            fullWidth: true,
-            m: 1,
-          }}
-        />
-      </SimpleGrid>
-    </SimpleGrid>
-  );
+type UpdateInfoUserProps = {
+  user: any;
+  logout: any;
+  deleteAccount: any;
+  updateNameProps: UpdateNameProps;
+  settingAppProps: SettingsAppProps;
 };
+const UpdateInfoUser = ({
+  user,
+  logout,
+  deleteAccount,
+  settingAppProps,
+  updateNameProps,
+}: UpdateInfoUserProps) => (
+  <SimpleGrid cols={1} spacing="md">
+    <Stack>
+      <Title order={4}>Email</Title>
+      <TextInput required value={user?.email} placeholder="john@doe.io" disabled radius="md" />
+    </Stack>
+    <Divider />
+    <UpdateName {...updateNameProps} />
+    <Divider />
+    <SettingsApp {...settingAppProps} />
+    <Divider
+      label={
+        <Text size="xs" color="red" fw="bold">
+          Danger zone
+        </Text>
+      }
+      my="sm"
+    />
+    <SimpleGrid cols={2} spacing="md">
+      <Button onClick={logout} radius="sm">
+        Logout
+      </Button>
+      <ConfirmationModal
+        onConfirm={deleteAccount}
+        labelButton="Delete account"
+        buttonProps={{
+          leftSection: <IconTrash style={{ width: rem(16), height: rem(16) }} stroke={1.5} />,
+          color: 'red',
+          fullWidth: true,
+          m: 1,
+        }}
+      />
+    </SimpleGrid>
+  </SimpleGrid>
+);
 
-const UpdateName = () => {
-  const user = useAppSelector(selectUser);
+type UpdateNameProps = {
+  name: any;
+  phone: any;
+  work: any;
+  setName: any;
+  setPhone: any;
+  setWork: any;
+  errorMessage: any;
+  successMessage: any;
+  setErrorMessage: any;
+  setSuccessMessage: any;
+  loading: any;
+  isLoading: any;
+  update: any;
+};
+export const UpdateName = ({
+  name,
+  phone,
+  work,
+  setName,
+  setPhone,
+  setWork,
+  errorMessage,
+  successMessage,
+  setErrorMessage,
+  setSuccessMessage,
+  loading,
+  isLoading,
+  update,
+}: UpdateNameProps) => {
+  const [initialName, setInitialName] = React.useState(name);
+  const [initialPhone, setInitialPhone] = React.useState(phone);
+  const [initialWork, setInitialWork] = React.useState(work);
 
-  const [loading, setLoading] = useState(false);
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [work, setWork] = useState('');
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
-
-  const dispatch = useAppDispatch();
-
-  const icon = <IconInfoCircle />;
-
-  const update = async () => {
-    setErrorMessage(null);
-    setSuccessMessage(null);
-    setLoading(true);
-    const updated_at = new Date();
-    const updates = {
-      id: user?.id,
-      full_name: name,
-      phone,
-      work,
-      updated_at,
-    };
-    const { error } = await supabase.from('profiles').upsert(updates);
-    if (error) {
-      //@ts-ignore
-      setErrorMessage(error.message);
-    }
-    setSuccessMessage('Profile updated successfully');
-    dispatch(
-      setProfile({
-        full_name: name,
-        phone,
-        work,
-        updated_at,
-      })
-    );
-    setLoading(false);
+  const handleSave = () => {
+    update();
   };
 
-  useEffect(() => {
-    let ignore = false;
-    async function getProfile() {
-      if (!user) return;
-      setErrorMessage(null);
-      setSuccessMessage(null);
-      setLoading(true);
+  const handleSetName = (e: any) => {
+    setName(e.target.value);
+    setInitialName(e.target.value);
+  };
 
-      const { data, error } = await supabase
-        .from('profiles')
-        .select('full_name, phone, work, updated_at ')
-        .eq('id', user?.id)
-        .limit(1);
+  const handleSetPhone = (e: any) => {
+    setPhone(e.target.value);
+    setInitialPhone(e.target.value);
+  };
 
-      if (!ignore) {
-        if (error) {
-          //@ts-ignore
-          setErrorMessage(error.message);
-        } else if (data[0]) {
-          setName(data[0].full_name);
-          setPhone(data[0].phone);
-          setWork(data[0].work);
-
-          dispatch(
-            setProfile({
-              full_name: data[0].full_name,
-              phone: data[0].phone,
-              work: data[0].work,
-              updated_at: data[0].updated_at,
-            })
-          );
-        }
-      }
-
-      setLoading(false);
-    }
-
-    getProfile();
-
-    return () => {
-      ignore = true;
-    };
-  }, [user]);
+  const handleSetWork = (e: any) => {
+    setWork(e.target.value);
+    setInitialWork(e.target.value);
+  };
+  const icon = <IconInfoCircle />;
 
   return (
     <SimpleGrid cols={1} spacing="md">
@@ -207,18 +156,18 @@ const UpdateName = () => {
         <TextInput
           required
           label="Full name"
-          value={name}
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder={name}
+          value={initialName}
+          onChange={handleSetName}
+          placeholder={initialName ?? 'John Doe'}
           radius="md"
         />
 
         <TextInput
           required
           label="Phone number"
-          value={phone}
-          onChange={(e) => setPhone(e.currentTarget.value)}
-          placeholder={phone ?? '1234567890'}
+          value={initialPhone}
+          onChange={handleSetPhone}
+          placeholder={initialPhone ?? '1234567890'}
           radius="md"
         />
       </SimpleGrid>
@@ -226,25 +175,27 @@ const UpdateName = () => {
       <TextInput
         required
         label="Work"
-        value={work}
-        placeholder={work ?? 'Software engineer'}
+        value={initialWork}
+        placeholder={initialWork ?? 'Software engineer'}
         radius="md"
-        onChange={(e) => setWork(e.currentTarget.value)}
+        onChange={handleSetWork}
       />
 
       <Group justify="flex-end">
-        <Button onClick={update} radius="xl">
-          {loading ? <Loader color="white" size="sm" /> : upperFirst('Save')}
+        <Button onClick={handleSave} radius="xl">
+          {loading || isLoading ? <Loader color="white" size="sm" /> : upperFirst('Save')}
         </Button>
       </Group>
     </SimpleGrid>
   );
 };
 
-const SettingsApp = () => {
-  const theme = useMantineTheme();
-  const { colorScheme, setColorScheme } = useMantineColorScheme();
-
+type SettingsAppProps = {
+  setColorScheme: any;
+  colorScheme: any;
+  theme: any;
+};
+export const SettingsApp = ({ setColorScheme, colorScheme, theme }: SettingsAppProps) => {
   const sunIcon = (
     <IconSun
       style={{ width: rem(16), height: rem(16) }}

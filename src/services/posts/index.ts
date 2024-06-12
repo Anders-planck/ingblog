@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { createApi, fakeBaseQuery } from '@reduxjs/toolkit/query/react';
 import { supabase } from '@/lib/supabase';
 import { Post } from '@/types/post';
 import { formatPost } from '@/pages/Post/utils';
@@ -19,7 +19,7 @@ type PostNewPostParams = {
 
 export const postApi = createApi({
   reducerPath: 'postApi',
-  baseQuery: fetchBaseQuery(),
+  baseQuery: fakeBaseQuery(),
   tagTypes: ['POSTS', 'LIKED_POSTS', 'BOOKMARKED_POSTS'],
   endpoints: (builder) => ({
     getPosts: builder.query<Post[], GetPostsParams>({
@@ -30,8 +30,8 @@ export const postApi = createApi({
           .select(
             '*, profiles(full_name, avatar_url), likes:likes(*), bookmarks:bookmarks(*), comments:comments(*, profiles(full_name, avatar_url, id))'
           )
-          .eq('published', true)
-          .order('created_at', { ascending: false });
+          .order('created_at', { ascending: false })
+          .eq('published', true);
 
         // Se title è definito, aggiungi il filtro .ilike()
         if (title) {
@@ -40,10 +40,7 @@ export const postApi = createApi({
 
         const { data, error } = await query;
 
-        if (error) {
-          return { error };
-        }
-        return { data: data.map(formatPost) };
+        return { data: data?.map(formatPost) ?? null, error: error ?? null };
       },
       providesTags: ['POSTS'],
     }),
@@ -199,10 +196,16 @@ export const postApi = createApi({
         ]);
 
         if (error) {
-          return { error };
+          return {
+            error,
+            data: null,
+          };
         }
 
-        return {};
+        return {
+          error: null,
+          data: null,
+        };
       },
       invalidatesTags: ['POSTS'],
     }),

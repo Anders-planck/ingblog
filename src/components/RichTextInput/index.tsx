@@ -86,6 +86,7 @@ const RichTextInput = ({
   return (
     <Stack gap={2}>
       <Input.Wrapper
+        data-testid="rich-text-editor"
         {...(!readonly && label && { label })}
         {...(!readonly && description && { description })}
         {...(!readonly && error && { error })}

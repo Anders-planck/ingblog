@@ -1,0 +1,69 @@
+@startuml
+!theme plain
+title Authentication Flow
+
+[*] --> start: User attempts to Authentication Page
+
+state "Start" as start
+start: User chooses login method (GitHub, Google, Email)
+
+state "GitHub Login" as github_login
+github_login: User chooses GitHub, clicking "Login with GitHub"
+
+state "Google Login" as google_login
+google_login: User chooses Google, clicking "Login with Google"
+
+state "Email Magic Link" as email_magic_link
+email_magic_link: User chooses Email, entering email address
+
+state "Fetch User (GitHub)" as fetch_github
+fetch_github: The system checks if user exists in DB or not.
+
+state "Fetch User (Google)" as fetch_google
+fetch_google: The system checks if user exists in DB or not.
+
+state "Fetch User (Email)" as fetch_email
+fetch_email: The system checks if user exists in DB or not.
+
+state "Creating User (GitHub)" as create_github
+create_github: The system creates a new user \nand  redirects to home page
+
+state "Creating User (Google)" as create_google
+create_google: The system creates a new user \nand  redirects to home page
+
+state "Creating User (Email)" as create_email
+create_email: The system creates a new user \nand  redirects to home page
+
+state "Saving to DB" as saving
+saving: The system saves user data to DB
+
+state "Redirect to Home Page" as redirect
+state "Home Page" as home
+
+
+start --> github_login : User chooses GitHub
+start --> google_login : User chooses Google
+start --> email_magic_link : User chooses Email
+
+github_login --> fetch_github : User logs in
+google_login --> fetch_google : User logs in
+email_magic_link --> fetch_email : User logs in
+
+fetch_github --> create_github : User not in DB
+fetch_google --> create_google : User not in DB
+fetch_email --> create_email : User not in DB
+
+fetch_github --> redirect : User in DB
+fetch_google --> redirect : User in DB
+fetch_email --> redirect : User in DB
+
+create_github --> saving : New user
+create_google --> saving : New user
+create_email --> saving : New user
+
+saving --> redirect : User data saved
+
+redirect --> home : User redirected to home page
+
+home --> [*] : User is on home page
+@enduml

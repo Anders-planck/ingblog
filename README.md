@@ -306,8 +306,8 @@ Per avviare l'applicazione, è possibile utilizzare il comando `docker-compose u
 4. Initialize the vercel and prisma.
     ```sh
     docker compose exec node /bin/bash setup_vercel.sh
-    docker compose exec node vercel env pull .env.development.local --token=${{ secrets.VERCEL_ISA_BLOG_TOKEN }}
-    docker compose exec node cp  .env.development.local .env
+    docker compose exec node vercel env pull .env.local.local --token=${{ secrets.VERCEL_ISA_BLOG_TOKEN }}
+    docker compose exec node cp  .env.local.local .env
     ```
 
 5. Install NPM packages

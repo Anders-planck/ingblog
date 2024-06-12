@@ -1,0 +1,55 @@
+@startuml
+!theme plain
+top to bottom direction
+title Database Schema
+
+class bookmarks {
+   createdAt: timestamp with time zone
+   authorId: uuid
+   postId: uuid
+   id: uuid
+}
+
+class comments {
+   content: jsonb
+   createdAt: timestamp with time zone
+   authorId: uuid
+   postId: uuid
+   id: uuid
+}
+
+class likes {
+   createdAt: timestamp with time zone
+   authorId: uuid
+   postId: uuid
+   id: uuid
+}
+
+class posts {
+   title: text
+   content: jsonb
+   published: boolean
+   authorId: uuid
+   category: category
+   created_at: timestamp with time zone
+   image: text
+   overview: text
+   id: uuid
+}
+class profiles {
+   full_name: text
+   phone: text
+   work: text
+   updated_at: timestamp with time zone
+   avatar_url: text
+   id: uuid
+}
+
+bookmarks  -[#595959,plain]-^  posts     : "postId:id"
+bookmarks  -[#595959,plain]-^  profiles  : "authorId:id"
+comments   -[#595959,plain]-^  posts     : "postId:id"
+comments   -[#595959,plain]-^  profiles  : "authorId:id"
+likes      -[#595959,plain]-^  posts     : "postId:id"
+likes      -[#595959,plain]-^  profiles  : "authorId:id"
+posts      -[#595959,plain]-^  profiles  : "authorId:id"
+@enduml

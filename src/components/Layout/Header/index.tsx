@@ -43,6 +43,7 @@ import {
   AUTH_ROUTE,
   HOME_ROUTE,
 } from '@/routes';
+import { setSearch } from '@/store/app/search';
 
 const BlogsLinks = [
   {
@@ -112,6 +113,7 @@ export function Header() {
         <Group justify="space-between">
           <Anchor
             onClick={() => {
+              dispatch(setSearch(''));
               navigate(HOME_ROUTE);
             }}
           >
@@ -136,13 +138,13 @@ export function Header() {
                 >
                   <Group gap={7}>
                     <Avatar
-                      src={user.user_metadata.avatar_url}
-                      alt={user.user_metadata.full_name}
+                      src={user.user_metadata?.avatar_url}
+                      alt={user.user_metadata?.full_name}
                       radius="xl"
                       size={20}
                     />
                     <Text fw={500} size="sm" lh={1} mr={3}>
-                      {profile?.full_name ?? user?.user_metadata.full_name}
+                      {profile?.full_name ?? user?.user_metadata?.full_name}
                     </Text>
                     <IconChevronDown style={{ width: rem(12), height: rem(12) }} stroke={1.5} />
                   </Group>
@@ -287,10 +289,10 @@ export function Header() {
             >
               <Group justify="space-between" px="md">
                 <Group>
-                  <Avatar radius="xl" src={user?.user_metadata.avatar_url} />
+                  <Avatar radius="xl" src={user?.user_metadata?.avatar_url} />
 
                   <div>
-                    <Text fw={500}>{profile?.full_name ?? user?.user_metadata.full_name}</Text>
+                    <Text fw={500}>{profile?.full_name ?? user?.user_metadata?.full_name}</Text>
                     <Text size="xs" c="dimmed">
                       {user?.email}
                     </Text>

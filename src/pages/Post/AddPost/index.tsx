@@ -54,7 +54,7 @@ const AddPost = () => {
   const handleSubmit = async (values: any) => {
     if (!user) return;
 
-    if (!content) {
+    if (!content || content.trim().length === 0) {
       setErrorContent('Content is required');
       return;
     }
@@ -83,7 +83,7 @@ const AddPost = () => {
   }, []);
 
   return (
-    <Page title="Add Post">
+    <Page title="Add Post" data-testid="add-post">
       <Box p={padding}>
         <Title order={1}>Post</Title>
 
@@ -91,6 +91,7 @@ const AddPost = () => {
           <form onSubmit={form.onSubmit(handleSubmit)}>
             <Stack>
               <TextInput
+                data-testid="post-title"
                 withAsterisk
                 label="Title"
                 description="Title of your article 🤓"
@@ -100,6 +101,7 @@ const AddPost = () => {
               />
 
               <TextInput
+                data-testid="post-image"
                 label="Image"
                 description="Image URL of your article, is optional 🤷🏽‍♂️"
                 placeholder="Post image URL"
@@ -108,6 +110,7 @@ const AddPost = () => {
               />
 
               <Select
+                data-testid="post-category"
                 withAsterisk
                 searchable
                 label="Category"
@@ -119,6 +122,7 @@ const AddPost = () => {
               />
 
               <Textarea
+                data-testid="post-overview"
                 label="Overview description 🙆🏽‍♂️"
                 withAsterisk
                 description="tell me more about you article"
@@ -129,6 +133,7 @@ const AddPost = () => {
               />
 
               <RichTextInput
+                data-testid="post-content"
                 label="Content 📝"
                 description="write your post content here 🤓"
                 key="content"
@@ -141,6 +146,7 @@ const AddPost = () => {
               />
 
               <Checkbox
+                data-testid="post-publish"
                 mt="md"
                 label="Do you want to publish this post?"
                 key={form.key('publish')}
@@ -149,6 +155,7 @@ const AddPost = () => {
 
               <Group justify="flex-end" mt="md">
                 <Button
+                  data-testid="post-save"
                   type="submit"
                   disabled={!form.isValid || isSubmitting}
                   loading={isSubmitting}

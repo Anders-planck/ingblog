@@ -38,8 +38,8 @@ export const fakePost: Post = {
 
 export type Like = {
   id?: string;
-  authorId: number;
-  postId: number;
+  authorId: string;
+  postId: string;
   createdAt?: string;
 };
 

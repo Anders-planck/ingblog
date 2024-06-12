@@ -39,8 +39,8 @@ const PostView = () => {
 
   return (
     <Page title={post?.title || 'Post'}>
-      {post && (
-        <Box>
+      {post ? (
+        <Box data-testid="post-view">
           {post.image && <Image src={post.image} alt={post.title} height={180} radius={radius} />}
 
           <SimpleGrid cols={1} spacing="xs" p={padding}>
@@ -83,6 +83,20 @@ const PostView = () => {
               <CommentView comments={[...post.comments].reverse()} />
             )}
           </SimpleGrid>
+        </Box>
+      ) : (
+        <Box
+          data-testid="post-view-not-fount"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100%',
+          }}
+        >
+          <Title order={1} mt="xl">
+            Post not found
+          </Title>
         </Box>
       )}
     </Page>

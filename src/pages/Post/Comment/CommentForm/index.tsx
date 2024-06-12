@@ -42,7 +42,7 @@ const CommentForm = ({ post }: Props) => {
   };
 
   return (
-    <form onSubmit={form.onSubmit(handleOnSubmit)}>
+    <form onSubmit={form.onSubmit(handleOnSubmit)} data-testid="comment-form">
       <Textarea
         label="hey 🙆🏽‍♂️"
         withAsterisk
