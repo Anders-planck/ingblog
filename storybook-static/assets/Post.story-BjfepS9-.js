@@ -1,5 +1,0 @@
-import{j as t}from"./Text-C7Dh7ZI7.js";import{P as n}from"./index-DSlX9BrU.js";import{a as d}from"./post-CPjMHyEV.js";import{C as u}from"./Container-BzzqRwV5.js";import"./index-CDs2tPxN.js";import"./utils-CCbRh-jk.js";import"./Avatar-CFaihW2U.js";import"./index-BGVOYX_M.js";import"./index-B-E8tDCn.js";import"./createReactComponent-BZ78rv5h.js";import"./iframe-Ck49Qx9C.js";import"../sb-preview/runtime.js";import"./routes-DKc0Bs61.js";import"./Title--B-sobQY.js";import"./Group-CXAjiDjl.js";const R={component:n,title:"Components/Post",parameters:{backgrounds:{default:"dark"}},decorators:[c=>t.jsx(u,{size:"md",children:t.jsx(c,{})})]},r=()=>t.jsx(n,{skeleton:!0}),o={args:{item:d}};var e,s,a;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:"() => <Post skeleton />",...(a=(s=r.parameters)==null?void 0:s.docs)==null?void 0:a.source}}};var m,p,i;o.parameters={...o.parameters,docs:{...(m=o.parameters)==null?void 0:m.docs,source:{originalSource:`{
-  args: {
-    item: fakePost
-  }
-}`,...(i=(p=o.parameters)==null?void 0:p.docs)==null?void 0:i.source}}};export{r as Default,R as default,o as primary};
