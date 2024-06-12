@@ -35,8 +35,8 @@ test('Post type', () => {
 
   // Test Like type
   const validLike: Like = {
-    authorId: 1,
-    postId: 1,
+    authorId: '1',
+    postId: '1',
   };
 
   expectType<Like>(validLike);
@@ -61,8 +61,8 @@ test('Post type', () => {
 
   const invalidBookmark = {
     id: 1,
-    authorId: 1,
-    postId: 1,
+    authorId: '1',
+    postId: '1',
     createdAt: new Date().toISOString(),
   };
 

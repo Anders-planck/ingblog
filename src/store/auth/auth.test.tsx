@@ -37,7 +37,7 @@ const profile = {
   phone: '187587656757',
   full_name: 'Test User',
   work: 'Developer',
-  updated_at: new Date(),
+  updated_at: new Date().toISOString(),
 };
 
 describe('Auth Store', () => {

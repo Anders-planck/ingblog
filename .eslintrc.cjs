@@ -7,4 +7,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'import/extensions': 'off',
   },
+  "env": {
+    "jest/globals": true
+  },
+  plugins: ['jest'],
 };

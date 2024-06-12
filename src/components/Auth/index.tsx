@@ -121,6 +121,7 @@ export function AuthForm(props: PaperProps) {
         <>
           <Stack>
             <TextInput
+              data-testid="email-input"
               required
               label="Email"
               value={email}
@@ -131,7 +132,7 @@ export function AuthForm(props: PaperProps) {
           </Stack>
 
           <Group justify="flex-end" mt="xl">
-            <Button onClick={handleLogin} radius="xl">
+            <Button onClick={handleLogin} radius="xl" data-testid="login-button">
               {loading ? <Loader color="white" size="sm" /> : upperFirst("Let's go")}
             </Button>
           </Group>

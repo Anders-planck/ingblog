@@ -37,6 +37,7 @@ type GoogleButtonProps = ButtonProps &
 export function GoogleButton({ signInWithGoogle, ...props }: GoogleButtonProps) {
   return (
     <Button
+      data-testid="google-button"
       onClick={signInWithGoogle}
       leftSection={<GoogleIcon />}
       variant="default"

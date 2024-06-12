@@ -2,16 +2,18 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Session } from '@supabase/supabase-js';
 import { RootState } from '@/store';
 
+export type Profile = {
+  full_name: string;
+  phone: string;
+  work: string;
+  updated_at: string;
+} | null;
+
 export interface AuthState {
   user: any | null;
   session: Session | null;
   loginAttempted: boolean;
-  profile: {
-    full_name: string;
-    phone: string;
-    work: string;
-    updated_at: Date;
-  } | null;
+  profile: Profile;
 }
 
 const initialState: AuthState = {

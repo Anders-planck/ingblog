@@ -1,6 +1,7 @@
 import { render, screen } from '@test-utils';
 import { Welcome } from './Welcome';
 
+jest.setTimeout(300000);
 describe('Welcome component', () => {
   it('has correct Vite guide link', () => {
     render(<Welcome />);

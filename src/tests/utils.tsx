@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { render } from '@testing-library/react';
+import { render, renderHook } from '@testing-library/react';
 import type { RenderOptions } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { MantineProvider } from '@mantine/core';
@@ -32,4 +32,25 @@ export function renderWithProviders(
     store,
     ...render(ui, { wrapper: Wrapper, ...renderOptions }),
   };
+}
+
+export function renderHookWithProviders(
+  hook: () => any,
+  extendedRenderOptions: ExtendedRenderOptions = {}
+) {
+  const {
+    preloadedState = {},
+    // Automatically create a store instance if no store was passed in
+    store = setupStore(preloadedState),
+  } = extendedRenderOptions;
+
+  const wrapper = ({ children }: PropsWithChildren) => (
+    <Provider store={store}>
+      <MantineProvider>{children}</MantineProvider>
+    </Provider>
+  );
+
+  return renderHook(hook, {
+    wrapper,
+  });
 }

@@ -1,13 +1,14 @@
 import { Avatar, Text, Group } from '@mantine/core';
 import { IconPhoneCall, IconAt } from '@tabler/icons-react';
 import classes from './UserInfoIcons.module.css';
-import { useAppSelector } from '@/store';
-import { selectProfile, selectUser } from '@/store/auth';
 
-export function UserInfoIcons() {
-  const user = useAppSelector(selectUser);
-  const profile = useAppSelector(selectProfile);
+type UserInfoIconsProps = {
+  user: any;
+  profile: any;
+};
 
+export function UserInfoIcons({ user, profile }: UserInfoIconsProps) {
+  //console.log('user info icons', user, profile);
   return (
     <div>
       <Group wrap="nowrap">
