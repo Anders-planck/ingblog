@@ -1,12 +1,12 @@
 @startuml
 
 !theme plain
-title Mini Blog Finite State Machine
+title Mini Blog flow
 
 [*] --> HomePage : the user lands on the home page
 
 state "Home Page" as HomePage {
-    /'state "Search" as Search {
+    state "Search" as Search {
         [*] --> SearchModal : the user clicks on the search icon
         SearchModal --> PostList : the user types on escape key \n or clicks outside the modal
         SearchModal --> UpdatedPostList : the user types enter
@@ -20,23 +20,23 @@ state "Home Page" as HomePage {
           [*] --> PostView : the user clicks on a post
           PostView --> PostList : the user goes back to the post list
        }
-    }'/
+    }
 }
 
 
-/'HomePage --> Search : the user clicks on the search icon'/
+HomePage --> Search : the user clicks on the search icon
 
 state "Account" as Account {
     state "liked post" as LikedPost{
-        /'[*] --> ListLikedPosts : the user sees the list of liked posts
+        [*] --> ListLikedPosts : the user sees the list of liked posts
         ListLikedPosts --> UnlikedPost : the user clicks on the unlike\n button (remove from liked posts)
-        UnlikedPost --> ListLikedPosts : the list of liked posts is updated'/
+        UnlikedPost --> ListLikedPosts : the list of liked posts is updated
     }
 
     state "saved post" as SavedPost{
-       /' [*] --> ListSavedPosts : the user sees the list of saved posts
+       [*] --> ListSavedPosts : the user sees the list of saved posts
         ListSavedPosts --> UnsavedPost : the user clicks on the unsave\n button (remove from saved posts)
-        UnsavedPost --> ListSavedPosts : the list of saved posts is updated'/
+        UnsavedPost --> ListSavedPosts : the list of saved posts is updated
     }
 
     state "settings" as Settings {
@@ -44,37 +44,36 @@ state "Account" as Account {
         --
         [*] --> updateUserDetail : the user updates the user details
          state "updateUserDetail" as updateUserDetail {
-            /'[*] --> fieldsFormUser : the user fills the form
+            [*] --> fieldsFormUser : the user fills the form
             fieldsFormUser --> submitButtonUser : the user clicks on the submit button
             submitButtonUser --> isUserDetailValid : the user has filled all the required fields
             isUserDetailValid --> fieldsFormUser : the user has not filled all the required fields
             isUserDetailValid --> updateUserDetail : the user has filled all the required fields
-'/
         }
         --
         [*] --> updateSistemaColor : the user updates the color system
         state "updateSistemaColor" as updateSistemaColor {
-            /'[*] --> switchColor : the user clicks on the switch color button
+            [*] --> switchColor : the user clicks on the switch color button
             switchColor --> switchColor : the user clicks on the switch color button
-       '/ }
+        }
         --
         [*] --> dangerZone : the user goes \nto the danger zone
         state "dangerZone" as dangerZone {
-            /'[*] --> deleteUser : the user clicks on the delete user button
+            [*] --> deleteUser : the user clicks on the delete user button
             deleteUser --> confirmDeleteUser : the user confirms the deletion
             confirmDeleteUser --> deleteUser : the user cancels the deletion
             confirmDeleteUser --> dangerZone : the user confirms the deletion
-        '/}
+        }
     }
 }
 
  state "Add Post" as AddPost {
-     /' [*] --> fieldsForm : the user fills the form
+      [*] --> fieldsForm : the user fills the form
         fieldsForm --> submitButton : the user clicks on the submit button
         submitButton --> isPostValid : the user has filled all the required fields
         isPostValid --> fieldsForm : the user has not filled all the required fields
         isPostValid --> HomePage : the user has filled all the required fields
- '/}
+ }
 
  state "Auth" as Auth {
     [*] --> LoginForm : the user is not authenticated
