@@ -1,0 +1,59 @@
+@startuml
+
+!theme plain
+title Account flow
+
+state "Account" as Account {
+    [*] --> fetchProfileUser : fetch the user profile automatically
+
+    [*] --> selectorAccount : the user clicks on the Setting/liked/saved icon
+    state "liked post" as LikedPost
+
+    state "saved post" as SavedPost
+
+    state "settings" as Settings {
+        [*] --> userDetail : the user sees the user details
+        --
+        [*] --> updateUserDetail : the user updates the user details
+         state "updateUserDetail" as updateUserDetail {
+            [*] -> FormUpdateUserDetail : the user fills the form
+            FormUpdateUserDetail --> checkFormUpdateUserDetail : the user checks the form after clicking the submit button
+            checkFormUpdateUserDetail --> errorFormUpdateUserDetail : the user sees the error form
+            errorFormUpdateUserDetail --> FormUpdateUserDetail : the user corrects the form
+            checkFormUpdateUserDetail --> successFormUpdateUserDetail : the user sees the success form
+            successFormUpdateUserDetail --> updateUserDetail : the user goes back to the user details
+         }
+        --
+        [*] --> updateSistemaColor : the user updates the color system
+        state "updateSistemaColor" as updateSistemaColor{
+            state "Dark Theme" as DarkTheme
+            state "Light Theme" as LightTheme
+            [*] --> [H]: Resume
+            [H] --> DarkTheme: initial theme
+            DarkTheme --> LightTheme : Switch button clicked
+            LightTheme --> DarkTheme : Switch button clicked
+        }
+        --
+        [*] --> dangerZone : the user goes \nto the danger zone
+        state "dangerZone" as dangerZone{
+            [*] --> deleteUser : the user deletes the account
+            deleteUser --> confirmDeleteUser : the user confirms the account deletion
+            confirmDeleteUser --> deleteUser : the user cancels the account deletion
+            deleteUser --> successDeleteUser : the user deletes the account
+            [*] --> logoutUser : the user logs out
+            logoutUser --> confirmLogoutUser : the user confirms the logout
+            confirmLogoutUser --> logoutUser : the user cancels the logout
+            logoutUser --> successLogoutUser : the user logs out
+
+        }
+    }
+}
+
+
+state selectorAccount <<choice>>
+selectorAccount: the user clicks on the account/liked/saved icon
+selectorAccount --> Settings :  Setting icon
+selectorAccount --> LikedPost : liked posts icon
+selectorAccount --> SavedPost : saved posts icon
+
+@enduml

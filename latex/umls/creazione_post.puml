@@ -1,6 +1,6 @@
 @startuml
 !theme plain
-title Post Creation Process
+title Post Creation Process flow
 
 [*] --> start : User is logged in and on post creation page
 

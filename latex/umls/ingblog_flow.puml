@@ -5,35 +5,27 @@ title Mini Blog Finite State Machine
 
 [*] --> HomePage : the user lands on the home page
 
-state "Home Page" as HomePage
+state "Home Page" as HomePage {
+  [*] --> GetPosts : Fetch posts
+  [*] --> GetSession : Check user authentication
+}
+
+state "GetPosts" as GetPosts
+state "GetSession" as GetSession
 
 state "Account" as Account {
+    [*] --> fetchProfileUser : fetch the user profile automatically
+    [*] --> selectorAccount : the user clicks on the Setting/liked/saved icon
     state "liked post" as LikedPost
-
     state "saved post" as SavedPost
-
-    state "settings" as Settings {
-        [*] --> userDetail : the user sees the user details
-        --
-        [*] --> updateUserDetail : the user updates the user details
-         state "updateUserDetail" as updateUserDetail
-        --
-        [*] --> updateSistemaColor : the user updates the color system
-        state "updateSistemaColor" as updateSistemaColor
-        --
-        [*] --> dangerZone : the user goes \nto the danger zone
-        state "dangerZone" as dangerZone
-    }
+    state "settings" as Settings
 }
 
- state "Add Post" as AddPost
-
-state "Auth" as Auth {
-    [*] --> LoginForm : User lands on the login\n form without authentication
-    LoginForm --> AttemptAuthentication : User attempts to authenticate \n by clicking the login button
-    AttemptAuthentication --> LoginForm : Authentication fails, \nuser remains on the login form
-    AttemptAuthentication --> HomePage : Authentication succeeds,\n user is redirected to the home page
+state "Add Post" as AddPost {
+    [*] -> fetchCategories : fetch the categories automatically
 }
+
+state "Auth" as Auth
 
 
 state selectorAccount <<choice>>
