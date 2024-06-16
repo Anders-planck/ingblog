@@ -25,55 +25,55 @@
 \begin{frame}
     \frametitle{Introduzione}
     \begin{itemize}
-        \item \textbf{ISA blog} è una piattaforma progettata per la comunità ISA,
-        dove studenti e insegnanti possono condividere le loro esperienze e conoscenze.
+        \item \textbf{ISA blog} è una piattaforma di blogging open-source, costruita con tecnologie moderne
+        dove gli utenti possono condividere i propri pensieri e interagire con gli altri utenti.
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Requisiti}
-    Requisiti funzionali primari:
+    \textbf{Requisiti funzionali primari}, gli utenti possono:
     \begin{itemize}
-        \item Gli utenti possono visualizzare la lista dei posts pubblicati.
-        \item Gli utenti possono visualizzare i dettagli di un post.
-        \item Gli utenti possono interagire con i post pubblicati.
+        \item Registrarsi e accedere all'applicazione.
+        \item Visualizzare una lista di articoli pubblicati.
+        \item Visualizzare i dettagli di un articolo.
+        \item Interagire cogli articoli pubblicati (commenti, like).
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Requisiti}
-    Requisiti funzioniali derivati:
+    \textbf{Requisiti funzioniali derivati}, gli utenti possono:
     \begin{itemize}
-        \item Gli utenti devono essere in grado di aggiornare i dettagli del loro profilo.
-        \item Gli utenti devono essere in grado di creare nuovi post.
-        \item Gli utenti devono essere in grado di commentare i post esistenti.
-        \item Gli utenti devono essere in grado di rispondere ai commenti.
+        \item Aggiornare i dettagli del loro profilo.
+        \item Creare nuovi articoli.
+        \item Commentare gli articoli esistenti.
       \end{itemize}
     Security:
     \begin{itemize}
-        \item la creazione di nuovi post e interazione con i post esistenti deve essere permessa solo agli utenti registrati.
+        \item la creazione di nuovi articoli e interazione gli altri utenti deve essere permessa solo agli utenti registrati,
+        \item Gli utenti possono:
               \begin{itemize}
-                  \item Gli utenti possono registrarsi autonomamente.
-                  \item Gli utenti possono effettuare il login tramite email e github o google.
+                  \item Registrarsi autonomamente.
+                  \item Effettuare il login tramite dei provider authentication come email e github o google.
               \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Utenti}
-    Per poter utilizzare l'apllicazione,non è necessario registrarsi come utente, ma per poter creare un post o commentare un post è necessario registrarsi.
+    L'applicazione prevede due tipi di utenti:
     \begin{itemize}
+        \item \textbf{Utente non registrato}: può visualizzare gli articoli e i commenti, ma non può creare nuovi articoli o commentare i articoli esistenti.
+        \item \textbf{Utente registrato}: può creare nuovi articoli, commentare gli articoli esistenti e rispondere ai commenti.
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Tecnologie utilizzate}
+\begin{frame}{Tecnologie e Liberie utilizzate}
     \begin{itemize}
-        \item \textbf{Backend}: Supabase (un'alternativa open-source a Firebase)
-        \item \textbf{Hosting e funzioni serverless}: Vercel
-        \item \textbf{Libreria UI}: Mantine (una libreria di componenti e ganci React con supporto nativo per temi scuri, focalizzata su usabilità e accessibilità)
-        \item \textbf{Testing}: Vitest (un runner di test veloce, leggero e con opinioni per progetti JavaScript moderni)
-        \item \textbf{Containerizzazione}: Docker
-        \item \textbf{Autenticazione}: GitHub OAuth, Google OAuth
-        \item \textbf{Trasformazione CSS}: PostCSS (uno strumento per trasformare gli stili con plugin JS)
-        \item \textbf{Gestione degli stati}: Redux Toolkit (l'insieme di strumenti ufficiali, autorevoli e inclusi nelle batterie per uno sviluppo efficiente di Redux)
-        \item \textbf{Recupero dati e cache}: Interrogazione RTK
+        \item \textbf{Backend}: Supabase (un'alternativa open-source a Firebase) - un server database POSTGRES.
+        \item \textbf{Hosting}: Vercel (una piattaforma di hosting per applicazioni web statiche e serverless)
+        \item \textbf{Libreria UI}: Mantine (una libreria di componenti React)
+        \item \textbf{Testing}: Jest (un runner di test veloce, leggero e con opinioni per progetti JavaScript moderni)
+        \item \textbf{Containerisation}: Docker
+        \item \textbf{Gestione dei stati e recupero di dati e cache}: Redux Toolkit \& RTK query
         \item \textbf{Forms}: React Hook Form (un form performante, flessibile ed estensibile con una validazione facile da usare)
     \end{itemize}
 \end{frame}
@@ -82,40 +82,55 @@
     \frametitle{Testing}
     Sono state testate le seguenti funzionalità:
     \begin{itemize}
-        \item Nella directory \textbf{pages}, è stato testato il corretto rendering delle pagine e la corretta navigazione tra di esse.
+        \item Tutte le pagine dell'applicazione sono state testate per verificare il corretto funzionamento.
         \begin{itemize}
-            \item Home page: verifica del caricamento corretto dei post e della possibilità di navigare a un post specifico.
-            \item Pagina del post: verifica del caricamento corretto dei dettagli del post e dei commenti associati.
-            \item Pagina di login/registrazione: verifica del corretto funzionamento dei form di login e registrazione.
+            \item Home page: verifica del caricamento corretto dei articoli e della possibilità di navigare a un articolo specifico.
+            \item Pagina del singolo articolo: verifica del caricamento corretto dei dettagli del post e dei commenti associati.
+            \item Pagina di login/registrazione: verifica del corretto funzionamento dei form di autenticazione.
         \end{itemize}
-        \item Nella directory \textbf{service}, è stato testato il corretto funzionamento delle chiamate API.
+        \item sono stati testati i servizi di Supabase per verificare il corretto funzionamento dell'API.
         \begin{itemize}
+            \item Recupero dell'utente: verifica che i dettagli dell'utente vengano recuperati correttamente dall'API.
+            \item Aggiornamento dell'utente: verifica che i dettagli dell'utente possano essere aggiornati correttamente tramite l'API.
             \item Recupero dei post: verifica che i post vengano recuperati correttamente dall'API.
             \item Creazione di un post: verifica che un nuovo post possa essere creato correttamente tramite l'API.
-            \item Autenticazione: verifica che l'autenticazione dell'utente funzioni correttamente tramite l'API.
+            \item Creazione di un commento: verifica che un nuovo commento possa essere creato correttamente tramite l'API.
+            \item Recupero dei commenti: verifica che i commenti vengano recuperati correttamente dall'API.
         \end{itemize}
-        \item Nella directory \textbf{component}, è stato testato il corretto funzionamento dei componenti React.
+        \item sono stati testati i componenti React per verificare il corretto funzionamento.
         \begin{itemize}
             \item Componente Post: verifica che il componente Post renderizzi correttamente i dettagli di un post.
             \item Componente Comment: verifica che il componente Comment renderizzi correttamente un commento.
-            \item Componente Form: verifica che i componenti del form gestiscano correttamente l'input dell'utente e inviino i dati corretti quando vengono inviati.
         \end{itemize}
+        \item sono state effettuate dei unit tests su funzioni di trasformazione di dati e di utility.
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{CI/CD}
     L'applicazione utilizza le GitHub Actions per il CI/CD.
-    Il workflow è eseguito ogni volta che viene effettuato un push o un pull request sul branch main o develop.
+    Sono stati definiti 5 job:
     \begin{itemize}
-        \item \textbf{Build}: viene eseguito il build dell'applicazione tramite node (npm run build).
-        \item \textbf{Test}: vengono eseguiti i test di unità e di sistema.
-        \item \textbf{Deploy}: viene buildata l'immagine Docker dell'applicazione e pubblicata su Docker Hub.
+        \item \textbf{Su Master}:
+        \begin{itemize}
+            \item \textbf{Build}: viene eseguito il build dell'applicazione
+            \item \textbf{Test}: vengono eseguiti i test dell'applicazione
+            \item \textbf{Deploy}: viene eseguito il deploy della storybook su Vercel automaticamente
+            \item \textbf{Deploy}: viene eseguito il deploy dell'applicazione su Vercel
+            \item \textbf{Deploy}: viene buildata l'immagine Docker dell'applicazione e pubblicata su Docker Hub
+        \end{itemize}
+        \item \textbf{Su Develop}:
+        \begin{itemize}
+            \item \textbf{Build}: viene eseguito il build dell'applicazione
+            \item \textbf{Test}: vengono eseguiti i test dell'applicazione
+            \item \textbf{Deploy}: viene eseguito il deploy della preview dell'applicazione su Vercel
+        \end{itemize}
+        \item \textbf{Su Pull Request}:
+        \begin{itemize}
+            \item \textbf{Build}: viene eseguito il build dell'applicazione
+            \item \textbf{Test}: vengono eseguiti i test dell'applicazione
+        \end{itemize}
     \end{itemize}
-    Inoltre, ogni volta che viene effettuato un push sul branch main, viene eseguito il deploy dell'applicazione su vercel.
 \end{frame}
-
-
-
 
 \end{document}
