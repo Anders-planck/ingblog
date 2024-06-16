@@ -12,7 +12,7 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
       class="m_89d60db1 mantine-Tabs-root"
       data-orientation="horizontal"
       data-variant="default"
-      id="mantine-552wwh4x2"
+      id="mantine-u1nbj7bmh"
       style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-blue-filled);"
     >
       <div
@@ -24,13 +24,13 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
         role="tablist"
       >
         <button
-          aria-controls="mantine-552wwh4x2-panel-settings"
+          aria-controls="mantine-u1nbj7bmh-panel-settings"
           aria-selected="true"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-active="true"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-552wwh4x2-tab-settings"
+          id="mantine-u1nbj7bmh-tab-settings"
           role="tab"
           tabindex="0"
           type="button"
@@ -66,12 +66,12 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
           </span>
         </button>
         <button
-          aria-controls="mantine-552wwh4x2-panel-postsLikes"
+          aria-controls="mantine-u1nbj7bmh-panel-postsLikes"
           aria-selected="false"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-552wwh4x2-tab-postsLikes"
+          id="mantine-u1nbj7bmh-tab-postsLikes"
           role="tab"
           tabindex="-1"
           type="button"
@@ -113,12 +113,12 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
           </span>
         </button>
         <button
-          aria-controls="mantine-552wwh4x2-panel-savedPosts"
+          aria-controls="mantine-u1nbj7bmh-panel-savedPosts"
           aria-selected="false"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-552wwh4x2-tab-savedPosts"
+          id="mantine-u1nbj7bmh-tab-savedPosts"
           role="tab"
           tabindex="-1"
           type="button"
@@ -152,10 +152,10 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
         </button>
       </div>
       <div
-        aria-labelledby="mantine-552wwh4x2-tab-postsLikes"
+        aria-labelledby="mantine-u1nbj7bmh-tab-postsLikes"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-552wwh4x2-panel-postsLikes"
+        id="mantine-u1nbj7bmh-panel-postsLikes"
         role="tabpanel"
         style="display: none;"
       >
@@ -225,7 +225,7 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
                   <p
                     class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
                   >
-                    17 days ago
+                    21 days ago
                   </p>
                 </div>
               </div>
@@ -444,7 +444,7 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
                   <p
                     class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
                   >
-                    17 days ago
+                    21 days ago
                   </p>
                 </div>
               </div>
@@ -608,10 +608,10 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
         </div>
       </div>
       <div
-        aria-labelledby="mantine-552wwh4x2-tab-savedPosts"
+        aria-labelledby="mantine-u1nbj7bmh-tab-savedPosts"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-552wwh4x2-panel-savedPosts"
+        id="mantine-u1nbj7bmh-panel-savedPosts"
         role="tabpanel"
         style="display: none;"
       >
@@ -633,10 +633,10 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
         </div>
       </div>
       <div
-        aria-labelledby="mantine-552wwh4x2-tab-settings"
+        aria-labelledby="mantine-u1nbj7bmh-tab-settings"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-552wwh4x2-panel-settings"
+        id="mantine-u1nbj7bmh-panel-settings"
         role="tabpanel"
       >
         <style
@@ -772,7 +772,7 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
                     data-disabled="true"
                     data-variant="default"
                     disabled=""
-                    id="mantine-vseq9gh16"
+                    id="mantine-vdljnsm0t"
                     placeholder="john@doe.io"
                     required=""
                     value="john@doe.fr"
@@ -814,8 +814,8 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
                   <label
                     class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                     data-required="true"
-                    for="mantine-2ow6ided2"
-                    id="mantine-2ow6ided2-label"
+                    for="mantine-36js5izan"
+                    id="mantine-36js5izan-label"
                   >
                     Full name
                     <span
@@ -834,7 +834,7 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
                       aria-invalid="false"
                       class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                       data-variant="default"
-                      id="mantine-2ow6ided2"
+                      id="mantine-36js5izan"
                       placeholder="John Doe"
                       required=""
                     />
@@ -846,8 +846,8 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
                   <label
                     class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                     data-required="true"
-                    for="mantine-i5qxw1kqh"
-                    id="mantine-i5qxw1kqh-label"
+                    for="mantine-t7vnkehq0"
+                    id="mantine-t7vnkehq0-label"
                   >
                     Phone number
                     <span
@@ -866,7 +866,7 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
                       aria-invalid="false"
                       class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                       data-variant="default"
-                      id="mantine-i5qxw1kqh"
+                      id="mantine-t7vnkehq0"
                       placeholder="1234567890"
                       required=""
                     />
@@ -879,8 +879,8 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
                 <label
                   class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                   data-required="true"
-                  for="mantine-q5o3huygc"
-                  id="mantine-q5o3huygc-label"
+                  for="mantine-dw0fttx4f"
+                  id="mantine-dw0fttx4f-label"
                 >
                   Work
                   <span
@@ -899,7 +899,7 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
                     aria-invalid="false"
                     class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                     data-variant="default"
-                    id="mantine-q5o3huygc"
+                    id="mantine-dw0fttx4f"
                     placeholder="Software engineer"
                     required=""
                   />
@@ -954,11 +954,11 @@ exports[`Account Page Check if tabs get all fields should render tabs 1`] = `
               >
                 <label
                   class="m_5f6e695e mantine-Switch-body"
-                  for="mantine-b68kuqugr"
+                  for="mantine-zktgo5ttp"
                 >
                   <input
                     class="m_926b4011 mantine-Switch-input"
-                    id="mantine-b68kuqugr"
+                    id="mantine-zktgo5ttp"
                     role="switch"
                     type="checkbox"
                   />
@@ -1124,7 +1124,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
       class="m_89d60db1 mantine-Tabs-root"
       data-orientation="horizontal"
       data-variant="default"
-      id="mantine-ju4cnlxvo"
+      id="mantine-uc7ymq2yl"
       style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-blue-filled);"
     >
       <div
@@ -1136,13 +1136,13 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         role="tablist"
       >
         <button
-          aria-controls="mantine-ju4cnlxvo-panel-settings"
+          aria-controls="mantine-uc7ymq2yl-panel-settings"
           aria-selected="true"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-active="true"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-ju4cnlxvo-tab-settings"
+          id="mantine-uc7ymq2yl-tab-settings"
           role="tab"
           tabindex="0"
           type="button"
@@ -1178,12 +1178,12 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
           </span>
         </button>
         <button
-          aria-controls="mantine-ju4cnlxvo-panel-postsLikes"
+          aria-controls="mantine-uc7ymq2yl-panel-postsLikes"
           aria-selected="false"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-ju4cnlxvo-tab-postsLikes"
+          id="mantine-uc7ymq2yl-tab-postsLikes"
           role="tab"
           tabindex="-1"
           type="button"
@@ -1225,12 +1225,12 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
           </span>
         </button>
         <button
-          aria-controls="mantine-ju4cnlxvo-panel-savedPosts"
+          aria-controls="mantine-uc7ymq2yl-panel-savedPosts"
           aria-selected="false"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-ju4cnlxvo-tab-savedPosts"
+          id="mantine-uc7ymq2yl-tab-savedPosts"
           role="tab"
           tabindex="-1"
           type="button"
@@ -1264,10 +1264,10 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         </button>
       </div>
       <div
-        aria-labelledby="mantine-ju4cnlxvo-tab-postsLikes"
+        aria-labelledby="mantine-uc7ymq2yl-tab-postsLikes"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-ju4cnlxvo-panel-postsLikes"
+        id="mantine-uc7ymq2yl-panel-postsLikes"
         role="tabpanel"
         style="display: none;"
       >
@@ -1337,7 +1337,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <p
                     class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
                   >
-                    17 days ago
+                    21 days ago
                   </p>
                 </div>
               </div>
@@ -1556,7 +1556,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <p
                     class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
                   >
-                    17 days ago
+                    21 days ago
                   </p>
                 </div>
               </div>
@@ -1720,10 +1720,10 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         </div>
       </div>
       <div
-        aria-labelledby="mantine-ju4cnlxvo-tab-savedPosts"
+        aria-labelledby="mantine-uc7ymq2yl-tab-savedPosts"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-ju4cnlxvo-panel-savedPosts"
+        id="mantine-uc7ymq2yl-panel-savedPosts"
         role="tabpanel"
         style="display: none;"
       >
@@ -1745,10 +1745,10 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         </div>
       </div>
       <div
-        aria-labelledby="mantine-ju4cnlxvo-tab-settings"
+        aria-labelledby="mantine-uc7ymq2yl-tab-settings"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-ju4cnlxvo-panel-settings"
+        id="mantine-uc7ymq2yl-panel-settings"
         role="tabpanel"
       >
         <style
@@ -1884,7 +1884,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                     data-disabled="true"
                     data-variant="default"
                     disabled=""
-                    id="mantine-mfgao14ee"
+                    id="mantine-v1372k1ww"
                     placeholder="john@doe.io"
                     required=""
                     value="john@doe.fr"
@@ -1926,8 +1926,8 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <label
                     class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                     data-required="true"
-                    for="mantine-d1hrgahxz"
-                    id="mantine-d1hrgahxz-label"
+                    for="mantine-co0yg9od4"
+                    id="mantine-co0yg9od4-label"
                   >
                     Full name
                     <span
@@ -1946,7 +1946,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                       aria-invalid="false"
                       class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                       data-variant="default"
-                      id="mantine-d1hrgahxz"
+                      id="mantine-co0yg9od4"
                       placeholder="John Doe"
                       required=""
                     />
@@ -1958,8 +1958,8 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <label
                     class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                     data-required="true"
-                    for="mantine-5g4i9eck9"
-                    id="mantine-5g4i9eck9-label"
+                    for="mantine-vfqo610dw"
+                    id="mantine-vfqo610dw-label"
                   >
                     Phone number
                     <span
@@ -1978,7 +1978,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                       aria-invalid="false"
                       class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                       data-variant="default"
-                      id="mantine-5g4i9eck9"
+                      id="mantine-vfqo610dw"
                       placeholder="1234567890"
                       required=""
                     />
@@ -1991,8 +1991,8 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                 <label
                   class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                   data-required="true"
-                  for="mantine-btditi75v"
-                  id="mantine-btditi75v-label"
+                  for="mantine-uzzw5km01"
+                  id="mantine-uzzw5km01-label"
                 >
                   Work
                   <span
@@ -2011,7 +2011,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                     aria-invalid="false"
                     class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                     data-variant="default"
-                    id="mantine-btditi75v"
+                    id="mantine-uzzw5km01"
                     placeholder="Software engineer"
                     required=""
                   />
@@ -2066,11 +2066,11 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
               >
                 <label
                   class="m_5f6e695e mantine-Switch-body"
-                  for="mantine-vf6fm0x0t"
+                  for="mantine-jm5fi9l6z"
                 >
                   <input
                     class="m_926b4011 mantine-Switch-input"
-                    id="mantine-vf6fm0x0t"
+                    id="mantine-jm5fi9l6z"
                     role="switch"
                     type="checkbox"
                   />
@@ -2236,7 +2236,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
       class="m_89d60db1 mantine-Tabs-root"
       data-orientation="horizontal"
       data-variant="default"
-      id="mantine-ju4cnlxvo"
+      id="mantine-uc7ymq2yl"
       style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-blue-filled);"
     >
       <div
@@ -2248,13 +2248,13 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         role="tablist"
       >
         <button
-          aria-controls="mantine-ju4cnlxvo-panel-settings"
+          aria-controls="mantine-uc7ymq2yl-panel-settings"
           aria-selected="true"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-active="true"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-ju4cnlxvo-tab-settings"
+          id="mantine-uc7ymq2yl-tab-settings"
           role="tab"
           tabindex="0"
           type="button"
@@ -2290,12 +2290,12 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
           </span>
         </button>
         <button
-          aria-controls="mantine-ju4cnlxvo-panel-postsLikes"
+          aria-controls="mantine-uc7ymq2yl-panel-postsLikes"
           aria-selected="false"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-ju4cnlxvo-tab-postsLikes"
+          id="mantine-uc7ymq2yl-tab-postsLikes"
           role="tab"
           tabindex="-1"
           type="button"
@@ -2337,12 +2337,12 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
           </span>
         </button>
         <button
-          aria-controls="mantine-ju4cnlxvo-panel-savedPosts"
+          aria-controls="mantine-uc7ymq2yl-panel-savedPosts"
           aria-selected="false"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-ju4cnlxvo-tab-savedPosts"
+          id="mantine-uc7ymq2yl-tab-savedPosts"
           role="tab"
           tabindex="-1"
           type="button"
@@ -2376,10 +2376,10 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         </button>
       </div>
       <div
-        aria-labelledby="mantine-ju4cnlxvo-tab-postsLikes"
+        aria-labelledby="mantine-uc7ymq2yl-tab-postsLikes"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-ju4cnlxvo-panel-postsLikes"
+        id="mantine-uc7ymq2yl-panel-postsLikes"
         role="tabpanel"
         style="display: none;"
       >
@@ -2449,7 +2449,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <p
                     class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
                   >
-                    17 days ago
+                    21 days ago
                   </p>
                 </div>
               </div>
@@ -2668,7 +2668,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <p
                     class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
                   >
-                    17 days ago
+                    21 days ago
                   </p>
                 </div>
               </div>
@@ -2832,10 +2832,10 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         </div>
       </div>
       <div
-        aria-labelledby="mantine-ju4cnlxvo-tab-savedPosts"
+        aria-labelledby="mantine-uc7ymq2yl-tab-savedPosts"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-ju4cnlxvo-panel-savedPosts"
+        id="mantine-uc7ymq2yl-panel-savedPosts"
         role="tabpanel"
         style="display: none;"
       >
@@ -2857,10 +2857,10 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         </div>
       </div>
       <div
-        aria-labelledby="mantine-ju4cnlxvo-tab-settings"
+        aria-labelledby="mantine-uc7ymq2yl-tab-settings"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-ju4cnlxvo-panel-settings"
+        id="mantine-uc7ymq2yl-panel-settings"
         role="tabpanel"
       >
         <style
@@ -2996,7 +2996,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                     data-disabled="true"
                     data-variant="default"
                     disabled=""
-                    id="mantine-mfgao14ee"
+                    id="mantine-v1372k1ww"
                     placeholder="john@doe.io"
                     required=""
                     value="john@doe.fr"
@@ -3038,8 +3038,8 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <label
                     class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                     data-required="true"
-                    for="mantine-d1hrgahxz"
-                    id="mantine-d1hrgahxz-label"
+                    for="mantine-co0yg9od4"
+                    id="mantine-co0yg9od4-label"
                   >
                     Full name
                     <span
@@ -3058,7 +3058,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                       aria-invalid="false"
                       class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                       data-variant="default"
-                      id="mantine-d1hrgahxz"
+                      id="mantine-co0yg9od4"
                       placeholder="John Doe"
                       required=""
                     />
@@ -3070,8 +3070,8 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <label
                     class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                     data-required="true"
-                    for="mantine-5g4i9eck9"
-                    id="mantine-5g4i9eck9-label"
+                    for="mantine-vfqo610dw"
+                    id="mantine-vfqo610dw-label"
                   >
                     Phone number
                     <span
@@ -3090,7 +3090,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                       aria-invalid="false"
                       class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                       data-variant="default"
-                      id="mantine-5g4i9eck9"
+                      id="mantine-vfqo610dw"
                       placeholder="1234567890"
                       required=""
                     />
@@ -3103,8 +3103,8 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                 <label
                   class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                   data-required="true"
-                  for="mantine-btditi75v"
-                  id="mantine-btditi75v-label"
+                  for="mantine-uzzw5km01"
+                  id="mantine-uzzw5km01-label"
                 >
                   Work
                   <span
@@ -3123,7 +3123,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                     aria-invalid="false"
                     class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                     data-variant="default"
-                    id="mantine-btditi75v"
+                    id="mantine-uzzw5km01"
                     placeholder="Software engineer"
                     required=""
                   />
@@ -3178,11 +3178,11 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
               >
                 <label
                   class="m_5f6e695e mantine-Switch-body"
-                  for="mantine-vf6fm0x0t"
+                  for="mantine-jm5fi9l6z"
                 >
                   <input
                     class="m_926b4011 mantine-Switch-input"
-                    id="mantine-vf6fm0x0t"
+                    id="mantine-jm5fi9l6z"
                     role="switch"
                     type="checkbox"
                   />
@@ -3348,7 +3348,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
       class="m_89d60db1 mantine-Tabs-root"
       data-orientation="horizontal"
       data-variant="default"
-      id="mantine-ju4cnlxvo"
+      id="mantine-uc7ymq2yl"
       style="--tabs-radius: var(--mantine-radius-default); --tabs-color: var(--mantine-color-blue-filled);"
     >
       <div
@@ -3360,13 +3360,13 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         role="tablist"
       >
         <button
-          aria-controls="mantine-ju4cnlxvo-panel-settings"
+          aria-controls="mantine-uc7ymq2yl-panel-settings"
           aria-selected="true"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-active="true"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-ju4cnlxvo-tab-settings"
+          id="mantine-uc7ymq2yl-tab-settings"
           role="tab"
           tabindex="0"
           type="button"
@@ -3402,12 +3402,12 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
           </span>
         </button>
         <button
-          aria-controls="mantine-ju4cnlxvo-panel-postsLikes"
+          aria-controls="mantine-uc7ymq2yl-panel-postsLikes"
           aria-selected="false"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-ju4cnlxvo-tab-postsLikes"
+          id="mantine-uc7ymq2yl-tab-postsLikes"
           role="tab"
           tabindex="-1"
           type="button"
@@ -3449,12 +3449,12 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
           </span>
         </button>
         <button
-          aria-controls="mantine-ju4cnlxvo-panel-savedPosts"
+          aria-controls="mantine-uc7ymq2yl-panel-savedPosts"
           aria-selected="false"
           class="mantine-focus-auto m_539e827b m_4ec4dce6 mantine-Tabs-tab m_87cf2631 mantine-UnstyledButton-root"
           data-orientation="horizontal"
           data-variant="default"
-          id="mantine-ju4cnlxvo-tab-savedPosts"
+          id="mantine-uc7ymq2yl-tab-savedPosts"
           role="tab"
           tabindex="-1"
           type="button"
@@ -3488,10 +3488,10 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         </button>
       </div>
       <div
-        aria-labelledby="mantine-ju4cnlxvo-tab-postsLikes"
+        aria-labelledby="mantine-uc7ymq2yl-tab-postsLikes"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-ju4cnlxvo-panel-postsLikes"
+        id="mantine-uc7ymq2yl-panel-postsLikes"
         role="tabpanel"
         style="display: none;"
       >
@@ -3561,7 +3561,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <p
                     class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
                   >
-                    17 days ago
+                    21 days ago
                   </p>
                 </div>
               </div>
@@ -3780,7 +3780,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <p
                     class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
                   >
-                    17 days ago
+                    21 days ago
                   </p>
                 </div>
               </div>
@@ -3944,10 +3944,10 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         </div>
       </div>
       <div
-        aria-labelledby="mantine-ju4cnlxvo-tab-savedPosts"
+        aria-labelledby="mantine-uc7ymq2yl-tab-savedPosts"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-ju4cnlxvo-panel-savedPosts"
+        id="mantine-uc7ymq2yl-panel-savedPosts"
         role="tabpanel"
         style="display: none;"
       >
@@ -3969,10 +3969,10 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
         </div>
       </div>
       <div
-        aria-labelledby="mantine-ju4cnlxvo-tab-settings"
+        aria-labelledby="mantine-uc7ymq2yl-tab-settings"
         class="m_b0c91715 mantine-Tabs-panel"
         data-orientation="horizontal"
-        id="mantine-ju4cnlxvo-panel-settings"
+        id="mantine-uc7ymq2yl-panel-settings"
         role="tabpanel"
       >
         <style
@@ -4108,7 +4108,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                     data-disabled="true"
                     data-variant="default"
                     disabled=""
-                    id="mantine-mfgao14ee"
+                    id="mantine-v1372k1ww"
                     placeholder="john@doe.io"
                     required=""
                     value="john@doe.fr"
@@ -4150,8 +4150,8 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <label
                     class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                     data-required="true"
-                    for="mantine-d1hrgahxz"
-                    id="mantine-d1hrgahxz-label"
+                    for="mantine-co0yg9od4"
+                    id="mantine-co0yg9od4-label"
                   >
                     Full name
                     <span
@@ -4170,7 +4170,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                       aria-invalid="false"
                       class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                       data-variant="default"
-                      id="mantine-d1hrgahxz"
+                      id="mantine-co0yg9od4"
                       placeholder="John Doe"
                       required=""
                     />
@@ -4182,8 +4182,8 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                   <label
                     class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                     data-required="true"
-                    for="mantine-5g4i9eck9"
-                    id="mantine-5g4i9eck9-label"
+                    for="mantine-vfqo610dw"
+                    id="mantine-vfqo610dw-label"
                   >
                     Phone number
                     <span
@@ -4202,7 +4202,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                       aria-invalid="false"
                       class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                       data-variant="default"
-                      id="mantine-5g4i9eck9"
+                      id="mantine-vfqo610dw"
                       placeholder="1234567890"
                       required=""
                     />
@@ -4215,8 +4215,8 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                 <label
                   class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                   data-required="true"
-                  for="mantine-btditi75v"
-                  id="mantine-btditi75v-label"
+                  for="mantine-uzzw5km01"
+                  id="mantine-uzzw5km01-label"
                 >
                   Work
                   <span
@@ -4235,7 +4235,7 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
                     aria-invalid="false"
                     class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                     data-variant="default"
-                    id="mantine-btditi75v"
+                    id="mantine-uzzw5km01"
                     placeholder="Software engineer"
                     required=""
                   />
@@ -4290,11 +4290,11 @@ exports[`Account Page Check if tabs get all fields should switch tabs when click
               >
                 <label
                   class="m_5f6e695e mantine-Switch-body"
-                  for="mantine-vf6fm0x0t"
+                  for="mantine-jm5fi9l6z"
                 >
                   <input
                     class="m_926b4011 mantine-Switch-input"
-                    id="mantine-vf6fm0x0t"
+                    id="mantine-jm5fi9l6z"
                     role="switch"
                     type="checkbox"
                   />

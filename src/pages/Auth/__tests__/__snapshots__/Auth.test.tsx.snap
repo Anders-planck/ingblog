@@ -147,8 +147,8 @@ exports[`check if buttons are on the screen 1`] = `
               <label
                 class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                 data-required="true"
-                for="mantine-pwsfe2dwp"
-                id="mantine-pwsfe2dwp-label"
+                for="mantine-jne84z2vm"
+                id="mantine-jne84z2vm-label"
               >
                 Email
                 <span
@@ -168,7 +168,7 @@ exports[`check if buttons are on the screen 1`] = `
                   class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                   data-testid="email-input"
                   data-variant="default"
-                  id="mantine-pwsfe2dwp"
+                  id="mantine-jne84z2vm"
                   placeholder="hello@mantine.dev"
                   required=""
                   value=""
@@ -351,8 +351,8 @@ exports[`renders Authenticator 1`] = `
               <label
                 class="m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
                 data-required="true"
-                for="mantine-d9oe3idk5"
-                id="mantine-d9oe3idk5-label"
+                for="mantine-kxx8do7pm"
+                id="mantine-kxx8do7pm-label"
               >
                 Email
                 <span
@@ -372,7 +372,7 @@ exports[`renders Authenticator 1`] = `
                   class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
                   data-testid="email-input"
                   data-variant="default"
-                  id="mantine-d9oe3idk5"
+                  id="mantine-kxx8do7pm"
                   placeholder="hello@mantine.dev"
                   required=""
                   value=""
