@@ -183,7 +183,7 @@ export const postApi = createApi({
 
     postNewPost: builder.mutation<void, PostNewPostParams>({
       // @ts-ignore
-      queryFn: async ({ title, image, content, category, publish, authorId }) => {
+      queryFn: async ({ title, image, content, category, publish, authorId, overview }) => {
         const { error } = await supabase.from('posts').insert([
           {
             title,
@@ -192,6 +192,7 @@ export const postApi = createApi({
             category,
             published: publish,
             authorId,
+            overview,
           },
         ]);
 
