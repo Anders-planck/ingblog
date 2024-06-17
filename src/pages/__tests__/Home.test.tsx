@@ -1,4 +1,5 @@
 import { waitFor } from '@testing-library/react';
+//import { userEvent } from '@test-utils';
 import { HomePage } from '@/pages/Home.page';
 import { supabase } from '@/lib/supabase';
 import { renderWithProviders } from '@/tests/utils';
@@ -151,10 +152,12 @@ describe('Home Page', () => {
       });
     });
 
-    /*    describe('ckeck if when user digit title in the search input we have the component work well', () => {
+    /*  describe('ckeck if when user digit title in the search input we have the component work well', () => {
       afterEach(() => {
         jest.clearAllMocks();
       });
+
+      const user = userEvent.setup();
       beforeEach(() => {
         (useGetPostsQuery as jest.Mock).mockImplementation((title: string | null | undefined) => ({
           data: title ? postsFake.filter((post) => post.title.includes(title)) : postsFake,
@@ -163,20 +166,20 @@ describe('Home Page', () => {
       });
       it('the title of the post is not in the list of autocomplete not exit', async () => {
         let getByTestIdMaster: any;
-        //let containerMaster: any;
+        let containerMaster: any;
         await waitFor(async () => {
-          const { getByTestId } = renderWithProviders(<HomePage />);
+          const { container, getByTestId } = renderWithProviders(<HomePage />);
           getByTestIdMaster = getByTestId;
-          //containerMaster = container;
+          containerMaster = container;
         });
 
         const searchButton = getByTestIdMaster('open-search-modal');
         expect(searchButton).toBeInTheDocument();
+        await user.click(searchButton);
 
         await waitFor(async () => {
           if (searchButton) {
-            searchButton.click();
-
+            expect(containerMaster).toMatchSnapshot();
             const modalSearch = getByTestIdMaster('search-modal');
             expect(modalSearch).toBeInTheDocument();
             expect(modalSearch).toHaveTextContent('Search');
@@ -193,14 +196,17 @@ describe('Home Page', () => {
           }
         });
 
-        /!*await waitFor(() => {
-          const modalSearchAfter = getByTestIdMaster('search-modal');
-          expect(modalSearchAfter).toBeInTheDocument();
-          expect(modalSearchAfter).not.toHaveTextContent('Search');
-          expect(containerMaster).toHaveTextContent('No posts yet');
-        });*!/
+        await waitFor(() => {
+          if (searchButton) {
+            const modalSearchAfter = getByTestIdMaster('search-modal');
+            expect(modalSearchAfter).toBeInTheDocument();
+            expect(modalSearchAfter).not.toHaveTextContent('Search');
+            expect(containerMaster).toHaveTextContent('No posts yet');
+          }
+        });
       });
-    });*/
+    });
+  */
   });
 });
 

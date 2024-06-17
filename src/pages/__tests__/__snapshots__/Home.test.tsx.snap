@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page when a user on the home page he see list of posts and make a search operations ckeck if when user digit title in the search input we have the component work well the title of the post is not in the list of autocomplete not exit 1`] = `
+<div
+  aria-hidden="true"
+  data-focus-id="mantine-g0lzweh5m"
+>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
+  <div>
+    <style
+      data-mantine-styles="inline"
+    >
+      .__m__-r54{--sg-spacing-x:var(--mantine-spacing-xs);--sg-spacing-y:var(--mantine-spacing-xs);--sg-cols:1;}
+    </style>
+    <div
+      class="m_2415a157 mantine-SimpleGrid-root __m__-r54"
+      id="posts-list"
+    >
+      <div
+        class="m_4081bf90 mantine-Group-root"
+        style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
+      >
+        <h1
+          class="m_8a5d1357 mantine-Title-root"
+          data-order="1"
+          style="--title-fw: var(--mantine-h1-font-weight); --title-lh: var(--mantine-h1-line-height); --title-fz: var(--mantine-h1-font-size);"
+        >
+          Posts
+        </h1>
+        <div
+          class="m_4081bf90 mantine-Group-root mantine-visible-from-xs"
+          style="--group-gap: calc(0.25rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+        >
+          <button
+            class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+            style="--ai-size: calc(2.5rem * var(--mantine-scale)); --ai-radius: var(--mantine-radius-md); --ai-bg: var(--mantine-color-blue-filled); --ai-hover: var(--mantine-color-blue-filled-hover); --ai-color: var(--mantine-color-white); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+            type="button"
+          >
+            <span
+              class="m_8d3afb97 mantine-ActionIcon-icon"
+            >
+              <svg
+                class="tabler-icon tabler-icon-search "
+                fill="none"
+                height="20"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"
+                />
+                <path
+                  d="M21 21l-6 -6"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+      <h5
+        class="m_8a5d1357 mantine-Title-root"
+        data-order="5"
+        style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size); text-align: center;"
+      >
+        No posts yet
+      </h5>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Page when a user on the home page he see list of posts renders the home page correctly with post list empty 1`] = `
+<div>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
+  <div>
+    <style
+      data-mantine-styles="inline"
+    >
+      .__m__-r21{--sg-spacing-x:var(--mantine-spacing-xs);--sg-spacing-y:var(--mantine-spacing-xs);--sg-cols:1;}
+    </style>
+    <div
+      class="m_2415a157 mantine-SimpleGrid-root __m__-r21"
+      id="posts-list"
+    >
+      <div
+        class="m_4081bf90 mantine-Group-root"
+        style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
+      >
+        <h1
+          class="m_8a5d1357 mantine-Title-root"
+          data-order="1"
+          style="--title-fw: var(--mantine-h1-font-weight); --title-lh: var(--mantine-h1-line-height); --title-fz: var(--mantine-h1-font-size);"
+        >
+          Posts
+        </h1>
+        <div
+          class="m_4081bf90 mantine-Group-root mantine-visible-from-xs"
+          style="--group-gap: calc(0.25rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+        >
+          <button
+            class="mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+            style="--ai-size: calc(2.5rem * var(--mantine-scale)); --ai-radius: var(--mantine-radius-md); --ai-bg: var(--mantine-color-blue-filled); --ai-hover: var(--mantine-color-blue-filled-hover); --ai-color: var(--mantine-color-white); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+            type="button"
+          >
+            <span
+              class="m_8d3afb97 mantine-ActionIcon-icon"
+            >
+              <svg
+                class="tabler-icon tabler-icon-search "
+                fill="none"
+                height="20"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"
+                />
+                <path
+                  d="M21 21l-6 -6"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+      <h5
+        class="m_8a5d1357 mantine-Title-root"
+        data-order="5"
+        style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size); text-align: center;"
+      >
+        No posts yet
+      </h5>
+    </div>
+  </div>
+</div>
+`;
