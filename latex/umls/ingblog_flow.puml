@@ -1,32 +1,36 @@
 @startuml
 
 !theme plain
-title Mini Blog Finite State Machine
+title ISA Blog flow Diagram
 
-[*] --> HomePage : the user lands on the home page
+[*] --> HomePage : the user lands\n on the home page
 
 state "Home Page" as HomePage {
   [*] --> GetPosts : Fetch posts
-  [*] --> GetSession : Check user authentication
+  [*] --> GetSession : fetch the user\n session
 }
 
 state "GetPosts" as GetPosts
 state "GetSession" as GetSession
 
 state "Account" as Account {
-    [*] --> fetchProfileUser : fetch the user profile automatically
-    [*] --> selectorAccount : the user clicks on the Setting/liked/saved icon
+    [*] --> fetchProfileUser : fetch the user \nprofile automatically
+    [*] --> selectorAccount : the user clicks on the \nSetting/liked/saved icon
     state "liked post" as LikedPost
     state "saved post" as SavedPost
     state "settings" as Settings
 }
 
 state "Add Post" as AddPost {
-    [*] -> fetchCategories : fetch the categories automatically
+    [*] -> fetchCategories : fetch the categories\n automatically
+}
+
+
+state "PostView" as PostView {
+    [*] --> fetchPost : fetch the pos\nt automatically
 }
 
 state "Auth" as Auth
-
 
 state selectorAccount <<choice>>
 selectorAccount: the user clicks on the account/liked/saved icon
@@ -38,10 +42,12 @@ state "redirect auth" as redirectAuth <<sdlreceive>>
 redirectAuth: the user is redirected to the auth page if not authenticated
 redirectAuth --> Auth : the user is not authenticated
 redirectAuth --> selectorAccount : the user is authenticated
-redirectAuth --> AddPost : the user is authenticated and clicked on the add post icon
-redirectAuth --> HomePage : the user is authenticated and clicked on the authentication icon
+redirectAuth --> AddPost : the user is authenticated\n and clicked on\n the add post icon
+redirectAuth --> HomePage : the user is authenticated\n and clicked on the\n authentication icon
 
-HomePage --> redirectAuth : the user clicks on the account/liked/bookmark icon, add post icon, or authentication icon
+HomePage --> redirectAuth : the user clicks on the\n account/liked/bookmark icon,\n add post icon,\n or authentication icon
 AddPost --> HomePage : the user clicks on the logo icon
 Account --> HomePage : the user clicks on the logo icon
+HomePage --> PostView : the user clicks on a single post
+PostView --> HomePage : the user clicks on the logo icon
 @enduml
